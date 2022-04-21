@@ -56,6 +56,7 @@
     "gatsby-source-filesystem": "^4.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
     "gatsby-transformer-yaml": "^4.5.0",
+    "locomotive-scroll": "^4.1.4",
     "lodash": "^4.17.20",
     "polished": "^4.1.1",
     "react": "^17.0.2",
@@ -65,8 +66,10 @@
     "react-hamburger-menu": "^1.2.1",
     "react-helmet": "^6.1.0",
     "react-is": "^16.13.1",
+    "react-locomotive-scroll": "^0.2.0",
     "react-responsive-modal": "^6.0.1",
     "react-toggle-dark-mode": "^1.0.4",
+    "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^5.3.3",
     "swiper": "^7.3.2",
     "three": "^0.135.0"

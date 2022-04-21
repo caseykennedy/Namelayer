@@ -11,7 +11,8 @@ import * as S from './header.scss'
 import Icon from '../Icons'
 // import MobileNav from './MobileNav'
 // import Modal from '../Modal'
-// import Logo from '../SVG/Logo'
+import Symbol from '../SVG/Symbol'
+import HandshakeLogo from '../SVG/Handshake'
 
 // ___________________________________________________________________
 
@@ -23,9 +24,16 @@ const Header = () => {
     <>
       <S.Header>
         <div className="logo">
+          <div className="symbol">
+            <Symbol />
+          </div>
           <div className="wordmark" aria-label="Namelayer">
             Namelayer
           </div>
+        </div>
+
+        <div className="handshake">
+          <HandshakeLogo />
         </div>
 
         <div className="twitter">

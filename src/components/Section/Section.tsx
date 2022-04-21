@@ -3,6 +3,7 @@
 
 import * as React from 'react'
 import theme from '../../../config/theme'
+import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
@@ -12,31 +13,14 @@ type Props = {
   children?: React.ReactNode
   className?: string
   color?: string
-  maxWidth?: number | number[] | string | string[]
-  pt?: number | number[] | string
-  pb?: number | number[] | string
-  pr?: number | number[] | string
-  pl?: number | number[] | string
+  maxWidth?: string
+  pt?: string
+  pb?: string
+  pr?: string
+  pl?: string
   id?: string
   overflow?: string
 }
-
-type RowProps = {
-  children: React.ReactChild
-}
-
-// export const Row = ({ children }: RowProps) => (
-//   <Box
-//     sx={{
-//       pb: [6, 7, 7],
-//       '&:last-child': {
-//         pb: 0,
-//       },
-//     }}
-//   >
-//     {children}
-//   </Box>
-// )
 
 const Section = ({
   bg,
@@ -52,33 +36,21 @@ const Section = ({
   id,
   overflow,
 }: Props) => (
-  <section
+  <S.Section
     id={id}
     className={className}
-    style={{ paddingTop: theme.gutter }}
-    // sx={{
-    //   bg,
-    //   color,
-    //   pt,
-    //   pb,
-    //   borderTop: border ? theme.border : 'none',
-    //   overflow: overflow || 'visible',
-    //   position: 'relative',
-    //   width: '100%',
-    // }}
+    bg={bg}
+    border={border}
+    color={color}
+    pt={pt}
+    pr={pr}
+    pb={pb}
+    pl={pl}
+    maxWidth={maxWidth}
+    overflow={overflow}
   >
-    <div
-    // sx={{
-    //   boxSizing: 'content-box',
-    //   maxWidth: maxWidth || theme.maxWidth,
-    //   mx: 'auto',
-    //   pr,
-    //   pl,
-    // }}
-    >
-      {children}
-    </div>
-  </section>
+    <div className="section__inner">{children}</div>
+  </S.Section>
 )
 
 export default Section

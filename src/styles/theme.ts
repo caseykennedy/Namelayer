@@ -9,9 +9,13 @@ import theme from '../../config/theme'
 const Theme = css`
   :root {
     // Border
-    --border: 1px solid var(--color-blue);
+    --border: 2px solid var(--color-blue);
+    
     // Header
     --header-width: calc(var(--space-unit) * 5);
+    
+    // Icons
+    --icon-size: 1.75rem;
 
     @media ${theme.mq.tablet} {
     }
@@ -24,6 +28,15 @@ const Theme = css`
       }
     }
   } */
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-family: 'fontName';
+    height: var(--icon-xs);
+    width: var(--icon-xs);
+  }
 `
 
 export default Theme

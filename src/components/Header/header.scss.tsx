@@ -3,38 +3,68 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import breakpoint from '../../utils/breakpoint'
 
 // ___________________________________________________________________
 
 export const Header = styled.header`
   background: var(--color-bg);
-  border-right: var(--border);
+  border-bottom: var(--border);
 
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   padding: var(--gutter);
 
-  height: 100vh;
-  width: var(--header-width);
+  position: sticky;
+  top: 0;
+  height: var(--header-width);
+  width: 100%;
 
   z-index: 9999;
 
+  @media ${breakpoint.tablet} {
+    border-right: var(--border);
+    border-bottom: none;
+    flex-flow: column nowrap;
+    height: 100vh;
+    width: var(--header-width);
+  }
+
   .logo {
-    position: relative;
-    top: var(--space-xxl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media ${breakpoint.tablet} {
+      flex-flow: column nowrap;
+    }
+
+    .symbol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .wordmark {
-      /* position: absolute;
-      top: 0;
-      left: 0; */
-
-      transform-origin: center center;
-      transform: rotate(90deg);
+      font-family: var(--font-sans);
+      font-size: calc(var(--text-base-size) * 1.15);
+      font-weight: 600;
+      position: relative;
       /* transform-origin: 50%; */
+
+      @media ${breakpoint.tablet} {
+        top: var(--space-xxxl);
+        transform-origin: center center;
+        transform: rotate(90deg);
+      }
     }
+  }
+
+  .handshake {
+    height: var(--icon-size);
+    width: var(--icon-size);
   }
 `
 

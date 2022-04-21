@@ -2,6 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
+import textCrop from './mixins'
 
 // Aeonik Regular
 import AeonikRegularEot from './fonts/AeonikRegular.eot'
@@ -38,7 +39,7 @@ const Typography = css`
 
     // font size
     --text-base-size: 1rem; // body font-size
-    --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
+    --text-scale-ratio: 1.440; // multiplier used to generate the type scale values 👇
 
     // font weight
     --body-font-weight: 500;
@@ -46,7 +47,7 @@ const Typography = css`
 
     // line-height
     --body-line-height: 1.5;
-    --heading-line-height: 1.25;
+    --heading-line-height: 1;
 
     // letter-spacing
     --heading-letter-spacing: 0em;
@@ -133,14 +134,12 @@ const Typography = css`
   }
 
   ::selection {
-    color: var(--color-white);
-    background-color: gray;
+    color: var(--color-black);
+    background-color: var(--color-magenta);
   }
 
   body,
   html {
-    @include fontSmooth;
-
     color: var(--color-text);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
@@ -151,7 +150,6 @@ const Typography = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-feature-settings: 'pnum';
-
     text-rendering: geometricPrecision;
     font-feature-settings: 'pnum';
     font-variant-numeric: proportional-nums;
@@ -163,10 +161,13 @@ const Typography = css`
   h3,
   h4,
   h5 {
+    ${textCrop(undefined, 0, 0)}
+
     color: var(--color-text);
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
+    margin-bottom: var(--space-xxl);
   }
 
   h1 {

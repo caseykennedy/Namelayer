@@ -6,6 +6,7 @@ import React, { useRef } from 'react'
 // Components
 import Header from '../Header'
 import Footer from '../Footer'
+import SmoothScroll from '../SmoothScroll'
 
 // Styles + Theme
 import * as S from './layout.scss.'
@@ -20,7 +21,7 @@ export type LayoutProps = {
   // }
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   console.log(
     `%c namelayer | decentralize the internet | built by tetra/ `,
     `background: #78FFF2; color: #000000`
@@ -28,7 +29,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <S.Wrapper>
       <Header />
-      <S.Content>{children}</S.Content>
+      <S.Content>
+        <SmoothScroll>{children}</SmoothScroll>
+      </S.Content>
+
       {/* <Footer /> */}
     </S.Wrapper>
   )
