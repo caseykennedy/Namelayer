@@ -74,8 +74,8 @@ for the Handshake blockchain."
     <SectionPanel
       border={true}
       title="mission"
-      message="HODL your domains/"
-      detail="With the Namelayer mobile HNS wallet you can<br />now manage domains, send and receive HNS and<br />purchase new domains on the primary market."
+      message="Own top-level domains on the dWeb."
+      detail="Now you can manage your names, send and receive HNS, and participate in domain auctions from your native device."
     />
     <SectionPanel
       border={true}
