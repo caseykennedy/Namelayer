@@ -38,8 +38,8 @@ const Typography = css`
     --font-sans: 'Aeonik', Helvetica, Arial, sans;
 
     // font size
-    --text-base-size: 1rem; // body font-size
-    --text-scale-ratio: 1.440; // multiplier used to generate the type scale values 👇
+    --text-base-size: 1.25rem; // body font-size
+    --text-scale-ratio: 1.618; // multiplier used to generate the type scale values 👇
 
     // font weight
     --body-font-weight: 500;
@@ -135,7 +135,7 @@ const Typography = css`
 
   ::selection {
     color: var(--color-black);
-    background-color: var(--color-magenta);
+    background-color: var(--color-primary);
   }
 
   body,
@@ -161,7 +161,7 @@ const Typography = css`
   h3,
   h4,
   h5 {
-    ${textCrop(undefined, 0, 0)}
+    ${textCrop(1, 0.05, -0.05)}
 
     color: var(--color-text);
     font-family: var(--font-sans);

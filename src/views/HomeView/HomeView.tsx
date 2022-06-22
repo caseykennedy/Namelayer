@@ -28,10 +28,10 @@ const SectionPanel = ({
   detail,
   children,
 }: SectionPanelProps) => (
-  <Section border={border}>
+  <Section>
     <S.SectionPanel>
       <div className="section-display">
-        <div className="section-display__title">{title}</div>
+        {/* <div className="section-display__title">{title}</div> */}
         <div className="section-display__message">
           <h2>{message}</h2>
         </div>
@@ -50,7 +50,7 @@ const Hero = () => (
   <Section>
     <S.Hero>
       <div>
-        <div className="sub">native HNS wallet coming 2022</div>
+        {/* <div className="sub">native HNS wallet coming 2022</div> */}
         <h1>Namelayer</h1>
       </div>
       <div className="arrow">
@@ -62,12 +62,11 @@ const Hero = () => (
 
 const HomeView = () => (
   <S.HomeView>
-    <Hero />
+    {/* <Hero /> */}
     <SectionPanel
       border={true}
       title="intro"
-      message="A decentralized domain registry and HNS wallet that rewards
-participants."
+      message="Manage .yourname/ and wallet on the dWeb, with Handshake."
       detail="Namelayer is the<br />on-chain domain manager and non-custodial<br />HNS wallet
 for the Handshake blockchain."
     />

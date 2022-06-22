@@ -32,13 +32,13 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="handshake">
+        {/* <div className="handshake">
           <HandshakeLogo />
         </div>
 
         <div className="twitter">
           <Icon name="twitter" />
-        </div>
+        </div> */}
       </S.Header>
 
       {/* <Modal open={isNavOpen} close={toggleMenu}>

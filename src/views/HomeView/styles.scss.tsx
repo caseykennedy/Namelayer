@@ -17,7 +17,7 @@ export const HomeView = styled.main`
 export const SectionPanel = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: ${sectionHeight};
   /* padding: var(--gutter) 0; */
 
@@ -35,9 +35,9 @@ export const SectionPanel = styled.div`
       /* font-size: 15vw; */
       text-align: right;
 
-      & > * {
+      /* & > * {
         flex: 0.5;
-      }
+      } */
     }
   }
 

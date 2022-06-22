@@ -7,7 +7,9 @@ import styled from 'styled-components'
 // ___________________________________________________________________
 
 export const Footer = styled.footer`
-  display: flex;
+  --footer: flex;
+
+  display: var(--footer);
   align-items: flex-end;
   justify-content: space-between;
   padding: var(--gutter);

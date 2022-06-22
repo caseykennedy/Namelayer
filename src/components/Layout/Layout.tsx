@@ -33,7 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
         <SmoothScroll>{children}</SmoothScroll>
       </S.Content>
 
-      {/* <Footer /> */}
+      <Footer />
     </S.Wrapper>
   )
 }

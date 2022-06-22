@@ -9,17 +9,18 @@ const Colors = css`
   :root,
   [data-theme='default'] {
     // base
-    --color-black: hsl(0,0%,0%);
-    --color-white: hsl(0,0%,100%);
-    --color-blue: hsl(232.9, 100%, 50%);
-    --color-magenta: hsl(300,100%,50%);
-    --color-yellow: hsl(66.1,100%,50%);
+    --color-black: hsl(0, 0, 0);
+    --color-white: hsl(0, 0, 1);
     --color-gray: gray;
 
+    --color-primary: #8C7746;
+
     // background
-    --color-bg: var(--color-black);
+    --color-bg: #E9E8EA;
     // typography
-    --color-text: var(--color-white);
+    --color-text: #151216;
+    // border
+    --color-border: #F2F2F3;
   }
 
   /* [data-theme='darkMode'] {

@@ -9,10 +9,10 @@ import theme from '../../config/theme'
 const Theme = css`
   :root {
     // Border
-    --border: 2px solid var(--color-blue);
+    --border: 2px solid var(--color-border);
     
     // Header
-    --header-width: calc(var(--space-unit) * 5);
+    --header-width: 25rem;
     
     // Icons
     --icon-size: 1.75rem;
