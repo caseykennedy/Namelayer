@@ -9,7 +9,7 @@ import Footer from '../Footer'
 import SmoothScroll from '../SmoothScroll'
 
 // Styles + Theme
-import * as S from './layout.scss.'
+import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
 
 // ___________________________________________________________________
@@ -30,9 +30,9 @@ const Layout = ({ children }: LayoutProps) => {
     <S.Wrapper>
       <Header />
       <S.Content>
-        <SmoothScroll>{children}</SmoothScroll>
+        {/* <SmoothScroll>{children}</SmoothScroll> */}
+        {children}
       </S.Content>
-
       <Footer />
     </S.Wrapper>
   )

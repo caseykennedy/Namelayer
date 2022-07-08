@@ -31,10 +31,7 @@ const SectionPanel = ({
   <Section>
     <S.SectionPanel>
       <div className="section-display">
-        {/* <div className="section-display__title">{title}</div> */}
-        <div className="section-display__message">
-          <h2>{message}</h2>
-        </div>
+        <h1>{message}</h1>
       </div>
       <div className="section-space">{children}</div>
       {detail && (
@@ -62,30 +59,11 @@ const Hero = () => (
 
 const HomeView = () => (
   <S.HomeView>
-    {/* <Hero /> */}
-    <SectionPanel
-      border={true}
-      title="intro"
-      message="Manage .yourname/ and wallet on the dWeb, with Handshake."
-      detail="Namelayer is the<br />on-chain domain manager and non-custodial<br />HNS wallet
-for the Handshake blockchain."
-    />
-    <SectionPanel
-      border={true}
-      title="mission"
-      message="Own top-level domains on the dWeb."
-      detail="Now you can manage your names, send and receive HNS, and participate in domain auctions from your native device."
-    />
-    <SectionPanel
-      border={true}
-      title="features"
-      message="It's not just a wallet."
-    />
-    <SectionPanel
-      border={true}
-      title="roadmap"
-      message="There's plenty in the pipeline."
-    />
+    <h1>Manage .yourname/ on the dWeb with Handshake.</h1>
+    <p>
+      Namelayer is your on-chain domain manager and non-custodial HNS wallet for
+      the Handshake blockchain.
+    </p>
   </S.HomeView>
 )
 

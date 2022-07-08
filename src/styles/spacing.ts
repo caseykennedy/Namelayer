@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import theme from '../../config/theme'
+import breakpoint from '../utils/breakpoint'
 
 // ___________________________________________________________________
 
@@ -15,7 +15,7 @@ const Spacing = css`
     --space-unit: 1rem;
     --gutter: var(--space-md);
 
-    @media ${theme.mq.tablet} {
+    @media ${breakpoint.tablet} {
       --gutter: var(--space-lg);
     }
   }
@@ -37,7 +37,7 @@ const Spacing = css`
   }
 
   @supports (--css: variables) {
-    @media ${theme.mq.tablet} {
+    @media ${breakpoint.tablet} {
       :root,
       * {
         --space-xxxxs: calc(0.237 * var(--space-unit));

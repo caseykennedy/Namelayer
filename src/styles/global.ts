@@ -27,7 +27,6 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     overscroll-behavior-y: none;
-    user-select: none;
   }
 
   .img {

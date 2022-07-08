@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 // Styles
-import * as S from './header.scss'
+import * as S from './styles.scss'
 
 // Components
 import Icon from '../Icons'
@@ -32,13 +32,12 @@ const Header = () => {
           </div>
         </div>
 
-        {/* <div className="handshake">
-          <HandshakeLogo />
-        </div>
-
-        <div className="twitter">
-          <Icon name="twitter" />
-        </div> */}
+        <nav>
+          <div>intro</div>
+          <div>features</div>
+          <div>roadmap</div>
+          <div>team</div>
+        </nav>
       </S.Header>
 
       {/* <Modal open={isNavOpen} close={toggleMenu}>

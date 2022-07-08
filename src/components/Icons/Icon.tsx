@@ -17,6 +17,7 @@ import Download from './SVG/Download'
 import ExternalLink from './SVG/ExternalLink'
 import Facebook from './SVG/Facebook'
 import GridView from './SVG/GridView'
+import Handshake from './SVG/Handshake'
 import Instagram from './SVG/Instagram'
 import ListView from './SVG/ListView'
 import NextArrow from './SVG/NextArrow'
@@ -89,6 +90,12 @@ const Icon = ({ name, className, color, fas }: Props) => {
       return (
         <IconStyle color={color} className={className}>
           <GridView />
+        </IconStyle>
+      )
+    case 'handshake':
+      return (
+        <IconStyle color={color} className={className}>
+          <Handshake />
         </IconStyle>
       )
     case 'instagram':

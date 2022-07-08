@@ -3,7 +3,6 @@
 
 import React from 'react'
 import ReactModal from 'react-responsive-modal'
-import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -15,10 +14,10 @@ type ModalProps = {
 
 const modalStyles = {
   overlay: {
-    background: theme.colors.white,
+    background: 'var(--color-white)',
   },
   modal: {
-    background: theme.colors.white,
+    background: 'var(--color-white)',
     boxShadow: 'none',
     margin: '0',
     padding: `0`,

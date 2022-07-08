@@ -28,28 +28,9 @@ export const SectionPanel = styled.div`
     &__title {
       margin-bottom: var(--gutter);
     }
-
-    &__message {
-      display: flex;
-      justify-content: flex-end;
-      /* font-size: 15vw; */
-      text-align: right;
-
-      /* & > * {
-        flex: 0.5;
-      } */
-    }
   }
 
   .section-detail {
-    display: flex;
-    justify-content: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-
-    & > * {
-      flex: 0.5;
-    }
   }
 `
 

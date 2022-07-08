@@ -8,27 +8,23 @@ import breakpoint from '../../utils/breakpoint'
 // ___________________________________________________________________
 
 export const Header = styled.header`
-  /* background: var(--color-bg); */
-  /* border-bottom: var(--border); */
-
   display: flex;
   flex-flow: row nowrap;
   /* align-items: center; */
   justify-content: space-between;
+
+  height: 100vh;
+  width: var(--header-width);
   padding: var(--gutter);
 
   position: sticky;
   top: 0;
-  height: var(--header-width);
-  width: 100%;
-
-  z-index: 9999;
+  
+  border-right: var(--border);
+  /* border-radius: var(--radius); */
 
   @media ${breakpoint.tablet} {
-    /* border-right: var(--border); */
-    border-bottom: none;
     flex-flow: column nowrap;
-    height: 100vh;
     width: var(--header-width);
   }
 
@@ -61,9 +57,19 @@ export const Header = styled.header`
     }
   }
 
-  .handshake {
-    height: var(--icon-size);
-    width: var(--icon-size);
+  nav {
+    & > * {
+      border-top: var(--border);
+      cursor: pointer;
+      padding: var(--space-md) 0;
+      transition: all 0.125s ease-in;
+
+      &:hover {
+        background: var(--color-text);
+        color: var(--color-bg);
+        padding-left: var(--space-md);
+      }
+    }
   }
 `
 

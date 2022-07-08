@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import theme from '../../config/theme'
+import breakpoint from '../utils/breakpoint'
 
 // ___________________________________________________________________
 
@@ -10,19 +10,29 @@ const Theme = css`
   :root {
     // Border
     --border: 2px solid var(--color-border);
-    
+
     // Header
-    --header-width: 25rem;
-    
+    --header-width: 100%;
+
     // Icons
     --icon-size: 1.75rem;
 
-    @media ${theme.mq.tablet} {
+    // radius
+    --radius: 4rem; // border radius base size
+    --radius-xs: calc(var(--radius) / 3);
+    --radius-sm: calc(var(--radius) / 2);
+    --radius-md: calc(var(--radius) * 2);
+    --radius-lg: calc(var(--radius) * 4);
+    --radius-full: 50%;
+
+    @media ${breakpoint.tablet} {
+      // Header
+      --header-width: 33vw;
     }
   }
 
   /* @supports (--css: variables) {
-    @media ${theme.mq.tablet} {
+    @media ${breakpoint.tablet} {
       :root,
       * {
       }

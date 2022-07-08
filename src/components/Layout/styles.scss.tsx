@@ -11,18 +11,11 @@ export const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   position: relative;
+  height: 100%;
   width: 100%;
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
-  }
-
-  .scroll-container {
-    position: fixed;
-    top: 0;
-    left: var(--header-width);
-    overflow: hidden;
-    will-change: transform;
   }
 `
 
@@ -36,6 +29,7 @@ export const Content = styled.div`
   gap: var(--gutter); */
 
   margin-left: auto;
+  padding: var(--gutter);
   /* max-height: 100%; */
   width: 100%;
 `

@@ -6,7 +6,7 @@
     "**/gatsby/**/*",
     "**/src/**/*",
     "**/index.ts"
-, "config/theme.ts"  ],
+  ],
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {

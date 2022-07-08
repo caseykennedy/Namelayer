@@ -2,14 +2,14 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import breakpoint from '../../utils/breakpoint'
 
 // ___________________________________________________________________
 
 export const AccordionContainer = styled.div`
-  border: ${theme.border};
-  border-radius: ${theme.radius};
-  margin-bottom: ${theme.space[3]};
+  border: var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--gutter);
   position: relative;
   width: 100%;
 `
@@ -28,33 +28,33 @@ display: flex;
   cursor: pointer;
 
   outline: none;
-  transition: background-color ${theme.transition.global};
+  transition: background-color var(--transition-global);
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &:hover {
-    background: ${theme.colors.highlight};
+    background: var(--color-primary);
   }
 `
 
 export const AccordionContent = styled.div`
   overflow: hidden;
-  transition: ${theme.transition.all};
+  transition: var(--transition-all);
 
   .content {
     flex-wrap: wrap;
-    padding-top: ${theme.space[4]};
-    padding-bottom: ${theme.space[4]};
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
   }
 `
 
 export const Carat = styled.div<{ caratColor?: string, caratWidth?: string }>`
   display: none;
-  transition: ${theme.transition.all};
+  transition: var(--transition-all);
 
-  @media ${theme.mq.tablet} {
+  @media ${breakpoint.tablet} {
     display: flex;
     align-items: center;
   }
@@ -66,6 +66,6 @@ export const Carat = styled.div<{ caratColor?: string, caratWidth?: string }>`
 
   svg {
     fill: ${p => p.caratColor};
-    width: ${p => p.caratWidth ? p.caratWidth : theme.space[3]};
+    width: ${p => p.caratWidth ? p.caratWidth : "var(--gutter)"};
   }
 `

@@ -38,8 +38,8 @@ const Typography = css`
     --font-sans: 'Aeonik', Helvetica, Arial, sans;
 
     // font size
-    --text-base-size: 1.25rem; // body font-size
-    --text-scale-ratio: 1.618; // multiplier used to generate the type scale values 👇
+    --text-base-size: 1.15rem; // body font-size
+    --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
 
     // font weight
     --body-font-weight: 500;
