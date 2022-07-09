@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { breakpoint } from "../../styles/mixins"
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -16,6 +16,48 @@ export const HomeView = styled.main`
 `
 
 export const Hero = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  background: var(--color-text);
+  color: var(--color-bg);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+    justify-content: stretch;
+  }
+
+  .billboard {
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & > * {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      padding: var(--gutter);
+      width: 100%;
+
+      &:first-child {
+        border-bottom: var(--border);
+      }
+    }
+  }
+
+  .figure {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: var(--gutter);
+    border-top: var(--border);
+    width: 100%;
+
+    @media ${breakpoint.tablet} {
+      border-top: none;
+      border-left: var(--border);
+    }
+  }
 `
 
 export const Introduction = styled.div`
@@ -43,7 +85,7 @@ export const Introduction = styled.div`
   }
 `
 
-export const ProjectMeta = styled(motion.div)`
+export const Meta = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
   gap: var(--gutter);
@@ -52,11 +94,40 @@ export const ProjectMeta = styled(motion.div)`
     flex-flow: row nowrap;
   }
 
-  & > * {
-    background-color: var(--color-text);
-    border-radius: var(--radius);
-    color: var(--color-bg);
-    padding: var(--gutter);
+  .item {
+    flex: 1;
+    padding: var(--space-md);
+    border: var(--border);
+    border-radius: var(--radius-sm);
+
+    &--built {
+      border-color: var(--color-tertiary);
+      color: var(--color-tertiary);
+    }
+
+    &--advised {
+      border-color: var(--color-quaternary);
+      color: var(--color-quaternary);
+    }
+
+    &--supported {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .pill {
+      display: inline-block;
+
+      border: var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-md);
+      padding: var(--space-xxxs) var(--space-lg);
+
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
   }
 `
 

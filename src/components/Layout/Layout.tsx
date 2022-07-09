@@ -30,10 +30,10 @@ const Layout = ({ children }: LayoutProps) => {
     <S.Wrapper>
       <Header />
       <S.Content>
-        {/* <SmoothScroll>{children}</SmoothScroll> */}
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
+        {/* {children} */}
       </S.Content>
-      <Footer />
+      {/* <Footer /> */}
     </S.Wrapper>
   )
 }

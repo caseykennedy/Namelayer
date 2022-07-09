@@ -28,8 +28,5 @@ export const Content = styled.div`
   column-gap: var(--gutter);
   gap: var(--gutter); */
 
-  margin-left: auto;
-  padding: var(--gutter) 0;
-  /* max-height: 100%; */
   width: 100%;
 `

@@ -29,6 +29,10 @@ const GlobalStyles = createGlobalStyle`
     overscroll-behavior-y: none;
   }
 
+  .scroll-container {
+    width: 100%;
+  }
+
   .img {
     width: 100%;
     height: 100%;

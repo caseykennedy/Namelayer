@@ -13,15 +13,17 @@ const Colors = css`
     --color-white: hsl(0, 0%, 100%);
     --color-gray: gray;
 
-    --color-primary: #322e3c;
-    --color-secondary: #998a66;
+    --color-primary: #BCB2D7;
+    --color-secondary: #CCC5B3;
+    --color-tertiary: #BBE7E3;
+    --color-quaternary: #FAC6B2;
 
     // background
-    --color-bg: #d4d2d6;
+    --color-bg: #151216;
     // typography
-    --color-text: var(--color-primary);
+    --color-text: #d4d2d6;
     // border
-    --color-border: var(--color-primary);
+    --color-border: #322E3C;
   }
 
   /* [data-theme='darkMode'] {

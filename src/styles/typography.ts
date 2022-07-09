@@ -163,11 +163,10 @@ const Typography = css`
   h5 {
     ${textCrop(1, 0.05, -0.05)}
 
-    color: var(--color-text);
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space-lg);
   }
 
   h1 {

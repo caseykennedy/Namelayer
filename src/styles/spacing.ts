@@ -13,7 +13,7 @@ const Spacing = css`
 
   :root {
     --space-unit: 1rem;
-    --gutter: var(--space-md);
+    --gutter: var(--space-xl);
   }
 
   :root,

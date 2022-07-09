@@ -12,20 +12,30 @@ import * as S from './styles.scss'
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
 import Rings from '../../components/SVG/Rings'
+import Wordmark from '../../components/SVG/Wordmark'
 
 // ___________________________________________________________________
 
 const Hero = () => (
-  <Section>
-    <h1>Manage .yourname/ on the dWeb with Handshake.</h1>
-    <p>
-      Namelayer is your on-chain domain manager and non-custodial HNS wallet for
-      the Handshake blockchain.
-    </p>
-    <div>
-      <Rings />
+  <S.Hero>
+    <div className="billboard">
+      <div>
+        <Wordmark />
+      </div>
+      <div>
+        <h2>Manage .yourname/ on the dWeb with Handshake.</h2>
+        <p>
+          Namelayer is your on-chain domain manager and non-custodial HNS wallet
+          for the Handshake blockchain.
+        </p>
+      </div>
     </div>
-  </Section>
+    <div className="figure">
+      <div>
+        <Rings />
+      </div>
+    </div>
+  </S.Hero>
 )
 
 const polyVariant = {
@@ -33,7 +43,7 @@ const polyVariant = {
     opacity: 1,
     transition: {
       type: 'spring',
-      duration: '0.333s',
+      duration: 3,
     },
   },
   hidden: {
@@ -43,30 +53,36 @@ const polyVariant = {
 
 const svgVariant = {
   visible: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.02 },
+    transition: { staggerChildren: 0.25, delayChildren: 0.5 },
   },
 }
 
-const ProjectMeta = () => (
+const Meta = () => (
   <Section>
-    <S.ProjectMeta variants={svgVariant} initial="hidden" animate="visible">
-      <motion.div variants={polyVariant}>
-        Built by namers: taylor, chris, casey
+    <S.Meta variants={svgVariant} initial="hidden" animate="visible">
+      <motion.div variants={polyVariant} className="item item--built">
+        <span className="pill pill--built">Built by namers</span>
+        <p>taylor, chris, casey</p>
       </motion.div>
-      <motion.div variants={polyVariant}>
-        Built by namers: taylor, chris, casey
+      <motion.div variants={polyVariant} className="item item--advised">
+        <span className="pill pill--advised">Advised by degens</span>
+        <p>jackie, chjango, kyokan</p>
       </motion.div>
-      <motion.div variants={polyVariant}>
-        Built by namers: taylor, chris, casey
+      <motion.div variants={polyVariant} className="item item--supported">
+        <span className="pill pill--supported">Supported by</span>
+        <p>@dwebfoundation</p>
       </motion.div>
-    </S.ProjectMeta>
+    </S.Meta>
   </Section>
 )
+
+const Features = () => <Section border={true}>Features</Section>
 
 const HomeView = () => (
   <S.HomeView>
     <Hero />
-    <ProjectMeta />
+    <Meta />
+    <Features />
   </S.HomeView>
 )
 

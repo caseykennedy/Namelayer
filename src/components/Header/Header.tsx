@@ -27,17 +27,13 @@ const Header = () => {
           <div className="symbol">
             <Symbol />
           </div>
-          <div className="wordmark" aria-label="Namelayer">
-            Namelayer
-          </div>
         </div>
 
-        <nav>
-          <div>intro</div>
-          <div>features</div>
-          <div>roadmap</div>
-          <div>team</div>
-        </nav>
+        <div className="marquee">Namelayer</div>
+
+        <div className="twitter">
+          <Icon name="twitter" />
+        </div>
       </S.Header>
 
       {/* <Modal open={isNavOpen} close={toggleMenu}>

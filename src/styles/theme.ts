@@ -9,10 +9,10 @@ import breakpoint from '../utils/breakpoint'
 const Theme = css`
   :root {
     // Border
-    --border: 1px solid var(--color-border);
+    --border: 2px solid var(--color-border);
 
     // Header
-    --header-width: 100%;
+    --header-width: 4rem;
 
     // Icons
     --icon-size: 1.75rem;
@@ -26,8 +26,6 @@ const Theme = css`
     --radius-full: 50%;
 
     @media ${breakpoint.tablet} {
-      // Header
-      --header-width: 28vw;
     }
   }
 
