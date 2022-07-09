@@ -19,14 +19,14 @@ export const Footer = styled.footer`
   height: 100vh;
   width: 4rem;
 
-  /* background: var(--color-text); */
+  background: var(--color-text);
   border-left: var(--border);
   color: var(--color-bg);
 
   a,
   .info {
     svg path {
-      fill: var(--color-primary);
+      fill: var(--color-bg);
 
       &:hover {
         fill: var(--color-white);

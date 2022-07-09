@@ -3,7 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import { motion } from 'framer-motion'
+import { breakpoint } from "../../styles/mixins"
 
 // ___________________________________________________________________
 
@@ -14,48 +15,7 @@ export const HomeView = styled.main`
   width: 100%;
 `
 
-export const SectionPanel = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  /* justify-content: space-between; */
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
-
-  .section-display {
-    display: flex;
-    flex-flow: column nowrap;
-
-    &__title {
-      margin-bottom: var(--gutter);
-    }
-  }
-
-  .section-detail {
-  }
-`
-
 export const Hero = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
-
-  .sub {
-  }
-
-  h1 {
-    align-self: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-    padding-top: calc(var(--space-xxxxl) * 2);
-  }
-
-  .arrow {
-    align-self: flex-end;
-    height: var(--icon-size);
-    width: var(--icon-size);
-  }
 `
 
 export const Introduction = styled.div`
@@ -80,6 +40,23 @@ export const Introduction = styled.div`
     align-self: flex-end;
     height: var(--icon-size);
     width: var(--icon-size);
+  }
+`
+
+export const ProjectMeta = styled(motion.div)`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gutter);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
+
+  & > * {
+    background-color: var(--color-text);
+    border-radius: var(--radius);
+    color: var(--color-bg);
+    padding: var(--gutter);
   }
 `
 

@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import textCrop from './mixins'
+import {breakpoint, textCrop} from './mixins'
 
 // Aeonik Regular
 import AeonikRegularEot from './fonts/AeonikRegular.eot'
@@ -33,16 +33,16 @@ import AeonikBlackOtf from './fonts/AeonikBlack.otf'
 const Typography = css`
   :root {
     // font family
-    --font-primary: 'Menlo', Liberation Mono, Menlo, Courier, monospace;
+    --font-primary: 'Aeonik', Helvetica, Arial, sans;
     --font-mono: 'Menlo', Liberation Mono, Menlo, Courier, monospace;
     --font-sans: 'Aeonik', Helvetica, Arial, sans;
 
     // font size
-    --text-base-size: 1.15rem; // body font-size
+    --text-base-size: 1.125rem; // body font-size
     --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
 
     // font weight
-    --body-font-weight: 500;
+    --body-font-weight: 600;
     --heading-font-weight: 500;
 
     // line-height
@@ -171,7 +171,11 @@ const Typography = css`
   }
 
   h1 {
-    font-size: var(--text-xxxxl);
+    font-size: var(--text-xxxl);
+
+    @media ${breakpoint.desktop} {
+      font-size: var(--text-xxxxl);
+    }
   }
 
   h2 {

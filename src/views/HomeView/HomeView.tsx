@@ -1,69 +1,72 @@
-/* eslint-disable react/no-danger */
 // HomeView:
 // ___________________________________________________________________
 
 import * as React from 'react'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-// Theme + ui
+// Styles
 import * as S from './styles.scss'
 
 // Components
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
+import Rings from '../../components/SVG/Rings'
 
 // ___________________________________________________________________
 
-type SectionPanelProps = {
-  border?: boolean
-  title?: string
-  message?: string
-  detail?: string
-  children?: React.ReactNode
-}
-
-const SectionPanel = ({
-  border,
-  title,
-  message,
-  detail,
-  children,
-}: SectionPanelProps) => (
-  <Section>
-    <S.SectionPanel>
-      <div className="section-display">
-        <h1>{message}</h1>
-      </div>
-      <div className="section-space">{children}</div>
-      {detail && (
-        <div className="section-detail">
-          <p dangerouslySetInnerHTML={{ __html: detail }} />
-        </div>
-      )}
-    </S.SectionPanel>
-  </Section>
-)
-
 const Hero = () => (
   <Section>
-    <S.Hero>
-      <div>
-        {/* <div className="sub">native HNS wallet coming 2022</div> */}
-        <h1>Namelayer</h1>
-      </div>
-      <div className="arrow">
-        <Icon name="arrow" />
-      </div>
-    </S.Hero>
-  </Section>
-)
-
-const HomeView = () => (
-  <S.HomeView>
     <h1>Manage .yourname/ on the dWeb with Handshake.</h1>
     <p>
       Namelayer is your on-chain domain manager and non-custodial HNS wallet for
       the Handshake blockchain.
     </p>
+    <div>
+      <Rings />
+    </div>
+  </Section>
+)
+
+const polyVariant = {
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: '0.333s',
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+}
+
+const svgVariant = {
+  visible: {
+    transition: { staggerChildren: 0.1, delayChildren: 0.02 },
+  },
+}
+
+const ProjectMeta = () => (
+  <Section>
+    <S.ProjectMeta variants={svgVariant} initial="hidden" animate="visible">
+      <motion.div variants={polyVariant}>
+        Built by namers: taylor, chris, casey
+      </motion.div>
+      <motion.div variants={polyVariant}>
+        Built by namers: taylor, chris, casey
+      </motion.div>
+      <motion.div variants={polyVariant}>
+        Built by namers: taylor, chris, casey
+      </motion.div>
+    </S.ProjectMeta>
+  </Section>
+)
+
+const HomeView = () => (
+  <S.HomeView>
+    <Hero />
+    <ProjectMeta />
   </S.HomeView>
 )
 

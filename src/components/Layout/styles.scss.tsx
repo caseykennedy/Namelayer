@@ -29,7 +29,7 @@ export const Content = styled.div`
   gap: var(--gutter); */
 
   margin-left: auto;
-  padding: var(--gutter);
+  padding: var(--gutter) 0;
   /* max-height: 100%; */
   width: 100%;
 `
