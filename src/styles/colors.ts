@@ -22,6 +22,7 @@ const Colors = css`
     --color-bg: #151216;
     // typography
     --color-text: #d4d2d6;
+    --color-text-muted: #9692A0;
     // border
     --color-border: #322E3C;
   }

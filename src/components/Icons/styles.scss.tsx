@@ -3,12 +3,12 @@
 
 import styled from 'styled-components'
 
-const IconStyle = styled.span`
+export const Icon = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: var(--icon-size);
-  width: var(--icon-size);
+  /* height: var(--icon-size);
+  width: var(--icon-size); */
 
   color: ${(p) => (p.color ? p.color : 'var(--color-text)')};
 
@@ -17,4 +17,4 @@ const IconStyle = styled.span`
   }
 `
 
-export default IconStyle
+export default Icon

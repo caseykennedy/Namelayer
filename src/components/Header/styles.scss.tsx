@@ -19,7 +19,7 @@ export const Header = styled.header`
   position: sticky;
   top: 0;
   
-  padding: var(--space-md) 0;
+  padding: 0 var(--gutter);
   height: var(--header-width);
   width: 100%;
   z-index: 9999;
@@ -28,6 +28,7 @@ export const Header = styled.header`
     border-right: var(--border);
     border-bottom: none;
     flex-flow: column nowrap;
+    padding: var(--space-md) 0;
     height: 100vh;
     width: var(--header-width);
   }

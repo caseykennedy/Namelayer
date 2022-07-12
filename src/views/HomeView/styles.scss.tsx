@@ -13,6 +13,10 @@ const sectionHeight = 'calc(100vh - calc(var(--gutter) * 2))'
 export const HomeView = styled.main`
   /* grid-column: 1/13; */
   width: 100%;
+
+  h5 {
+    color: var(--color-primary);
+  }
 `
 
 export const Hero = styled.div`
@@ -49,39 +53,71 @@ export const Hero = styled.div`
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
     padding: var(--gutter);
-    border-top: var(--border);
     width: 100%;
+
+    border-top: var(--border);
+    position: relative;
 
     @media ${breakpoint.tablet} {
       border-top: none;
       border-left: var(--border);
     }
+
+    .rings {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      svg {
+        max-height: 425px;
+      }
+    }
+
+    .handshake {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      svg {
+        width: 64px;
+
+        path {
+          fill: var(--color-bg);
+        }
+      }
+    }
   }
 `
 
-export const Introduction = styled.div`
+export const Intro = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
+  gap: var(--space-xxl);
 
-  .sub {
-    margin-bottom: var(--space-xl);
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
   }
 
-  h1 {
-    align-self: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-    padding-top: calc(var(--space-xxxxl) * 2);
-  }
+  & > * {
+    flex: 1;
+    padding: var(--gutter);
 
-  .arrow {
-    align-self: flex-end;
-    height: var(--icon-size);
-    width: var(--icon-size);
+    &:not(:first-child) {
+      border-left: var(--border);
+      padding-left: var(--gutter);
+    }
   }
 `
 
@@ -131,4 +167,29 @@ export const Meta = styled(motion.div)`
   }
 `
 
-// export default HomeView
+export const Features = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--space-xxl);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
+
+  & > * {
+    flex: 1;
+    padding: var(--gutter);
+
+    &:not(:first-child) {
+      border-left: var(--border);
+    }
+  }
+
+  .lead {
+    color: var(--color-text-muted);
+  }
+
+  .title {
+    margin-top: var(--space-xl);
+  }
+`
