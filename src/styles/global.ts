@@ -3,8 +3,6 @@
 
 import { createGlobalStyle } from 'styled-components'
 
-import theme from '../../config/theme'
-
 import Reset from './reset'
 import Colors from './colors'
 import Spacing from './spacing'
@@ -39,17 +37,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* ::-webkit-scrollbar {
-    width: ${theme.space[4]};
   }
 
   ::-webkit-scrollbar-track {
-    background: ${theme.colors.black};
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.background};
-    border-left: ${theme.border};
-    border-color: ${theme.colors.black};
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -57,5 +50,3 @@ const GlobalStyles = createGlobalStyle`
 `
 
 export default GlobalStyles
-
-// ___________________________________________________________________

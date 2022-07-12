@@ -1,9 +1,6 @@
 // Carat Icon:
-// Simple carat (>) icon.
 
-// Core
 import React from 'react'
-import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

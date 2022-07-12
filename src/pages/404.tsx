@@ -1,6 +1,5 @@
 
 import React from 'react'
-import theme from '../../config/theme'
 
 // ___________________________________________________________________
 

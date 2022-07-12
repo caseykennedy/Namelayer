@@ -2,10 +2,7 @@
 // ___________________________________________________________________
 
 import React, { useCallback, useEffect, useState, useRef } from 'react'
-
 import Icon from '../Icons'
-
-import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -131,8 +128,8 @@ const defaultProps = {
   title: 'title',
   color: 'var(--color-text)',
   colorActive: 'var(--color-text)',
-  caratColor: theme.colors.text,
-  caratWidth: theme.space[4],
+  caratColor: 'var(--color-text)',
+  caratWidth: '1rem',
 }
 
 Accordion.defaultProps = defaultProps

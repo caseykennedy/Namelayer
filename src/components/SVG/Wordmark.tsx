@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
-import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -13,8 +12,6 @@ const Wordmark = ({ fill }: Props) => (
   <SVG
     width="100%"
     viewBox="0 0 954 181"
-    initial="hidden"
-    animate="visible"
     fill="none"
   >
     <path
