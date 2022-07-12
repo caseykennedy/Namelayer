@@ -1,7 +1,5 @@
 // Header Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import breakpoint from '../../utils/breakpoint'
 
@@ -28,7 +26,7 @@ export const Header = styled.header`
     border-right: var(--border);
     border-bottom: none;
     flex-flow: column nowrap;
-    padding: var(--space-md) 0;
+    padding: var(--gutter) 0;
     height: 100vh;
     width: var(--header-width);
   }
