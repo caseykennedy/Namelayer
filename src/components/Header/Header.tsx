@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 // Styles
-import * as S from './header.scss'
+import * as S from './styles.scss'
 
 // Components
 import Icon from '../Icons'
@@ -27,14 +27,9 @@ const Header = () => {
           <div className="symbol">
             <Symbol />
           </div>
-          <div className="wordmark" aria-label="Namelayer">
-            Namelayer
-          </div>
         </div>
 
-        <div className="handshake">
-          <HandshakeLogo />
-        </div>
+        <div className="marquee">Namelayer</div>
 
         <div className="twitter">
           <Icon name="twitter" />

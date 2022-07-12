@@ -2,47 +2,54 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import textCrop from './mixins'
+import { breakpoint, textCrop } from './mixins'
 
-// Aeonik Regular
-import AeonikRegularEot from './fonts/AeonikRegular.eot'
-import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
-import AeonikRegularWoff from './fonts/AeonikRegular.woff'
-import AeonikRegularOtf from './fonts/AeonikRegular.otf'
+// NBInternationalPro Regular
+import NBInternationalProMonoEot from './fonts/NBInternationalPro-Mono.eot'
+import NBInternationalProMonoWoff2 from './fonts/NBInternationalPro-Mono.woff2'
+import NBInternationalProMonoWoff from './fonts/NBInternationalPro-Mono.woff'
+import NBInternationalProMonoOtf from './fonts/NBInternationalPro-Mono.otf'
 
-// Aeonik Light
-import AeonikLightEot from './fonts/AeonikLight.eot'
-import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
-import AeonikLightWoff from './fonts/AeonikLight.woff'
-import AeonikLightOtf from './fonts/AeonikLight.otf'
+// NBInternationalPro Regular
+import NBInternationalProRegularEot from './fonts/NBInternationalPro-Regular.eot'
+import NBInternationalProRegularWoff2 from './fonts/NBInternationalPro-Regular.woff2'
+import NBInternationalProRegularWoff from './fonts/NBInternationalPro-Regular.woff'
+import NBInternationalProRegularOtf from './fonts/NBInternationalPro-Regular.otf'
 
-// Aeonik Bold
-import AeonikBoldEot from './fonts/AeonikBold.eot'
-import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
-import AeonikBoldWoff from './fonts/AeonikBold.woff'
-import AeonikBoldOtf from './fonts/AeonikBold.otf'
+// NBInternationalPro Light
+import NBInternationalProLightEot from './fonts/NBInternationalPro-Light.eot'
+import NBInternationalProLightWoff2 from './fonts/NBInternationalPro-Light.woff2'
+import NBInternationalProLightWoff from './fonts/NBInternationalPro-Light.woff'
+import NBInternationalProLightOtf from './fonts/NBInternationalPro-Light.otf'
 
-// Aeonik Black
-import AeonikBlackEot from './fonts/AeonikBlack.eot'
-import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
-import AeonikBlackWoff from './fonts/AeonikBlack.woff'
-import AeonikBlackOtf from './fonts/AeonikBlack.otf'
+// NBInternationalPro Medium
+import NBInternationalProMediumEot from './fonts/NBInternationalPro-Medium.eot'
+import NBInternationalProMediumWoff2 from './fonts/NBInternationalPro-Medium.woff2'
+import NBInternationalProMediumWoff from './fonts/NBInternationalPro-Medium.woff'
+import NBInternationalProMediumOtf from './fonts/NBInternationalPro-Medium.otf'
+
+// NBInternationalPro Bold
+import NBInternationalProBoldEot from './fonts/NBInternationalPro-Bold.eot'
+import NBInternationalProBoldWoff2 from './fonts/NBInternationalPro-Bold.woff2'
+import NBInternationalProBoldWoff from './fonts/NBInternationalPro-Bold.woff'
+import NBInternationalProBoldOtf from './fonts/NBInternationalPro-Bold.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
   :root {
     // font family
-    --font-primary: 'Menlo', Liberation Mono, Menlo, Courier, monospace;
-    --font-mono: 'Menlo', Liberation Mono, Menlo, Courier, monospace;
-    --font-sans: 'Aeonik', Helvetica, Arial, sans;
+    --font-primary: 'NBInternationalPro', Helvetica, Arial, sans;
+    --font-mono: 'NBInternationalProMono', Menlo, Liberation Mono, Courier,
+      monospace;
+    --font-sans: 'NBInternationalPro', Helvetica, Arial, sans;
 
     // font size
-    --text-base-size: 1rem; // body font-size
-    --text-scale-ratio: 1.440; // multiplier used to generate the type scale values 👇
+    --text-base-size: 1.125rem; // body font-size
+    --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
 
     // font weight
-    --body-font-weight: 500;
+    --body-font-weight: 400;
     --heading-font-weight: 500;
 
     // line-height
@@ -81,61 +88,74 @@ const Typography = css`
     --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
   }
 
-  /* Aeonik Regular */
+  /* NBInternationalPro Mono */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikRegularEot});
-    src: url(${AeonikRegularWoff2}) format('woff2'),
-      url(${AeonikRegularWoff}) format('woff'),
-      url(${AeonikRegularOtf}) format('opentype'),
-      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'NBInternationalProMono';
+    src: url(${NBInternationalProMonoEot});
+    src: url(${NBInternationalProMonoWoff2}) format('woff2'),
+      url(${NBInternationalProMonoWoff}) format('woff'),
+      url(${NBInternationalProMonoOtf}) format('opentype'),
+      url(${NBInternationalProMonoEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Light */
+  /* NBInternationalPro Regular */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikLightEot});
-    src: url(${AeonikLightWoff2}) format('woff2'),
-      url(${AeonikLightWoff}) format('woff'),
-      url(${AeonikLightOtf}) format('opentype'),
-      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
+    font-family: 'NBInternationalPro';
+    src: url(${NBInternationalProRegularEot});
+    src: url(${NBInternationalProRegularWoff2}) format('woff2'),
+      url(${NBInternationalProRegularWoff}) format('woff'),
+      url(${NBInternationalProRegularOtf}) format('opentype'),
+      url(${NBInternationalProRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* NBInternationalPro Light */
+  @font-face {
+    font-family: 'NBInternationalPro';
+    src: url(${NBInternationalProLightEot});
+    src: url(${NBInternationalProLightWoff2}) format('woff2'),
+      url(${NBInternationalProLightWoff}) format('woff'),
+      url(${NBInternationalProLightOtf}) format('opentype'),
+      url(${NBInternationalProLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Bold */
+  /* NBInternationalPro Medium */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBoldEot});
-    src: url(${AeonikBoldWoff2}) format('woff2'),
-      url(${AeonikBoldWoff}) format('woff'),
-      url(${AeonikBoldOtf}) format('opentype'),
-      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
-    font-weight: 600;
+    font-family: 'NBInternationalPro';
+    src: url(${NBInternationalProMediumEot});
+    src: url(${NBInternationalProMediumWoff2}) format('woff2'),
+      url(${NBInternationalProMediumWoff}) format('woff'),
+      url(${NBInternationalProMediumOtf}) format('opentype'),
+      url(${NBInternationalProMediumEot}?#iefix) format('embedded-opentype');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Black */
+  /* NBInternationalPro Bold */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBlackEot});
-    src: url(${AeonikBlackWoff2}) format('woff2'),
-      url(${AeonikBlackWoff}) format('woff'),
-      url(${AeonikBlackOtf}) format('opentype'),
-      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
-    font-weight: 700;
+    font-family: 'NBInternationalPro';
+    src: url(${NBInternationalProBoldEot});
+    src: url(${NBInternationalProBoldWoff2}) format('woff2'),
+      url(${NBInternationalProBoldWoff}) format('woff'),
+      url(${NBInternationalProBoldOtf}) format('opentype'),
+      url(${NBInternationalProBoldEot}?#iefix) format('embedded-opentype');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
   ::selection {
     color: var(--color-black);
-    background-color: var(--color-magenta);
+    background-color: var(--color-primary);
   }
 
   body,
@@ -161,35 +181,41 @@ const Typography = css`
   h3,
   h4,
   h5 {
-    ${textCrop(undefined, 0, 0)}
+    ${textCrop(1, 0.05, -0.05)}
 
-    color: var(--color-text);
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space-lg);
   }
 
   h1 {
-    font-size: var(--text-xxxxl);
+    font-size: var(--text-xl);
+
+    @media ${breakpoint.desktop} {
+      font-size: var(--text-xxxxl);
+    }
   }
 
   h2 {
-    font-size: var(--text-xl);
-  }
-
-  h3 {
     font-size: var(--text-lg);
   }
 
-  h4 {
+  h3 {
     font-size: var(--text-md);
+  }
+
+  h4 {
+    font-size: var(--text-sm);
     font-weight: 600;
   }
 
   h5 {
-    font-size: var(--text-base-size);
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--heading-font-weight);
+    /* text-transform: uppercase; */
+    margin-bottom: var(--space-xxxxl);
   }
 
   // --------------------------------
@@ -199,11 +225,17 @@ const Typography = css`
   // --------------------------------
 
   p {
+    ${textCrop(1, 0.05, -0.05)}
+
     font-size: var(--text-base-size);
     line-height: var(--body-line-height);
 
     &:not(:last-child) {
       margin-bottom: var(--space-md);
+    }
+
+    &.lead {
+      font-size: var(--text-md);
     }
   }
 
@@ -273,6 +305,30 @@ const Typography = css`
     figcaption {
       font-size: var(--text-sm);
       color: var(--color-contrast-low);
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gutter);
+    gap: var(--space-sm);
+
+    margin-top: var(--space-md);
+
+    li {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: var(--space-xxs);
+        position: relative;
+        bottom: -2px;
+
+        svg {
+          width: 10px;
+        }
+      }
     }
   }
 `

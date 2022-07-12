@@ -5,7 +5,7 @@ import { css } from 'styled-components'
 
 // ___________________________________________________________________
 
-const textCrop = (
+export const textCrop = (
   lineHeight = 1.3,
   topAdjustment = 0,
   bottomAdjustment = 0
@@ -45,4 +45,11 @@ const textCrop = (
   `
 }
 
-export default textCrop
+// Breakpoints
+// ___________________________________________________________________
+
+const breakpoints: string[] = ['768px', '1140px']
+export const breakpoint = {
+  tablet: `(min-width: ${breakpoints[0]})`,
+  desktop: `(min-width: ${breakpoints[1]})`,
+}

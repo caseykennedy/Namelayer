@@ -3,7 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import { motion } from 'framer-motion'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -12,94 +13,183 @@ const sectionHeight = 'calc(100vh - calc(var(--gutter) * 2))'
 export const HomeView = styled.main`
   /* grid-column: 1/13; */
   width: 100%;
-`
 
-export const SectionPanel = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
-
-  .section-display {
-    display: flex;
-    flex-flow: column nowrap;
-
-    &__title {
-      margin-bottom: var(--gutter);
-    }
-
-    &__message {
-      display: flex;
-      justify-content: flex-end;
-      /* font-size: 15vw; */
-      text-align: right;
-
-      & > * {
-        flex: 0.5;
-      }
-    }
-  }
-
-  .section-detail {
-    display: flex;
-    justify-content: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-
-    & > * {
-      flex: 0.5;
-    }
+  h5 {
+    color: var(--color-primary);
   }
 `
 
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
+  background: var(--color-text);
+  color: var(--color-bg);
 
-  .sub {
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+    justify-content: stretch;
   }
 
-  h1 {
-    align-self: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-    padding-top: calc(var(--space-xxxxl) * 2);
+  .billboard {
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & > * {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      padding: var(--gutter);
+      width: 100%;
+
+      &:first-child {
+        border-bottom: var(--border);
+      }
+    }
   }
 
-  .arrow {
-    align-self: flex-end;
-    height: var(--icon-size);
-    width: var(--icon-size);
+  .figure {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--gutter);
+    width: 100%;
+
+    border-top: var(--border);
+    position: relative;
+
+    @media ${breakpoint.tablet} {
+      border-top: none;
+      border-left: var(--border);
+    }
+
+    .rings {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      svg {
+        max-height: 425px;
+      }
+    }
+
+    .handshake {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      svg {
+        width: 64px;
+
+        path {
+          fill: var(--color-bg);
+        }
+      }
+    }
   }
 `
 
-export const Introduction = styled.div`
+export const Intro = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  height: ${sectionHeight};
-  /* padding: var(--gutter) 0; */
+  gap: var(--space-xxl);
 
-  .sub {
-    margin-bottom: var(--space-xl);
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
   }
 
-  h1 {
-    align-self: flex-end;
-    /* font-size: 15vw; */
-    text-align: right;
-    padding-top: calc(var(--space-xxxxl) * 2);
-  }
+  & > * {
+    flex: 1;
+    padding: var(--gutter);
 
-  .arrow {
-    align-self: flex-end;
-    height: var(--icon-size);
-    width: var(--icon-size);
+    &:not(:first-child) {
+      border-left: var(--border);
+      padding-left: var(--gutter);
+    }
   }
 `
 
-// export default HomeView
+export const Meta = styled(motion.div)`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gutter);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
+
+  .item {
+    flex: 1;
+    padding: var(--space-md);
+    border: var(--border);
+    border-radius: var(--radius-sm);
+
+    &--built {
+      border-color: var(--color-tertiary);
+      color: var(--color-tertiary);
+    }
+
+    &--advised {
+      border-color: var(--color-quaternary);
+      color: var(--color-quaternary);
+    }
+
+    &--supported {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .pill {
+      display: inline-block;
+
+      border: var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-md);
+      padding: var(--space-xxxs) var(--space-lg);
+
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+`
+
+export const Features = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--space-xxl);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
+
+  & > * {
+    flex: 1;
+    padding: var(--gutter);
+
+    &:not(:first-child) {
+      border-left: var(--border);
+    }
+  }
+
+  .lead {
+    color: var(--color-text-muted);
+  }
+
+  .title {
+    margin-top: var(--space-xl);
+  }
+`

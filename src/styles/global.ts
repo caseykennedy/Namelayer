@@ -27,7 +27,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     overscroll-behavior-y: none;
-    user-select: none;
+  }
+
+  .scroll-container {
+    width: 100%;
   }
 
   .img {

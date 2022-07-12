@@ -128,14 +128,9 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4, 5, 5],
-  pb: [4, 5, 5],
-  pr: [4, 5, 5],
-  pl: [4, 5, 5],
   title: 'title',
-  color: theme.colors.text,
-  colorActive: theme.colors.text,
-  fontSize: [3, 4],
+  color: 'var(--color-text)',
+  colorActive: 'var(--color-text)',
   caratColor: theme.colors.text,
   caratWidth: theme.space[4],
 }

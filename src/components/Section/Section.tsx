@@ -2,7 +2,6 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -58,10 +57,10 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: theme.gutter,
-  pb: theme.gutter,
-  pr: theme.gutter,
-  pl: theme.gutter,
+  pt: 'var(--gutter)',
+  pb: 'var(--gutter)',
+  pr: 'var(--gutter)',
+  pl: 'var(--gutter)',
 }
 
 Section.defaultProps = defaultProps

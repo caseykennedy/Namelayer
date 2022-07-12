@@ -8,17 +8,28 @@ import styled from 'styled-components'
 
 export const Footer = styled.footer`
   display: flex;
-  align-items: flex-end;
+  flex-flow: column;
+  align-items: center;
   justify-content: space-between;
-  padding: var(--gutter);
-  width: 100%;
 
-  .twitter {
-    svg {
-      fill: var(--color-white);
+  position: sticky;
+  top: 0;
+
+  padding: var(--gutter);
+  height: 100vh;
+  width: 4rem;
+
+  background: var(--color-text);
+  border-left: var(--border);
+  color: var(--color-bg);
+
+  a,
+  .info {
+    svg path {
+      fill: var(--color-bg);
 
       &:hover {
-        fill: #1da1f2;
+        fill: var(--color-white);
       }
     }
   }

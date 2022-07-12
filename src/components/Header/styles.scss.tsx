@@ -15,19 +15,20 @@ export const Header = styled.header`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  padding: var(--gutter);
-
+  
   position: sticky;
   top: 0;
+  
+  padding: 0 var(--gutter);
   height: var(--header-width);
   width: 100%;
-
   z-index: 9999;
 
   @media ${breakpoint.tablet} {
     border-right: var(--border);
     border-bottom: none;
     flex-flow: column nowrap;
+    padding: var(--space-md) 0;
     height: 100vh;
     width: var(--header-width);
   }
@@ -46,25 +47,23 @@ export const Header = styled.header`
       align-items: center;
       justify-content: center;
     }
+  }
 
-    .wordmark {
-      font-family: var(--font-sans);
-      font-size: calc(var(--text-base-size) * 1.15);
-      font-weight: 600;
-      position: relative;
-      /* transform-origin: 50%; */
+  .marquee {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    position: relative;
 
-      @media ${breakpoint.tablet} {
-        top: var(--space-xxxl);
-        transform-origin: center center;
-        transform: rotate(90deg);
-      }
+    @media ${breakpoint.tablet} {
+      transform-origin: center center;
+      transform: rotate(-90deg);
     }
   }
 
-  .handshake {
-    height: var(--icon-size);
-    width: var(--icon-size);
+  .twitter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `
 
