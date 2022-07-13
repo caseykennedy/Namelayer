@@ -45,6 +45,7 @@ const Typography = css`
     --font-sans: 'NBInternationalPro', Helvetica, Arial, sans;
 
     // font size
+    --text-root-size: 1rem;
     --text-base-size: 1.125rem; // body font-size
     --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
 
@@ -53,8 +54,8 @@ const Typography = css`
     --heading-font-weight: 500;
 
     // line-height
-    --body-line-height: 1.5;
-    --heading-line-height: 1;
+    --body-line-height: 1.25;
+    --heading-line-height: 1.25;
 
     // letter-spacing
     --heading-letter-spacing: 0em;
@@ -314,6 +315,7 @@ const Typography = css`
     column-gap: var(--gutter);
     gap: var(--space-sm);
 
+    font-size: var(--text-root-size);
     margin-top: var(--space-md);
 
     li {

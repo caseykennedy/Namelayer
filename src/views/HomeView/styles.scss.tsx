@@ -17,6 +17,14 @@ export const HomeView = styled.main`
   h5 {
     color: var(--color-primary);
   }
+
+  .lead {
+    color: var(--color-text-muted);
+  }
+
+  .list-title {
+    margin-top: var(--space-xxl);
+  }
 `
 
 export const Hero = styled.div`
@@ -46,6 +54,11 @@ export const Hero = styled.div`
       &:first-child {
         border-bottom: var(--border);
       }
+    }
+
+    .wordmark {
+      padding-top: var(--space-xxxxl);
+      padding-bottom: var(--space-md);
     }
   }
 
@@ -101,26 +114,6 @@ export const Hero = styled.div`
   }
 `
 
-export const Intro = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  gap: var(--space-xxl);
-
-  @media ${breakpoint.tablet} {
-    flex-flow: row nowrap;
-  }
-
-  & > * {
-    flex: 1;
-    padding: var(--gutter);
-
-    &:not(:first-child) {
-      border-left: var(--border);
-      padding-left: var(--gutter);
-    }
-  }
-`
-
 export const Meta = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
@@ -132,11 +125,16 @@ export const Meta = styled(motion.div)`
 
   .item {
     flex: 1;
-    padding: var(--space-md);
+    padding: var(--space-lg);
     border: var(--border);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius);
+
+    p {
+      font-size: var(--text-md);
+    }
 
     &--built {
+      /* background-color: var(--color-tertiary); */
       border-color: var(--color-tertiary);
       color: var(--color-tertiary);
     }
@@ -156,21 +154,21 @@ export const Meta = styled(motion.div)`
 
       border: var(--border);
       border-radius: var(--radius-sm);
-      margin-bottom: var(--space-md);
-      padding: var(--space-xxxs) var(--space-lg);
+      margin-bottom: var(--space-xxl);
+      padding: var(--space-xxxs) var(--space-md);
 
       font-family: var(--font-mono);
       font-size: var(--text-sm);
       font-weight: 400;
-      text-transform: uppercase;
+      line-height: 2.25;
+      /* text-transform: uppercase; */
     }
   }
 `
 
-export const Features = styled.div`
+export const Intro = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--space-xxl);
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
@@ -182,14 +180,54 @@ export const Features = styled.div`
 
     &:not(:first-child) {
       border-left: var(--border);
+      padding-left: var(--gutter);
+    }
+  }
+`
+
+export const Features = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
+
+  & > * {
+    flex: 1;
+    padding: var(--gutter);
+  }
+
+  .feature-detail {
+    position: relative;
+
+    &__sticky {
+      position: sticky;
+      top: var(--gutter);
     }
   }
 
-  .lead {
-    color: var(--color-text-muted);
-  }
+  .feature-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gutter);
 
-  .title {
-    margin-top: var(--space-xl);
+    .feature {
+      flex: 1 1 200px;
+      display: flex;
+      flex-flow: column nowrap;
+
+      border: var(--border);
+      border-radius: var(--radius);
+      font-size: var(--text-root-size);
+      padding: var(--gutter);
+
+      &__title {
+        margin-bottom: var(--space-md);
+      }
+
+      &__desc {
+      }
+    }
   }
 `

@@ -45,10 +45,53 @@ const idealPersonas = [
   'programs',
 ]
 
+const featureData = [
+  {
+    title: 'Domain Manager',
+    desc: 'Manage your decentralized domains and on-chain DNS.',
+  },
+  {
+    title: 'TLD Marketplace',
+    desc: 'Bid on new TLDs in the primary market. Participate in domain auctions.',
+  },
+  {
+    title: 'Non-custodial Wallet',
+    desc: 'Hodl, send and receive HNS and own your private keys.',
+  },
+  {
+    title: 'Utility with Handshake',
+    desc: 'Useful integrations with community projects.',
+  },
+  {
+    title: 'Mint SLD NFTs',
+    desc: 'Stake your TLD and sell sub-level domains in the secondary market. ',
+  },
+  {
+    title: 'Secondary Marketplace',
+    desc: 'Buy and sell domains amongst holders in the secondary market.',
+  },
+  {
+    title: 'Light Client',
+    desc: 'SPV light client support.',
+  },
+  {
+    title: 'Fractals',
+    desc: 'Decentralized link-trees and domain parking.',
+  },
+  {
+    title: 'Hardware Support',
+    desc: 'Ledger integration for hardware wallet support.',
+  },
+  {
+    title: 'Atomic Swaps',
+    desc: 'In-app Bitcoin atomic swaps.',
+  },
+]
+
 const Hero = () => (
   <S.Hero>
     <div className="billboard">
-      <div>
+      <div className="wordmark">
         <Wordmark />
       </div>
       <div>
@@ -56,7 +99,7 @@ const Hero = () => (
           Namelayer is your on-chain domain manager and non-custodial HNS wallet
           for the Handshake blockchain.
         </h2>
-        <p>Manage .yourname/ on the decentralized web with Handshake.</p>
+        <p>Manage .yourname/ on the decentralized internet with Handshake.</p>
       </div>
     </div>
     <div className="figure">
@@ -74,15 +117,15 @@ const Meta = () => (
   <Section>
     <S.Meta variants={svgVariant} initial="hidden" animate="visible">
       <motion.div variants={polyVariant} className="item item--built">
-        <span className="pill pill--built">Built by namers</span>
+        <span className="pill pill--built">built by namers</span>
         <p>taylor, chris, casey</p>
       </motion.div>
       <motion.div variants={polyVariant} className="item item--advised">
-        <span className="pill pill--advised">Advised by degens</span>
+        <span className="pill pill--advised">advised by degens</span>
         <p>jackie, chjango, kyokan</p>
       </motion.div>
       <motion.div variants={polyVariant} className="item item--supported">
-        <span className="pill pill--supported">Supported by</span>
+        <span className="pill pill--supported">supported by</span>
         <p>@dwebfoundation</p>
       </motion.div>
     </S.Meta>
@@ -127,24 +170,31 @@ const Intro = () => (
 const Features = () => (
   <Section border={true} pt="0" pr="0" pb="0" pl="0">
     <S.Features>
-      <div>
-        <h5>features</h5>
-        <h2>It's not just a wallet.</h2>
-        <p className="lead">
-          With Namelayer you can manage your domains, send and receive HNS, and
-          participate in domain auctions from your native device.
-        </p>
-        <div className="title">Namelayer is great for:</div>
-        <ul>
-          {idealPersonas.map((persona, idx) => (
-            <li key={idx}>
-              <Icon name="plus" /> {persona}
-            </li>
-          ))}
-        </ul>
+      <div className="feature-detail">
+        <div className="feature-detail__sticky">
+          <h5>features</h5>
+          <h2>It's not just a wallet.</h2>
+          <p className="lead">
+            With Namelayer you can manage your domains, send and receive HNS,
+            and participate in domain auctions from your native device.
+          </p>
+          <div className="list-title">Namelayer is great for:</div>
+          <ul>
+            {idealPersonas.map((persona, idx) => (
+              <li key={idx}>
+                <Icon name="plus" /> {persona}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="feature-list">
-        <p>Feature list</p>
+        {featureData.map((feat, idx) => (
+          <div className="feature" key={idx}>
+            <div className="feature__title">{feat.title}</div>
+            <div className="feature__desc">{feat.desc}</div>
+          </div>
+        ))}
       </div>
     </S.Features>
   </Section>

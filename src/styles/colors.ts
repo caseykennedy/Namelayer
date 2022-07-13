@@ -17,6 +17,7 @@ const Colors = css`
     --color-secondary: #CCC5B3;
     --color-tertiary: #BBE7E3;
     --color-quaternary: #FAC6B2;
+    --color-quintary: #8C7746;
 
     // background
     --color-bg: #151216;
