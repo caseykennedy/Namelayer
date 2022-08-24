@@ -15,26 +15,11 @@ import Section from '../../components/Section'
 import Rings from '../../components/SVG/Rings'
 import Wordmark from '../../components/SVG/Wordmark'
 
+import Capabilities from './Capabilities'
+import Intro from './Intro'
+import PrivateKeys from './PrivateKeys'
+
 // ___________________________________________________________________
-
-const polyVariant = {
-  visible: {
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      duration: 3,
-    },
-  },
-  hidden: {
-    opacity: 0,
-  },
-}
-
-const svgVariant = {
-  visible: {
-    transition: { staggerChildren: 0.25, delayChildren: 0.5 },
-  },
-}
 
 const idealPersonas = [
   'namers',
@@ -113,20 +98,6 @@ const Hero = () => (
   </S.Hero>
 )
 
-const Capabilities = () => (
-  <Section bg="var(--color-text)" color="var(--color-bg)">
-    <S.Capabilities>
-      <div className="title">
-        <strong>Features:</strong>
-      </div>
-      <div>Domain Manager</div>
-      <div>TLD Marketplace</div>
-      <div>Non-custodial Wallet</div>
-      <div>Handshake Powered</div>
-    </S.Capabilities>
-  </Section>
-)
-
 // const Meta = () => (
 //   <Section>
 //     <S.Meta variants={svgVariant} initial="hidden" animate="visible">
@@ -146,95 +117,6 @@ const Capabilities = () => (
 //   </Section>
 // )
 
-const Meta = () => (
-  <Section>
-    <S.Meta variants={svgVariant} initial="hidden" animate="visible">
-      <div className="row">
-        <p>
-          <strong>Main title</strong>
-          <br />
-          <span>secondary title</span>
-        </p>
-      </div>
-      <div className="row">
-        <motion.div variants={polyVariant} className="item">
-          <div>
-            <Icon name="handshake" color="var(--color-text)" />
-          </div>
-          <p>
-            <strong>Built by namers</strong>
-            <br />
-            Namelayer is built by namers, for namers. Designed to be your one
-            stop shop for decentralized domains.
-          </p>
-        </motion.div>
-        <motion.div variants={polyVariant} className="item">
-          <div>
-            <Icon name="handshake" color="var(--color-text)" />
-          </div>
-          <p>
-            <strong>Advised by degens</strong>
-            <br />
-            Implement a converged Ticket and Issue Management system to enable
-            seamless work collaboration across teams.
-          </p>
-        </motion.div>
-        <motion.div variants={polyVariant} className="item">
-          <div>
-            <Icon name="handshake" color="var(--color-text)" />
-          </div>
-          <p>
-            <strong>Supported by</strong>
-            <br />
-            We are supported by the @dwebfoundation and work hand-in-hand with
-            them to build the best decentralized web.
-          </p>
-        </motion.div>
-      </div>
-    </S.Meta>
-  </Section>
-)
-
-const Intro = () => (
-  <Section border={true} pt="0" pr="0" pb="0" pl="0">
-    <S.Intro>
-      <div className="content">
-        <p>
-          <strong>Intro</strong>
-          <br />
-          <span>secondary title</span>
-        </p>
-        <div className="private-keys">
-          <h2>
-            Not your 🔑’s not your 🧀 — With Namelayer you hold your private
-            keys.
-          </h2>
-        </div>
-      </div>
-      <div>
-        <div className="box" />
-        {/* <div className="browser-compat">
-          <h3>Access Handshake TLDs with these browsers:</h3>
-          <ul>
-            <li>- Beacon</li>
-            <li>- Brave</li>
-            <li>- Opera</li>
-            <li>- Puma</li>
-            <li>- Aloha</li>
-          </ul>
-        </div>
-        <div className="handshake-info">
-          <h3>An experimental peer-to-peer root naming system.</h3>
-          <p>Handshake is a decentralized naming and certificate authority.</p>
-          <a href="https://handshake.org" target="__blank" rel="noreferrer">
-            Handshake.org
-          </a>
-        </div> */}
-      </div>
-    </S.Intro>
-  </Section>
-)
-
 const Features = () => (
   <Section border={true} pt="0" pr="0" pb="0" pl="0">
     <S.Features>
@@ -246,11 +128,11 @@ const Features = () => (
             <span>secondary title</span>
           </p>
           <h2>It's not just a wallet.</h2>
-          <p className="lead">
+          <p>
             With Namelayer you can manage your domains, send and receive HNS,
             and participate in domain auctions from your native device.
           </p>
-          <div className="list-title">Namelayer is great for:</div>
+          <div className="list-title"><strong>Namelayer is great for:</strong></div>
           <ul>
             {idealPersonas.map((persona, idx) => (
               <li key={idx}>
@@ -320,8 +202,8 @@ const HomeView = () => (
     {/* <div className="box__header" /> */}
     <Hero />
     <Capabilities />
-    <Meta />
     <Intro />
+    <PrivateKeys />
     <Features />
     <Roadmap />
     <Team />

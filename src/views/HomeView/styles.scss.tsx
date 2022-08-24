@@ -21,8 +21,6 @@ export const HomeView = styled.main`
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  border-bottom: var(--border);
-
   height: 65vh;
 
   @media ${breakpoint.tablet} {
@@ -104,27 +102,6 @@ export const Hero = styled.div`
       svg {
         width: 64px;
       }
-    }
-  }
-`
-
-export const Capabilities = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-
-  @media ${breakpoint.tablet} {
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-
-  .title {
-    margin-bottom: 0;
-  }
-
-  & > * {
-    /* flex: 1; */
-
-    &:not(:first-child) {
     }
   }
 `
@@ -235,12 +212,16 @@ export const Features = styled.div`
       display: flex;
       flex-flow: column nowrap;
 
+      background: var(--color-black);
       border: var(--border);
       border-radius: var(--radius);
+      color: var(--color-bg);
       font-size: var(--text-root-size);
-      padding: var(--gutter);
+      padding: var(--space-xl);
 
       &__title {
+        font-size: var(--text-md);
+        font-weight: 600;
         margin-bottom: var(--space-md);
       }
 

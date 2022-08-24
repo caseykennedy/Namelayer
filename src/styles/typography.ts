@@ -187,6 +187,7 @@ const Typography = css`
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
+    margin-bottom: var(--space-xl);
   }
 
   h1 {
@@ -227,6 +228,7 @@ const Typography = css`
   p {
     ${textCrop(1, 0.05, -0.05)}
 
+    color: var(--color-text-muted);
     font-size: var(--text-base-size);
     line-height: var(--body-line-height);
 
@@ -237,20 +239,24 @@ const Typography = css`
     &.lead {
       font-size: var(--text-md);
     }
+
+    strong {
+      color: var(--color-text);
+    }
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--color-text);
     text-decoration: none;
     transition: var(--transition-all);
 
     &:hover {
-      color: var(--color-primary-light);
     }
 
     &.link {
-      color: var(--color-accent);
-      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 700;
+      text-decoration: underline;
       transition: var(--transition-all);
 
       &:hover {
@@ -320,6 +326,7 @@ const Typography = css`
     li {
       display: flex;
       align-items: center;
+      font-weight: 700;
 
       span {
         margin-right: var(--space-xxs);
