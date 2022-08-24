@@ -17,15 +17,15 @@ const Colors = css`
     --color-secondary: #CCC5B3;
     --color-tertiary: #BBE7E3;
     --color-quaternary: #FAC6B2;
-    --color-quintary: #8C7746;
+    --color-quintary: #706c64;
 
     // background
-    --color-bg: #151216;
+    --color-bg: #706c64;
     // typography
-    --color-text: #d4d2d6;
-    --color-text-muted: #9692A0;
+    --color-text: #000000;
+    --color-text-muted: hsl(40, 6%, 22%);
     // border
-    --color-border: #322E3C;
+    --color-border: #000000;
   }
 
   /* [data-theme='darkMode'] {

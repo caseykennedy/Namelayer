@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .hns-1 {
     fill-rule: evenodd;
-    fill: ${(p) => (p.fill ? p.fill : 'var(--color-white)')};
+    fill: ${(p) => (p.fill ? p.fill : 'var(--color-bg)')};
   }
 `
 
@@ -33,7 +33,7 @@ const Handshake = ({ fill }: Props) => (
 export default Handshake
 
 const defaultProps = {
-  fill: 'var(--color-white)',
+  fill: 'var(--color-text)',
 }
 
 Handshake.defaultProps = defaultProps

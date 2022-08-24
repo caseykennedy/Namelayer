@@ -52,7 +52,7 @@ const Wordmark = ({ fill }: Props) => (
 export default Wordmark
 
 const defaultProps = {
-  fill: 'var(--color-bg)',
+  fill: 'var(--color-text)',
 }
 
 Wordmark.defaultProps = defaultProps

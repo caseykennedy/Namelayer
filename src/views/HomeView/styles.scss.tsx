@@ -1,37 +1,31 @@
-// Layout Styles:
-
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
-const sectionHeight = 'calc(100vh - calc(var(--gutter) * 2))'
-
 export const HomeView = styled.main`
   /* grid-column: 1/13; */
   width: 100%;
 
-  h5 {
-    color: var(--color-primary);
-  }
-
-  .lead {
-    color: var(--color-text-muted);
-  }
-
   .list-title {
     margin-top: var(--space-xxl);
+  }
+
+  .box__header {
+    border-bottom: var(--border);
+    height: var(--header-width);
   }
 `
 
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  background: var(--color-text);
-  color: var(--color-bg);
+
+  background: var(--color-quintary);
+  border-bottom: var(--border);
+
+  height: 65vh;
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
@@ -43,6 +37,7 @@ export const Hero = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: space-between;
 
     & > * {
       display: flex;
@@ -50,15 +45,20 @@ export const Hero = styled.div`
       justify-content: space-between;
       padding: var(--gutter);
       width: 100%;
-
-      &:first-child {
-        border-bottom: var(--border);
-      }
     }
 
     .wordmark {
-      padding-top: var(--space-xxxxl);
-      padding-bottom: var(--space-md);
+      padding-top: var(--space-xxxl);
+    }
+
+    .intro {
+      h1 {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: var(--space-xxl);
+      }
     }
   }
 
@@ -105,11 +105,28 @@ export const Hero = styled.div`
 
       svg {
         width: 64px;
-
-        path {
-          fill: var(--color-bg);
-        }
       }
+    }
+  }
+`
+
+export const Capabilities = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  & > * {
+    /* flex: 1; */
+
+    &:not(:first-child) {
     }
   }
 `
@@ -117,24 +134,31 @@ export const Hero = styled.div`
 export const Meta = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--gutter);
 
-  @media ${breakpoint.tablet} {
-    flex-flow: row nowrap;
+  p span {
+    color: var(--color-text-muted);
   }
 
-  .item {
-    flex: 1;
-    padding: var(--space-lg);
-    border: var(--border);
-    border-radius: var(--radius);
+  .row {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--space-xxxl);
 
-    p {
-      font-size: var(--text-md);
+    @media ${breakpoint.tablet} {
+      flex-flow: row nowrap;
     }
 
-    &--built {
-      /* background-color: var(--color-tertiary); */
+    &:first-child {
+      margin-bottom: var(--space-xxxl);
+    }
+
+    .item {
+      flex: 1;
+      /* padding: var(--space-lg); */
+      /* border: var(--border); */
+      border-radius: var(--radius);
+
+      /* &--built {
       border-color: var(--color-tertiary);
       color: var(--color-tertiary);
     }
@@ -147,21 +171,15 @@ export const Meta = styled(motion.div)`
     &--supported {
       border-color: var(--color-primary);
       color: var(--color-primary);
-    }
+    } */
 
-    .pill {
-      display: inline-block;
-
-      border: var(--border);
-      border-radius: var(--radius-sm);
-      margin-bottom: var(--space-xxl);
-      padding: var(--space-xxxs) var(--space-md);
-
-      font-family: var(--font-mono);
-      font-size: var(--text-sm);
-      font-weight: 400;
-      line-height: 2.25;
-      /* text-transform: uppercase; */
+      span {
+        display: inline-block;
+        /* font-family: var(--font-mono); */
+        /* line-height: 2.25; */
+        text-transform: uppercase;
+        margin-bottom: var(--space-xl);
+      }
     }
   }
 `
@@ -178,10 +196,17 @@ export const Intro = styled.div`
     flex: 1;
     padding: var(--gutter);
 
-    &:not(:first-child) {
+    /* &:not(:first-child) {
       border-left: var(--border);
       padding-left: var(--gutter);
-    }
+    } */
+  }
+
+  .box {
+    border: var(--border);
+    border-radius: var(--radius);
+    height: 800px;
+    width: 100%;
   }
 `
 
@@ -228,6 +253,31 @@ export const Features = styled.div`
 
       &__desc {
       }
+    d
+  }
+`
+
+export const Team = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--gutter);
+    margin-top: var(--gutter);
+
+    & > * {
+      padding: var(--gutter);
+      background: var(--color-black);
+      border: var(--border);
+      border-radius: var(--radius);
+
+      /* &:not(:first-child) {
+      border-left: var(--border);
+      padding-left: var(--gutter);
+    } */
     }
   }
 `

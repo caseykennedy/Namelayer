@@ -26,7 +26,7 @@ export const Header = styled.header`
     border-right: var(--border);
     border-bottom: none;
     flex-flow: column nowrap;
-    padding: var(--gutter) 0;
+    padding: var(--space-lg) 0;
     height: 100vh;
     width: var(--header-width);
   }

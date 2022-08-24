@@ -187,14 +187,13 @@ const Typography = css`
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
-    margin-bottom: var(--space-lg);
   }
 
   h1 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
 
     @media ${breakpoint.desktop} {
-      font-size: var(--text-xxxxl);
+      font-size: var(--text-lg);
     }
   }
 
