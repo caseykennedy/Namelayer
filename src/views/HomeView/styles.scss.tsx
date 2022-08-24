@@ -21,8 +21,6 @@ export const HomeView = styled.main`
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-
-  background: var(--color-quintary);
   border-bottom: var(--border);
 
   height: 65vh;
@@ -189,23 +187,18 @@ export const Intro = styled.div`
   flex-flow: column nowrap;
 
   @media ${breakpoint.tablet} {
-    flex-flow: row nowrap;
+    flex-flow: row-reverse nowrap;
   }
 
   & > * {
     flex: 1;
     padding: var(--gutter);
-
-    /* &:not(:first-child) {
-      border-left: var(--border);
-      padding-left: var(--gutter);
-    } */
   }
 
   .box {
     border: var(--border);
     border-radius: var(--radius);
-    height: 800px;
+    height: 600px;
     width: 100%;
   }
 `
@@ -253,7 +246,7 @@ export const Features = styled.div`
 
       &__desc {
       }
-    d
+    }
   }
 `
 

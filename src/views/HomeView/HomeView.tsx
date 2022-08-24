@@ -198,7 +198,7 @@ const Meta = () => (
 const Intro = () => (
   <Section border={true} pt="0" pr="0" pb="0" pl="0">
     <S.Intro>
-      <div>
+      <div className="content">
         <p>
           <strong>Intro</strong>
           <br />

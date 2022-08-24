@@ -20,7 +20,7 @@ const Colors = css`
     --color-quintary: #706c64;
 
     // background
-    --color-bg: #706c64;
+    --color-bg: hsl(43, 20%, 65%);
     // typography
     --color-text: #000000;
     --color-text-muted: hsl(40, 6%, 22%);

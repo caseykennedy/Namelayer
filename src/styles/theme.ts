@@ -18,7 +18,7 @@ const Theme = css`
     --icon-size: 1.75rem;
 
     // radius
-    --radius: 2rem; // border radius base size
+    --radius: 1.75rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);

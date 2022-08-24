@@ -54,8 +54,8 @@ const Typography = css`
     --heading-font-weight: 500;
 
     // line-height
-    --body-line-height: 1.25;
-    --heading-line-height: 1.25;
+    --body-line-height: 1.15;
+    --heading-line-height: 1.15;
 
     // letter-spacing
     --heading-letter-spacing: 0em;
