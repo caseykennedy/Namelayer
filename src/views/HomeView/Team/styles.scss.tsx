@@ -14,15 +14,18 @@ export const Team = styled.div`
   }
 
   .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-flow: row wrap;
     gap: var(--space-md);
 
     color: var(--color-secondary);
 
     & > * {
-      padding: var(--gutter);
+      flex: 1 1 300px;
+      display: flex;
+      flex-flow: column nowrap;
+
+      padding: var(--gutter-sm);
       background: var(--color-black);
       border: var(--border);
       border-radius: var(--radius);

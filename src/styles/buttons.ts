@@ -83,29 +83,36 @@ const Buttons = css`
       color: var(--color-white);
     } */
 
-    svg {
+    /* svg {
       path {
         fill: var(--color-primary);
       }
-    }
+    } */
+  }
+
+  .btn--outline {
+    background: transparent;
+    border: 1px solid;
+    color: var(--color-secondary);
+
+    /* &:hover,
+    &:focus {
+      background: var(--btn-outline-bg-hover);
+      color: var(--color-text);
+    } */
   }
 
   // size
-  .btn--xs {
-    font-size: calc(var(--text-base-size) * 0.75);
-    height: calc(var(--btn-height) * 0.65);
-    padding-right: calc(var(--btn-padding-x) * 0.75);
-    padding-left: calc(var(--btn-padding-x) * 0.75);
-  }
-
   .btn--sm {
-    /* font-size: var(--text-sm); */
+    font-size: var(--text-sm);
     height: calc(var(--btn-height) * 0.75);
+    padding-right: calc(var(--btn-padding-x) * 0.5);
+    padding-left: calc(var(--btn-padding-x) * 0.5);
   }
 
-  .btn--md {
+  /* .btn--md {
     font-size: var(--btn-font-size);
-  }
+  } */
 
   .btn--lg {
     font-size: calc(var(--text-base-size) * 1.1);

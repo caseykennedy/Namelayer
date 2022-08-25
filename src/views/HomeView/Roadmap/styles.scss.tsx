@@ -27,15 +27,17 @@ export const Roadmap = styled.div`
     }
   }
 
-  .feature-list {
+  .roadmap-list {
     display: flex;
     flex-flow: column wrap;
     gap: var(--space-md);
 
-    .feature {
+    &__item {
       flex: 1;
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
 
       background: var(--color-black);
       border: var(--border);
@@ -44,13 +46,21 @@ export const Roadmap = styled.div`
       font-size: var(--text-root-size);
       padding: var(--space-xl);
 
+      &__quarter {
+        padding-right: var(--gutter);
+      }
+
       &__title {
+        flex: 1;
         font-size: var(--text-md);
         font-weight: 600;
-        margin-bottom: var(--space-md);
       }
 
       &__desc {
+      }
+
+      &__state {
+        padding-left: var(--gutter);
       }
     }
   }

@@ -45,7 +45,7 @@ export const Features = styled.div`
       border-radius: var(--radius);
       color: var(--color-bg);
       font-size: var(--text-root-size);
-      padding: var(--space-xl);
+      padding: var(--gutter-sm);
 
       &__title {
         font-size: var(--text-md);
