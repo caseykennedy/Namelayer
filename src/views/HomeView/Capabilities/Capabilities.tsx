@@ -27,6 +27,7 @@ const Capabilities = () => (
         <li>TLD Marketplace</li>
         <li>Non-custodial Wallet</li>
         <li>Handshake Powered</li>
+        {/* <li>Manage .yourname/ on the decentralized internet with Handshake.</li> */}
       </ul>
     </Marquee>
   </S.Capabilities>

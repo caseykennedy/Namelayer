@@ -9,7 +9,7 @@ import breakpoint from '../utils/breakpoint'
 const Theme = css`
   :root {
     // Border
-    --border: 2px solid var(--color-border);
+    --border: 1px solid var(--color-border);
 
     // Header
     --header-width: 4rem;
@@ -18,12 +18,16 @@ const Theme = css`
     --icon-size: 1.75rem;
 
     // radius
-    --radius: 1rem; // border radius base size
+    --radius: 0.5rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
     --radius-lg: calc(var(--radius) * 4);
     --radius-full: 50%;
+
+    // transitions
+    --transition: 0.175s ease;
+    --transition-all: all var(--transition);
 
     @media ${breakpoint.tablet} {
     }

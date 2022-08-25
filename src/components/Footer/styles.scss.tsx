@@ -1,35 +1,74 @@
-// Footer styles:
-
-// ___________________________________________________________________
-
 import styled from 'styled-components'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
 export const Footer = styled.footer`
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  background: var(--color-black);
 
-  position: sticky;
-  top: 0;
+  /* min-height: 64vh; */
 
-  padding: var(--gutter);
-  height: 100vh;
-  width: 4rem;
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
 
-  background: var(--color-text);
-  border-left: var(--border);
-  color: var(--color-bg);
+  & > * {
+    flex: 1;
+  }
 
-  a,
-  .info {
-    svg path {
-      fill: var(--color-bg);
+  .billboard {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: var(--gutter);
+    color: var(--color-bg);
 
-      &:hover {
-        fill: var(--color-white);
+    .message {
+      font-size: var(--text-xxxl);
+      margin-bottom: var(--space-xxxl);
+    }
+  }
+
+  .explore {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--gutter);
+
+    & > * {
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+
+      background: var(--color-bg);
+      border: var(--border);
+      border-color: var(--color-tertiary);
+      border-radius: var(--radius);
+
+      @media ${breakpoint.tablet} {
+        flex-flow: row nowrap;
+      }
+
+      .call {
+        flex: 1;
+        padding: var(--gutter);
+      }
+
+      .action {
+        flex: 2;
+        padding: var(--gutter);
+
+        span {
+          margin-top: var(--gutter);
+          
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
       }
     }
   }

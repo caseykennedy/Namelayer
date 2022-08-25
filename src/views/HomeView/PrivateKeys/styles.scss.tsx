@@ -34,19 +34,9 @@ export const PrivateKeys = styled.div`
     }
   }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--space-md) var(--space-xxl);
-
-    background: var(--color-black);
-    border-radius: var(--radius);
-    color: var(--color-bg);
-
-    &:hover {
-      background: var(--color-black);
-    }
+  .btn .icon svg {
+    transform: rotate(-90deg);
+    width: 20px;
   }
 
   .box {

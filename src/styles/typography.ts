@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import { breakpoint, textCrop } from './mixins'
+import { breakpoint, fontSmooth, textCrop } from './mixins'
 
 // NBInternationalPro Regular
 import NBInternationalProMonoEot from './fonts/NBInternationalPro-Mono.eot'
@@ -161,20 +161,13 @@ const Typography = css`
 
   body,
   html {
+    ${fontSmooth}
+    
     color: var(--color-text);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
     font-weight: var(--body-font-weight);
     line-height: var(--body-line-height);
-
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-feature-settings: 'pnum';
-    text-rendering: geometricPrecision;
-    font-feature-settings: 'pnum';
-    font-variant-numeric: proportional-nums;
-    font-variant-ligatures: discretionary-ligatures;
   }
 
   h1,
@@ -187,7 +180,7 @@ const Typography = css`
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-md);
   }
 
   h1 {

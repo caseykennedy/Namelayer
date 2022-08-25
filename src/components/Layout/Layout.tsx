@@ -1,7 +1,7 @@
 // Layout:
 // ___________________________________________________________________
 
-import React, { useRef } from 'react'
+import React from 'react'
 
 // Components
 import Header from '../Header'
@@ -27,14 +27,16 @@ const Layout = ({ children }: LayoutProps) => {
     `background: #78FFF2; color: #000000`
   )
   return (
-    <S.Wrapper>
-      <Header />
-      <S.Content>
-        {/* <SmoothScroll>{children}</SmoothScroll> */}
-        {children}
-      </S.Content>
-      {/* <Footer /> */}
-    </S.Wrapper>
+    <>
+      <S.Wrapper>
+        <Header />
+        <S.Content>
+          {/* <SmoothScroll>{children}</SmoothScroll> */}
+          {children}
+        </S.Content>
+      </S.Wrapper>
+      <Footer />
+    </>
   )
 }
 

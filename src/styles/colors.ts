@@ -9,23 +9,31 @@ const Colors = css`
   :root,
   [data-theme='default'] {
     // base
-    --color-black: hsl(0, 0%, 0%);
+    --color-black: #000000;
     --color-white: hsl(0, 0%, 100%);
-    --color-gray: gray;
 
-    --color-primary: #BCB2D7;
-    --color-secondary: #CCC5B3;
-    --color-tertiary: #BBE7E3;
-    --color-quaternary: #FAC6B2;
-    --color-quintary: #706c64;
+    --color-primary: #000000;
+    --color-secondary: hsl(43, 20%, 65%);
+    --color-tertiary: hsl(43, 11%, 28%);
 
     // background
-    --color-bg: hsl(43, 20%, 65%);
+    --color-bg: var(--color-secondary);
     // typography
-    --color-text: #000000;
-    --color-text-muted: hsl(43, 11%, 28%);
+    --color-text: var(--color-black);
+    --color-text-muted: var(--color-tertiary);
     // border
-    --color-border: #000000;
+    --color-border: var(--color-black);
+  }
+
+  [data-theme='darkMode'] {
+    // base
+    --color-black: #000000;
+    --color-white: hsl(0, 0%, 100%);
+
+    // background
+    --color-bg: var(--color-black);
+    // typography
+    --color-text: var(--color-secondary);
   }
 
   /* [data-theme='darkMode'] {

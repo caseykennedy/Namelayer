@@ -52,7 +52,7 @@ const Intro = () => (
           <br />
           <span>
             Namelayer is built by namers, for namers. Designed to be your one
-            stop shop for decentralized domains.
+            stop shop for decentralized domain management.
           </span>
         </p>
       </motion.div>
@@ -74,13 +74,13 @@ const Intro = () => (
           <Icon name="carat" color="var(--color-text)" />
         </div>
         <p>
-          <strong>Supported by</strong>
+          <strong>Supported by the dWeb</strong>
           <br />
           We are supported by the{' '}
           <a href="/" target="_blank" rel="noopener" className="link">
             @dwebfoundation
           </a>{' '}
-          and work hand-in-hand with them to build the best decentralized web.
+          and work hand-in-hand with them to build the best decentralized internet.
         </p>
       </motion.div>
     </div>

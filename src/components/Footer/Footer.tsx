@@ -1,13 +1,8 @@
 // Footer:
-
 // ___________________________________________________________________
 
 import * as React from 'react'
-
-// Theme + UI
 import * as S from './styles.scss'
-
-// Components
 import Icon from '../Icons'
 
 // ___________________________________________________________________
@@ -18,20 +13,47 @@ const handshakeHref = 'https://handshake.org'
 
 const Footer = () => (
   <S.Footer>
-    {/* <div className="info">
-      <Icon name="plus" />
-    </div> */}
-    <a href={twitterHref} target="_blank" rel="noreferrer" className="twitter">
-      <Icon name="twitter" />
-    </a>
-    <a
-      href={handshakeHref}
-      target="_blank"
-      rel="noreferrer"
-      className="handshake"
-    >
-      <Icon name="handshake" />
-    </a>
+    <div className="billboard">
+      <div className="message">Slide into our DMs.</div>
+      <div>
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener"
+          className="btn btn--secondary"
+        >
+          email form
+        </a>
+      </div>
+      {/* <p>More info, features and news on the way.</p> */}
+      {/* <p>auctions, twitter, handshake.org, newsletter</p> */}
+    </div>
+    <div className="explore">
+      <div>
+        <div className="call">
+          <strong>Namelayer Auctions</strong>
+        </div>
+        <div className="action">
+          <p>
+            Handshake is an experimental peer-to-peer root naming system and
+            decentralized and certificate authority.
+          </p>
+          <Icon name="carat" color="var(--color-text)" />
+        </div>
+      </div>
+      <div>
+        <div className="call">
+          <strong>Learn about Handshake?</strong>
+        </div>
+        <div className="action">
+          <p>
+            Handshake is an experimental peer-to-peer root naming system and
+            decentralized and certificate authority.
+          </p>
+          <Icon name="carat" color="var(--color-text)" />
+        </div>
+      </div>
+    </div>
   </S.Footer>
 )
 
