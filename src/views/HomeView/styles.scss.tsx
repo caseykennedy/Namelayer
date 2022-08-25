@@ -20,7 +20,7 @@ export const HomeView = styled.main`
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  height: 65vh;
+  min-height: 65vh;
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
