@@ -9,12 +9,12 @@ const Colors = css`
   :root,
   [data-theme='default'] {
     // base
-    --color-black: #000000;
+    --color-black: #151216;
     --color-white: hsl(0, 0%, 100%);
 
-    --color-primary: #000000;
+    --color-primary: #151216;
     --color-secondary: hsl(43, 20%, 65%);
-    --color-tertiary: hsl(43, 11%, 28%);
+    --color-tertiary: #3B323E;
 
     // background
     --color-bg: var(--color-secondary);
@@ -23,17 +23,6 @@ const Colors = css`
     --color-text-muted: var(--color-tertiary);
     // border
     --color-border: var(--color-black);
-  }
-
-  [data-theme='darkMode'] {
-    // base
-    --color-black: #000000;
-    --color-white: hsl(0, 0%, 100%);
-
-    // background
-    --color-bg: var(--color-black);
-    // typography
-    --color-text: var(--color-secondary);
   }
 
   /* [data-theme='darkMode'] {

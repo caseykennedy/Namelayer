@@ -30,7 +30,7 @@ export const SubscribeForm = styled.form`
     padding: var(--space-sm);
 
     color: var(--color-tertiary);
-    font-size: var(--text-sm);
+    font-size: var(--text-base-size);
     font-weight: 600;
 
     background: var(--color-secondary);
