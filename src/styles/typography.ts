@@ -312,14 +312,11 @@ const Typography = css`
     grid-template-columns: repeat(2, 1fr);
     column-gap: var(--gutter);
     gap: var(--space-sm);
-
-    font-size: var(--text-root-size);
     margin-top: var(--space-md);
 
     li {
       display: flex;
       align-items: center;
-      font-weight: 700;
 
       span {
         margin-right: var(--space-xxs);
@@ -327,7 +324,7 @@ const Typography = css`
         bottom: -2px;
 
         svg {
-          width: 10px;
+          width: 14px;
         }
       }
     }

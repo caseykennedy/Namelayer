@@ -15,7 +15,7 @@ import Section from '../../components/Section'
 import Rings from '../../components/SVG/Rings'
 import Wordmark from '../../components/SVG/Wordmark'
 
-import Capabilities from './Capabilities'
+import Marquee from './Marquee'
 import Intro from './Intro'
 import PrivateKeys from './PrivateKeys'
 import Features from './Features'
@@ -51,9 +51,8 @@ const Hero = () => (
 
 const HomeView = () => (
   <S.HomeView>
-    {/* <div className="box__header" /> */}
     <Hero />
-    <Capabilities />
+    <Marquee />
     <Intro />
     <PrivateKeys />
     <Features />

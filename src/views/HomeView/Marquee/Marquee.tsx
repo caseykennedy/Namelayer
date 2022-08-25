@@ -2,35 +2,37 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import Marquee from 'react-fast-marquee'
+import FastMarquee from 'react-fast-marquee'
 
 // Styles
 import * as S from './styles.scss'
 
 // Components
 import Section from '../../../components/Section'
-import MarqueeMessage from '../../../components/MarqueeMessage'
 
 // ___________________________________________________________________
 
 const MarqueeProps = {
   gradient: false,
-  pauseOnHover: true,
+  pauseOnHover: false,
   speed: 25,
 }
 
-const Capabilities = () => (
-  <S.Capabilities>
-    <Marquee {...MarqueeProps}>
+const Marquee = () => (
+  <S.Marquee>
+    <FastMarquee {...MarqueeProps}>
       <ul>
+        <li>Decentralized Domains</li>
+        <li>Built on Handshake</li>
+        <li>Non-custodial Wallet</li>
         <li>Domain Manager</li>
         <li>TLD Marketplace</li>
-        <li>Non-custodial Wallet</li>
         <li>Handshake Powered</li>
+        <li>Domain Auctions</li>
         {/* <li>Manage .yourname/ on the decentralized internet with Handshake.</li> */}
       </ul>
-    </Marquee>
-  </S.Capabilities>
+    </FastMarquee>
+  </S.Marquee>
 )
 
-export default Capabilities
+export default Marquee

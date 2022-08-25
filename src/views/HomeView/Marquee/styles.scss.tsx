@@ -3,7 +3,7 @@ import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Capabilities = styled.div`
+export const Marquee = styled.div`
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
@@ -12,9 +12,10 @@ export const Capabilities = styled.div`
   background: var(--color-text);
   color: var(--color-bg);
 
-  /* .marquee {
-    max-width: calc(100vw - var(--header-width));
-  } */
+
+  .marquee-container {
+    max-width: calc(100vw - calc(var(--header-width) + 16px));
+  }
 
   ul {
     display: flex;
@@ -25,10 +26,10 @@ export const Capabilities = styled.div`
     width: 100%;
 
     li {
-      /* white-space: nowrap; */
-      /* margin: 0 var(--space-xl); */
+      white-space: nowrap;
+      margin: 0 var(--space-xxxxl);
     }
   }
 `
 
-export default Capabilities
+export default Marquee

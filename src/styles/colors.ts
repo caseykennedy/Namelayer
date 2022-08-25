@@ -9,12 +9,15 @@ const Colors = css`
   :root,
   [data-theme='default'] {
     // base
-    --color-black: #151216;
+    --color-black: hsl(285, 10%, 10%);
     --color-white: hsl(0, 0%, 100%);
 
-    --color-primary: #151216;
+    --color-primary: hsl(285, 10%, 8%);
     --color-secondary: hsl(43, 20%, 65%);
-    --color-tertiary: #3B323E;
+    --color-tertiary: hsl(285, 8%, 24%);
+
+
+    /* --color-secondary: #D06952; */
 
     // background
     --color-bg: var(--color-secondary);

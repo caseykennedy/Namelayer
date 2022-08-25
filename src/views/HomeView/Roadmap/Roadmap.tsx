@@ -17,31 +17,31 @@ const data = [
   {
     quarter: 'Q1',
     title: 'Non-custodial Wallet',
-    desc: 'Manage your decentralized domains and on-chain DNS.',
+    desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
     quarter: 'Q1',
     title: 'Domain Manager',
-    desc: 'Manage your decentralized domains and on-chain DNS.',
+    desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
     quarter: 'Q1',
     title: 'TLD Marketplace',
-    desc: 'Manage your decentralized domains and on-chain DNS.',
+    desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
     quarter: 'Q1',
     title: 'SPV Light Client',
-    desc: 'Manage your decentralized domains and on-chain DNS.',
+    desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
     quarter: 'Q1',
     title: 'Fractals',
-    desc: 'Manage your decentralized domains and on-chain DNS.',
+    desc: 'Manage your domains.',
     state: 'in progress',
   },
 ]
@@ -85,7 +85,7 @@ const Roadmap = () => (
         <motion.div variants={polyVariant} className="roadmap-list__item" key={idx}>
           <div className="roadmap-list__item__quarter">{item.quarter}</div>
           <div className="roadmap-list__item__title">{item.title}</div>
-          <div className="roadmap-list__item__desc">{item.desc}</div>
+          {/* <div className="roadmap-list__item__desc">{item.desc}</div> */}
           <div className="roadmap-list__item__state">{item.state}</div>
         </motion.div>
       ))}

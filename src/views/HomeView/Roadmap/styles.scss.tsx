@@ -35,7 +35,7 @@ export const Roadmap = styled.div`
     &__item {
       flex: 1;
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       align-items: center;
       justify-content: space-between;
 
@@ -45,6 +45,10 @@ export const Roadmap = styled.div`
       color: var(--color-bg);
       font-size: var(--text-root-size);
       padding: var(--space-xl);
+
+      @media ${breakpoint.tablet} {
+        flex-flow: row nowrap;
+      }
 
       &__quarter {
         padding-right: var(--gutter);
