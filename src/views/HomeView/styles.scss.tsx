@@ -43,7 +43,7 @@ export const Hero = styled.div`
     }
 
     .wordmark {
-      padding-top: var(--space-xxxl);
+      padding-top: var(--space-xxxxl);
     }
 
     .intro {

@@ -15,11 +15,21 @@ export const Team = styled.div`
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
     gap: var(--space-md);
 
     color: var(--color-secondary);
+
+    @media ${breakpoint.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
+
+    @media ${breakpoint.desktop} {
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
 
     .card {
       flex: 1 1 240px;
