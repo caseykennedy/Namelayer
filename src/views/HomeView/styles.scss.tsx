@@ -4,6 +4,7 @@ import { breakpoint } from '../../styles/mixins'
 // ___________________________________________________________________
 
 export const HomeView = styled.main`
+  position: relative;
   /* grid-column: 1/13; */
   width: 100%;
 

@@ -6,11 +6,16 @@ import { breakpoint } from '../../../styles/mixins'
 export const Marquee = styled.div`
   display: flex;
   flex-flow: row nowrap;
+
   overflow: hidden;
   padding: var(--space-xl) 0;
 
   background: var(--color-text);
   color: var(--color-bg);
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
 
   .marquee-container {
     @media ${breakpoint.tablet} {

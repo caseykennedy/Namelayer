@@ -1,8 +1,9 @@
 // Team:
 // ___________________________________________________________________
 
-import * as React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 // Styles
 import * as S from './styles.scss'
@@ -65,36 +66,48 @@ const staggerItems = {
   },
 }
 
-const Team = () => (
-  <S.Team>
-    <div className="row">
-      <p>
-        <strong>Team</strong>
-        <br />
-        <span>Dedicated to decentralization.</span>
-      </p>
-      {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
-    </div>
-    <motion.div
-      className="grid"
-      variants={staggerItems}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.8, margin: '100px' }}
-    >
-      {teamData.map((member, idx) => (
-        <motion.div variants={polyVariant} key={idx} className="card">
-          <div className="card__name heading">
-            {member.name}
-            <span>{member.title}</span>
-          </div>
-          <div className="card__figure">figure</div>
-          <div className="card__quote">{member.quote}</div>
-          <div className="card__handle">{member.handle}</div>
-        </motion.div>
-      ))}
-    </motion.div>
-  </S.Team>
-)
+const Team = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+  useEffect(() => {
+    const fetchData = async () => {
+      if (inView) {
+        await controls.start('visible')
+      }
+    }
+    fetchData().catch(console.error)
+  }, [controls, inView])
+  return (
+    <S.Team>
+      <div className="row">
+        <p>
+          <strong>Team</strong>
+          <br />
+          <span>Dedicated to decentralization.</span>
+        </p>
+        {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
+      </div>
+      <motion.div
+        className="grid"
+        animate={controls}
+        initial="hidden"
+        variants={staggerItems}
+        ref={ref}
+      >
+        {teamData.map((member, idx) => (
+          <motion.div variants={polyVariant} key={idx} className="card">
+            <div className="card__name heading">
+              {member.name}
+              <span>{member.title}</span>
+            </div>
+            <div className="card__figure">figure</div>
+            <div className="card__quote">{member.quote}</div>
+            <div className="card__handle">{member.handle}</div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </S.Team>
+  )
+}
 
 export default Team
