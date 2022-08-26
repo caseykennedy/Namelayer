@@ -78,7 +78,7 @@ const polyVariant = {
   },
 }
 
-const svgVariant = {
+const staggerItems = {
   visible: {
     transition: { staggerChildren: 0.15, delayChildren: 0.25 },
   },
@@ -112,9 +112,10 @@ const Features = () => (
     </div>
     <motion.div
       className="feature-list"
-      variants={svgVariant}
+      variants={staggerItems}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.8, margin: '500px' }}
     >
       {featureData.map((feat, idx) => (
         <motion.div variants={polyVariant} className="feature" key={idx}>

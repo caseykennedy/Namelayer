@@ -67,9 +67,9 @@ const Footer = () => (
       </div>
     </div>
     <div className="legal">
-      <span>&copy;{currentYear}</span>
-      <span>Decentralize the web</span>
-      <span>All rights reserved</span>
+      <span>&copy;{currentYear} Namelayer</span>
+      <span>Decentralize Everything</span>
+      <span>All Rights Reserved</span>
     </div>
   </S.Footer>
 )

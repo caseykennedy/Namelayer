@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Roadmap = styled.div`
+export const Roadmap = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
   padding: var(--gutter);
@@ -51,7 +52,7 @@ export const Roadmap = styled.div`
       }
 
       &__quarter {
-        padding-right: var(--gutter);
+        padding-right: var(--gutter-sm);
       }
 
       &__title {

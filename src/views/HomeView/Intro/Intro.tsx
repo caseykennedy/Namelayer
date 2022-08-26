@@ -26,14 +26,19 @@ const polyVariant = {
   },
 }
 
-const svgVariant = {
+const staggerItems = {
   visible: {
     transition: { staggerChildren: 0.25, delayChildren: 0.5 },
   },
 }
 
 const Intro = () => (
-  <S.Intro variants={svgVariant} initial="hidden" animate="visible">
+  <S.Intro
+    variants={staggerItems}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.8, margin: '200px' }}
+  >
     <div className="row">
       <p>
         <strong>Intro</strong>
@@ -80,7 +85,8 @@ const Intro = () => (
           <a href="/" target="_blank" rel="noopener" className="link">
             @dwebfoundation
           </a>{' '}
-          and work hand-in-hand with them to build the best decentralized internet.
+          and work hand-in-hand with them to build the best decentralized
+          internet.
         </p>
       </motion.div>
     </div>

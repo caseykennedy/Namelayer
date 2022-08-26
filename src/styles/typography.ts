@@ -162,7 +162,8 @@ const Typography = css`
   body,
   html {
     ${fontSmooth}
-    
+    ${textCrop(1, 0.05, -0.05)}
+
     color: var(--color-text);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
@@ -174,7 +175,8 @@ const Typography = css`
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  .heading {
     ${textCrop(1, 0.05, -0.05)}
 
     font-family: var(--font-sans);

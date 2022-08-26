@@ -36,7 +36,6 @@ export const PrivateKeys = styled.div`
 
   .btn .icon svg {
     transform: rotate(-90deg);
-    width: 20px;
   }
 
   .box {

@@ -24,7 +24,7 @@ const Buttons = css`
     @media ${breakpoint.tablet} {
       --btn-height: 62px;
       --btn-font-size: var(--text-base-size);
-      --btn-padding-x: var(--space-xxl);
+      --btn-padding-x: var(--space-lg);
       --btn-padding-y: var(--space-md);
     }
   }
@@ -68,6 +68,8 @@ const Buttons = css`
     }
 
     svg {
+      width: 18px;
+
       path {
         fill: var(--color-secondary);
       }

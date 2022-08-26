@@ -12,9 +12,10 @@ export const Marquee = styled.div`
   background: var(--color-text);
   color: var(--color-bg);
 
-
   .marquee-container {
-    max-width: calc(100vw - calc(var(--header-width) + 16px));
+    @media ${breakpoint.tablet} {
+      max-width: calc(100vw - calc(var(--header-width) + 16px));
+    }
   }
 
   ul {
@@ -27,7 +28,11 @@ export const Marquee = styled.div`
 
     li {
       white-space: nowrap;
-      margin: 0 var(--space-xxxxl);
+      margin: 0 var(--space-xl);
+
+      @media ${breakpoint.tablet} {
+        margin: 0 var(--space-xxxxl);
+      }
     }
   }
 `

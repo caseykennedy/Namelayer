@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Features = styled.div`
+export const Features = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
   border-top: var(--border);

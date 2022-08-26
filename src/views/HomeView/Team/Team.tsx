@@ -13,21 +13,36 @@ import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
-const data = [
+const teamData = [
   {
     name: 'Taylor Martens',
+    quote: 'The domain space has been opened up for the users',
+    handle: '🥷/',
+    title: 'product',
   },
   {
     name: 'Chris Mena',
+    quote: 'The domain space has been opened up for the users',
+    handle: '🕉/',
+    title: 'creative',
   },
   {
     name: 'Casey Kennedy',
+    quote: 'The domain space has been opened up for the users',
+    handle: '🧀/',
+    title: 'dev',
   },
   {
     name: 'Jackie Chan',
+    quote: 'The domain space has been opened up for the users',
+    handle: '🐈‍⬛/',
+    title: 'advisor',
   },
   {
-    name: 'Chjango Unchained',
+    name: 'Chjango',
+    quote: 'The domain space has been opened up for the users',
+    handle: '👩‍🚀/',
+    title: 'advisor',
   },
 ]
 
@@ -36,7 +51,7 @@ const polyVariant = {
     opacity: 1,
     transition: {
       type: 'spring',
-      duration: 3,
+      duration: 2,
     },
   },
   hidden: {
@@ -44,7 +59,7 @@ const polyVariant = {
   },
 }
 
-const svgVariant = {
+const staggerItems = {
   visible: {
     transition: { staggerChildren: 0.15, delayChildren: 0.25 },
   },
@@ -62,13 +77,20 @@ const Team = () => (
     </div>
     <motion.div
       className="grid"
-      variants={svgVariant}
+      variants={staggerItems}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.8, margin: '100px' }}
     >
-      {data.map((pal, idx) => (
-        <motion.div variants={polyVariant} key={idx}>
-          <div>{pal.name}</div>
+      {teamData.map((member, idx) => (
+        <motion.div variants={polyVariant} key={idx} className="card">
+          <div className="card__name heading">
+            {member.name}
+            <span>{member.title}</span>
+          </div>
+          <div className="card__figure">figure</div>
+          <div className="card__quote">{member.quote}</div>
+          <div className="card__handle">{member.handle}</div>
         </motion.div>
       ))}
     </motion.div>

@@ -59,7 +59,7 @@ const polyVariant = {
   },
 }
 
-const svgVariant = {
+const staggerItems = {
   visible: {
     transition: { staggerChildren: 0.15, delayChildren: 0.25 },
   },
@@ -77,12 +77,17 @@ const Roadmap = () => (
     </div>
     <motion.div
       className="roadmap-list"
-      variants={svgVariant}
+      variants={staggerItems}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.8, margin: '200px' }}
     >
       {data.map((item, idx) => (
-        <motion.div variants={polyVariant} className="roadmap-list__item" key={idx}>
+        <motion.div
+          variants={polyVariant}
+          className="roadmap-list__item"
+          key={idx}
+        >
           <div className="roadmap-list__item__quarter">{item.quarter}</div>
           <div className="roadmap-list__item__title">{item.title}</div>
           {/* <div className="roadmap-list__item__desc">{item.desc}</div> */}

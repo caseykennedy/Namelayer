@@ -14,14 +14,15 @@ export const Team = styled.div`
   }
 
   .grid {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: var(--space-md);
 
     color: var(--color-secondary);
 
-    & > * {
-      flex: 1 1 300px;
+    .card {
+      flex: 1 1 240px;
       display: flex;
       flex-flow: column nowrap;
 
@@ -30,10 +31,40 @@ export const Team = styled.div`
       border: var(--border);
       border-radius: var(--radius);
 
-      /* &:not(:first-child) {
-      border-left: var(--border);
-      padding-left: var(--gutter);
-    } */
+      &__name {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: var(--text-md);
+        font-weight: 600;
+        margin-bottom: var(--space-md);
+
+        span {
+          font-size: var(--text-sm);
+          /* font-weight: 400; */
+          margin-left: auto;
+        }
+      }
+
+      &__quote {
+        margin-bottom: var(--space-md);
+      }
+
+      &__figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: var(--space-md);
+        height: 222px;
+
+        border: var(--border);
+        border-color: var(--color-text-muted);
+        border-radius: var(--radius);
+        color: var(--color-text-muted);
+      }
     }
   }
 `

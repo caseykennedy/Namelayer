@@ -2,6 +2,7 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
+import { motion } from 'framer-motion'
 
 // Styles
 import * as S from './styles.scss'
@@ -11,6 +12,25 @@ import Icon from '../../../components/Icons'
 import Section from '../../../components/Section'
 
 // ___________________________________________________________________
+
+const polyVariant = {
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+}
+
+const svgVariant = {
+  visible: {
+    transition: { staggerChildren: 0.25, delayChildren: 0.5 },
+  },
+}
 
 const PrivateKeys = () => (
   <S.PrivateKeys>
@@ -44,7 +64,15 @@ const PrivateKeys = () => (
       </div>
     </div>
     <div className="figure">
-      <div className="box">app mockup</div>
+      <motion.div
+        variants={polyVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.8, margin: '200px' }}
+        className="box"
+      >
+        app mockup
+      </motion.div>
     </div>
   </S.PrivateKeys>
 )
