@@ -15,20 +15,26 @@ import Section from '../../../components/Section'
 
 const polyVariant = {
   visible: {
+    y: 0,
     opacity: 1,
     transition: {
       type: 'spring',
-      duration: 3,
+      duration: 2,
+      y: { stiffness: 1000, velocity: -1000 },
     },
   },
   hidden: {
+    y: 25,
     opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
   },
 }
 
 const staggerItems = {
   visible: {
-    transition: { staggerChildren: 0.25, delayChildren: 0.5 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.25 },
   },
 }
 

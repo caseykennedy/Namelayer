@@ -13,9 +13,9 @@ export const Marquee = styled.div`
   background: var(--color-text);
   color: var(--color-bg);
 
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 999; */
 
   .marquee-container {
     @media ${breakpoint.tablet} {

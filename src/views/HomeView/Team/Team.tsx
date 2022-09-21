@@ -49,14 +49,20 @@ const teamData = [
 
 const polyVariant = {
   visible: {
+    y: 0,
     opacity: 1,
     transition: {
       type: 'spring',
       duration: 2,
+      y: { stiffness: 1000, velocity: -1000 },
     },
   },
   hidden: {
+    y: 25,
     opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
   },
 }
 
@@ -68,7 +74,9 @@ const staggerItems = {
 
 const Team = () => {
   const controls = useAnimation()
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView({
+    threshold: 0.25,
+  })
   useEffect(() => {
     const fetchData = async () => {
       if (inView) {
