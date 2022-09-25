@@ -4,19 +4,22 @@ import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Roadmap = styled(motion.div)`
+export const Features = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
-  padding: var(--gutter);
   border-top: var(--border);
+
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+  }
 
   & > * {
     flex: 1;
+    padding: var(--gutter);
   }
 
   .detail {
     position: relative;
-    margin-bottom: var(--space-xxxl);
   }
 
   .sticky {
@@ -28,47 +31,32 @@ export const Roadmap = styled(motion.div)`
     }
   }
 
-  .roadmap-list {
+  .feature-list {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     gap: var(--space-md);
 
-    &__item {
-      flex: 1;
+    .feature {
+      flex: 1 1 200px;
       display: flex;
       flex-flow: column nowrap;
-      align-items: center;
-      justify-content: space-between;
 
       background: var(--color-black);
       border: var(--border);
       border-radius: var(--radius);
-      color: var(--color-bg);
       font-size: var(--text-root-size);
-      padding: var(--space-xl);
-
-      @media ${breakpoint.tablet} {
-        flex-flow: row nowrap;
-      }
-
-      &__quarter {
-        padding-right: var(--gutter-sm);
-      }
+      padding: var(--gutter-sm);
 
       &__title {
-        flex: 1;
         font-size: var(--text-md);
         font-weight: 600;
+        margin-bottom: var(--space-md);
       }
 
       &__desc {
-      }
-
-      &__state {
-        padding-left: var(--gutter);
       }
     }
   }
 `
 
-export default Roadmap
+export default Features

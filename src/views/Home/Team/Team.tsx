@@ -16,32 +16,32 @@ import Section from '../../../components/Section'
 
 const teamData = [
   {
-    name: 'Taylor Martens',
+    name: 'Taylor',
     quote: 'The domain space has been opened up for the users',
     handle: '🥷/',
     title: 'product',
   },
   {
-    name: 'Chris Mena',
-    quote: 'The domain space has been opened up for the users',
+    name: 'Chris',
+    quote: 'Good design is tasty.',
     handle: '🕉/',
     title: 'creative',
   },
   {
-    name: 'Casey Kennedy',
-    quote: 'The domain space has been opened up for the users',
+    name: 'Case',
+    quote: 'A decentralized internet is key for digital sovereignty.',
     handle: '🧀/',
     title: 'dev',
   },
   {
-    name: 'Jackie Chan',
-    quote: 'The domain space has been opened up for the users',
+    name: 'Jacky',
+    quote: 'Open-source code guarantees collaborative iteration.',
     handle: '🐈‍⬛/',
     title: 'advisor',
   },
   {
     name: 'Chjango',
-    quote: 'The domain space has been opened up for the users',
+    quote: 'A free internet means prosperity for all.',
     handle: '👩‍🚀/',
     title: 'advisor',
   },

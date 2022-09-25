@@ -37,7 +37,7 @@ export const Team = styled.div`
       flex-flow: column nowrap;
 
       padding: var(--gutter-sm);
-      background: var(--color-black);
+      background: var(--color-bg-secondary);
       border: var(--border);
       border-radius: var(--radius);
 
@@ -71,7 +71,6 @@ export const Team = styled.div`
         height: 222px;
 
         border: var(--border);
-        border-color: var(--color-text-muted);
         border-radius: var(--radius);
         color: var(--color-text-muted);
       }

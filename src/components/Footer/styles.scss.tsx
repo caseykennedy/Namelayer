@@ -7,6 +7,7 @@ export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
   background: var(--color-black);
+  border-top: var(--border);
   color: var(--color-secondary);
 
   /* min-height: 64vh; */

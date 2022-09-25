@@ -15,7 +15,7 @@ import Section from '../../../components/Section'
 const MarqueeProps = {
   gradient: false,
   pauseOnHover: false,
-  speed: 55,
+  speed: 25,
 }
 
 const Marquee = () => (

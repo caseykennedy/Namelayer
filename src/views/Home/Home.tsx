@@ -1,15 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
-// HomeView:
-// ___________________________________________________________________
+// Home:
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-// Styles
 import * as S from './styles.scss'
 
-// Components
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
 import Rings from '../../components/SVG/Rings'
@@ -21,8 +17,6 @@ import PrivateKeys from './PrivateKeys'
 import Features from './Features'
 import Roadmap from './Roadmap'
 import Team from './Team'
-
-// ___________________________________________________________________
 
 const Hero = () => (
   <S.Hero>
@@ -49,7 +43,7 @@ const Hero = () => (
   </S.Hero>
 )
 
-const HomeView = () => (
+const Home = () => (
   <S.HomeView>
     <Hero />
     <Marquee />
@@ -61,4 +55,4 @@ const HomeView = () => (
   </S.HomeView>
 )
 
-export default HomeView
+export default Home

@@ -6,7 +6,7 @@ import breakpoint from '../../utils/breakpoint'
 // ___________________________________________________________________
 
 export const Header = styled.header`
-  background: var(--color-bg);
+  background: var(--color-bg-secondary);
   border-bottom: var(--border);
 
   display: flex;
