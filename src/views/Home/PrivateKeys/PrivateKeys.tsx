@@ -3,6 +3,7 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { StaticImage } from 'gatsby-plugin-image'
 
 // Styles
 import * as S from './styles.scss'
@@ -54,7 +55,12 @@ const PrivateKeys = () => (
         viewport={{ once: true, amount: 0.8, margin: '200px' }}
         className="box"
       >
-        app mockup
+        <StaticImage
+          src="../../../images/mockup.png"
+          alt="A dinosaur"
+          placeholder="blurred"
+          objectFit="contain"
+        />
       </motion.div>
     </div>
   </S.PrivateKeys>

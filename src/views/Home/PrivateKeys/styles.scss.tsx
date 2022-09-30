@@ -43,7 +43,7 @@ export const PrivateKeys = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    border: var(--border);
+    /* border: var(--border); */
     border-radius: var(--radius);
     height: 720px;
     width: 100%;
