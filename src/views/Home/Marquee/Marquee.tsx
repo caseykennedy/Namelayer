@@ -4,11 +4,7 @@
 import * as React from 'react'
 import FastMarquee from 'react-fast-marquee'
 
-// Styles
 import * as S from './styles.scss'
-
-// Components
-import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 

@@ -37,10 +37,10 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--secondary btn--outline btn--sm"
+              className="btn btn--secondary btn--sm"
             >
               Name Auctions
-              <Icon name="carat" color="var(--color-secondary)" />
+              <Icon name="carat" />
             </a>
           </div>
         </div>
@@ -57,10 +57,10 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--secondary btn--outline btn--sm"
+              className="btn btn--secondary btn--sm"
             >
               Handshake.org
-              <Icon name="carat" color="var(--color-secondary)" />
+              <Icon name="carat" />
             </a>
           </div>
         </div>

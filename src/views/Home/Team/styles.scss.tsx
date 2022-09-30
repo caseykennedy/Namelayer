@@ -19,8 +19,6 @@ export const Team = styled.div`
     /* grid-template-rows: repeat(3, 1fr); */
     gap: var(--space-md);
 
-    color: var(--color-secondary);
-
     @media ${breakpoint.tablet} {
       grid-template-columns: repeat(2, 1fr);
       /* grid-template-rows: repeat(2, 1fr); */

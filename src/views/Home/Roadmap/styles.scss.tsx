@@ -40,11 +40,11 @@ export const Roadmap = styled(motion.div)`
       align-items: center;
       justify-content: space-between;
 
-      background: var(--color-black);
+      background: var(--color-bg-secondary);
       border: var(--border);
       border-radius: var(--radius);
       font-size: var(--text-root-size);
-      padding: var(--space-xl);
+      padding: var(--gutter-sm);
 
       @media ${breakpoint.tablet} {
         flex-flow: row nowrap;

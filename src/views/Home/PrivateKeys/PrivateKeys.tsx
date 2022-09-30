@@ -7,30 +7,13 @@ import { motion } from 'framer-motion'
 // Styles
 import * as S from './styles.scss'
 
+// Utils
+import { polyVariant } from '../../../utils/variants'
+
 // Components
 import Icon from '../../../components/Icons'
-import Section from '../../../components/Section'
 
 // ___________________________________________________________________
-
-const polyVariant = {
-  visible: {
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      duration: 3,
-    },
-  },
-  hidden: {
-    opacity: 0,
-  },
-}
-
-const svgVariant = {
-  visible: {
-    transition: { staggerChildren: 0.25, delayChildren: 0.5 },
-  },
-}
 
 const PrivateKeys = () => (
   <S.PrivateKeys>
@@ -47,17 +30,17 @@ const PrivateKeys = () => (
           With Namelayer you hold your private keys.
         </h2>
         <p>
-          Handshake is an experimental peer-to-peer root naming system and
-          decentralized and certificate authority.
+          The naming layer is the root of your data. Own yours on the dWeb with
+          Namelayer/.
         </p>
         <div>
           <a
             href="https://handshake.org"
             target="__blank"
             rel="noreferrer"
-            className="btn btn--primary"
+            className="btn btn--secondary"
           >
-            Some action
+            Download
             <Icon name="carat" className="icon" />
           </a>
         </div>

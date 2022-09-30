@@ -18,7 +18,7 @@ const Spacing = css`
     --gutter-lg: var(--space-xl);
 
     @media ${breakpoint.tablet} {
-      --gutter-sm: var(--space-xl);
+      --gutter-sm: var(--space-lg);
       --gutter: var(--space-xxl);
       --gutter-lg: var(--space-xxxl);
     }

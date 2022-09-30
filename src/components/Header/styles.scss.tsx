@@ -6,17 +6,17 @@ import breakpoint from '../../utils/breakpoint'
 // ___________________________________________________________________
 
 export const Header = styled.header`
-  background: var(--color-bg-secondary);
+  background: var(--color-bg);
   border-bottom: var(--border);
 
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  
+
   position: sticky;
   top: 0;
-  
+
   padding: 0 var(--gutter);
   height: var(--header-width);
   width: 100%;
@@ -60,8 +60,19 @@ export const Header = styled.header`
 
   .twitter {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  .yinyang {
+    display: flex;
+    place-content: center;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
   }
 `
 

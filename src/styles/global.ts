@@ -38,7 +38,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  /* ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   ::-webkit-scrollbar-track {
@@ -48,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb:hover {
-  } */
+  }
 `
 
 export default GlobalStyles

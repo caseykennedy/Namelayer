@@ -1,4 +1,4 @@
-// Roadmap:
+// Browsers:
 // ___________________________________________________________________
 
 import * as React from 'react'
@@ -18,46 +18,54 @@ import Section from '../../../components/Section'
 
 const data = [
   {
-    quarter: 'Q1',
-    title: 'Non-custodial Wallet',
+    quarter: 'Extension',
+    title: 'Bob Extension',
     desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
-    quarter: 'Q1',
-    title: 'Domain Manager',
+    quarter: 'Extension',
+    title: 'Fingertip',
     desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
-    quarter: 'Q1',
-    title: 'TLD Marketplace',
+    quarter: 'Browser',
+    title: 'Beacon',
     desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
-    quarter: 'Q1',
-    title: 'SPV Light Client',
+    quarter: 'Browser',
+    title: 'Opera',
     desc: 'Manage your domains.',
     state: 'in progress',
   },
   {
-    quarter: 'Q1',
-    title: 'Fractals',
+    quarter: 'Browser',
+    title: 'Puma',
+    desc: 'Manage your domains.',
+    state: 'in progress',
+  },
+  {
+    quarter: 'Browser',
+    title: 'Aloha',
     desc: 'Manage your domains.',
     state: 'in progress',
   },
 ]
 
-const Roadmap = () => (
-  <S.Roadmap>
+const Browsers = () => (
+  <S.Browsers>
     <div className="detail">
       <p>
-        <strong>Roadmap</strong>
+        <strong>Use the browser you love</strong>
         <br />
-        <span>There&apos;s plenty in the pipeline.</span>
+        <span>
+          Handshake is a decentralized root zone that works† on any device
+          connected to the internet. The internet works as you know it!
+        </span>
       </p>
-      {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
     </div>
     <motion.div
       className="roadmap-list"
@@ -72,14 +80,13 @@ const Roadmap = () => (
           className="roadmap-list__item"
           key={idx}
         >
-          <div className="roadmap-list__item__quarter">{item.quarter}</div>
           <div className="roadmap-list__item__title">{item.title}</div>
           {/* <div className="roadmap-list__item__desc">{item.desc}</div> */}
-          <div className="roadmap-list__item__state">{item.state}</div>
+          <div className="roadmap-list__item__state">{item.quarter}</div>
         </motion.div>
       ))}
     </motion.div>
-  </S.Roadmap>
+  </S.Browsers>
 )
 
-export default Roadmap
+export default Browsers

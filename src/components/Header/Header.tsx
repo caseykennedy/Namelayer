@@ -22,13 +22,13 @@ const Header = () => {
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
   const toggleTheme = () => {
-    setTheme(theme === 'default' ? 'darkmode' : 'default')
+    setTheme(theme === 'default' ? 'darkMode' : 'default')
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }
 
   useEffect(() => {
-    const localTheme: string | null = localStorage.getItem('theme')
+    const localTheme = localStorage.getItem('theme')
     if (localTheme) {
       document.documentElement.setAttribute('data-theme', localTheme)
     }
@@ -47,6 +47,14 @@ const Header = () => {
 
         <div className="twitter">
           <Icon name="twitter" />
+          <button
+            type="button"
+            onClick={toggleTheme}
+            onKeyDown={toggleTheme}
+            className="yinyang"
+          >
+            ◒
+          </button>
         </div>
       </S.Header>
 

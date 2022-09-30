@@ -11,8 +11,6 @@ const Buttons = css`
   :root {
     --btn-primary-bg: var(--color-primary);
     --btn-primary-color: var(--color-secondary);
-    --btn-secondary-bg: var(--color-secondary);
-    --btn-secondary-color: var(--color-primary);
 
     --btn-height: 52px;
     --btn-padding-x: var(--space-xl);
@@ -29,6 +27,13 @@ const Buttons = css`
     }
   }
 
+  /* [data-theme='darkMode'] {
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-color: var(--color-secondary);
+    --btn-secondary-bg: var(--color-secondary);
+    --btn-secondary-color: var(--color-primary);
+  } */
+
   .btn {
     ${fontSmooth}
 
@@ -37,11 +42,11 @@ const Buttons = css`
     justify-content: center;
     gap: var(--space-lg);
 
-    background: var(--color-black);
+    background: var(--color-primary);
     border: 1px solid transparent;
     border-radius: var(--btn-radius);
 
-    color: var(--color-secondary);
+    color: var(--color-bg);
     font-size: var(--btn-font-size);
     font-weight: var(--btn-font-weight);
     white-space: nowrap;
@@ -52,50 +57,41 @@ const Buttons = css`
 
     cursor: pointer;
     transition: var(--transition-all);
-    will-change: transform;
 
     &:active,
     &:hover {
-      transform: translateY(1.5px);
-    }
-  }
-
-  .btn--primary {
-    background: var(--btn-primary-bg);
-    color: var(--btn-primary-color);
-
-    &:hover {
+      transform: translateX(2.5px);
     }
 
     svg {
       width: 18px;
 
       path {
-        fill: var(--color-secondary);
+        fill: var(--color-bg);
       }
     }
   }
 
+  .btn--primary {
+    background: var(--color-text);
+
+    &:hover {
+      background: var(--color-text-muted);
+    }
+  }
+
   .btn--secondary {
-    background: var(--btn-secondary-bg);
-    color: var(--btn-secondary-color);
+    background: var(--color-text-muted);
 
-    /* &:hover {
-      background: var(--color-accent-dark);
-      color: var(--color-white);
-    } */
-
-    /* svg {
-      path {
-        fill: var(--color-primary);
-      }
-    } */
+    &:hover {
+      background: var(--color-text);
+    }
   }
 
   .btn--outline {
     background: transparent;
-    border: 1px solid;
-    color: var(--color-secondary);
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
 
     /* &:hover,
     &:focus {

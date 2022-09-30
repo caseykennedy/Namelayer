@@ -6,9 +6,8 @@ import { breakpoint } from '../../styles/mixins'
 export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
-  background: var(--color-black);
+  background: var(--color-bg-secondary);
   border-top: var(--border);
-  color: var(--color-secondary);
 
   /* min-height: 64vh; */
 
@@ -19,7 +18,7 @@ export const Footer = styled.footer`
   .billboard {
     display: flex;
     flex-flow: column-reverse nowrap;
-    background: var(--color-black);
+    /* background: var(--color-bg-secondary); */
 
     /* min-height: 64vh; */
 
@@ -36,7 +35,6 @@ export const Footer = styled.footer`
       flex-flow: column nowrap;
       justify-content: space-between;
       padding: var(--gutter);
-      color: var(--color-secondary);
 
       &__message {
         font-size: var(--text-xxxl);
@@ -55,9 +53,11 @@ export const Footer = styled.footer`
         flex: 1;
         display: flex;
         flex-flow: column nowrap;
+        overflow: hidden;
         width: 100%;
 
         /* background: var(--color-bg); */
+        background: var(--color-bg);
         border: var(--border);
         border-color: var(--color-tertiary);
         border-radius: var(--radius);

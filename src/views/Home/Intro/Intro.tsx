@@ -7,36 +7,14 @@ import { motion } from 'framer-motion'
 // Styles
 import * as S from './styles.scss'
 
+// Utils
+import { polyVariant, staggerItems } from '../../../utils/variants'
+
 // Components
 import Icon from '../../../components/Icons'
 import Section from '../../../components/Section'
 
 // ___________________________________________________________________
-
-const polyVariant = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      duration: 2,
-      y: { stiffness: 1000, velocity: -1000 },
-    },
-  },
-  hidden: {
-    y: 25,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-}
-
-const staggerItems = {
-  visible: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.25 },
-  },
-}
 
 const Intro = () => (
   <S.Intro

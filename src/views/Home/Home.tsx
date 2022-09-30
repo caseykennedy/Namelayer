@@ -1,8 +1,6 @@
 // Home:
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 import * as S from './styles.scss'
 
@@ -17,6 +15,7 @@ import PrivateKeys from './PrivateKeys'
 import Features from './Features'
 import Roadmap from './Roadmap'
 import Team from './Team'
+import Browsers from './Browsers'
 
 const Hero = () => (
   <S.Hero>
@@ -52,6 +51,7 @@ const Home = () => (
     <Features />
     <Roadmap />
     <Team />
+    <Browsers />
   </S.HomeView>
 )
 
