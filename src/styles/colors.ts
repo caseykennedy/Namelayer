@@ -12,16 +12,16 @@ const Colors = css`
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
 
-    --color-primary: hsl(44, 2%, 61%);
-    --color-secondary: hsl(285, 10%, 8%);
+    --color-primary: hsl(43, 16%, 65%);
+    --color-secondary: hsl(43, 10%, 14%);
     --color-tertiary: hsl(285, 8%, 24%);
 
     // background
     --color-bg: var(--color-primary);
-    --color-bg-secondary: hsl(44, 2%, 65%);
+    --color-bg-secondary: hsl(43, 16%, 68%);
     // typography
     --color-text: var(--color-secondary);
-    --color-text-muted: hsl(252, 3%, 30%);
+    --color-text-muted: hsl(43, 12%, 28%);
     // border
     --color-border: var(--color-tertiary);
   }

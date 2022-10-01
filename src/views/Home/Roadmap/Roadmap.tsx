@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import * as S from './styles.scss'
 
 // Utils
-import { polyVariant, staggerItems } from '../../../utils/variants'
+import { polyVariant, staggerItems, viewport } from '../../../utils/variants'
 
 // Components
 import Icon from '../../../components/Icons'
@@ -64,7 +64,7 @@ const Roadmap = () => (
       variants={staggerItems}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.8, margin: '200px' }}
+      viewport={viewport}
     >
       {data.map((item, idx) => (
         <motion.div

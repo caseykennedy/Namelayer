@@ -3,9 +3,9 @@ export const polyVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
-      stiffness: 1000,
-      velocity: -1000,
+      duration: 0.5,
+      stiffness: 100,
+      velocity: -100,
     },
   },
   hidden: {
@@ -19,4 +19,9 @@ export const staggerItems = {
   visible: {
     transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
+}
+
+export const viewport = {
+  once: true,
+  amount: 0.1,
 }

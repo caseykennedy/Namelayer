@@ -9,7 +9,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import * as S from './styles.scss'
 
 // Utils
-import { polyVariant } from '../../../utils/variants'
+import { polyVariant, viewport } from '../../../utils/variants'
 
 // Components
 import Icon from '../../../components/Icons'
@@ -52,7 +52,7 @@ const PrivateKeys = () => (
         variants={polyVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.8, margin: '200px' }}
+        viewport={viewport}
         className="box"
       >
         <StaticImage
