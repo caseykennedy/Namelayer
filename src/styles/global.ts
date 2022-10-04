@@ -20,11 +20,6 @@ const GlobalStyles = createGlobalStyle`
   ${Typography}
   ${Theme}
 
-  html,
-  body {
-    background: var(--color-bg);
-  }
-
   body {
     overscroll-behavior-y: none;
   }

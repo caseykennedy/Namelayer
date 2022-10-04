@@ -10,14 +10,14 @@ import { breakpoint, fontSmooth } from './mixins'
 const Buttons = css`
   :root {
     --btn-primary-bg: var(--color-primary);
-    --btn-primary-color: var(--color-secondary);
+    --btn-primary-color: var(--color-bg);
 
     --btn-height: 52px;
     --btn-padding-x: var(--space-xl);
     --btn-padding-y: var(--space-md);
     --btn-font-size: var(--text-base-size);
     --btn-font-weight: 600;
-    --btn-radius: var(--radius);
+    --btn-radius: var(--radius-sm);
 
     @media ${breakpoint.tablet} {
       --btn-height: 62px;
@@ -42,7 +42,7 @@ const Buttons = css`
     justify-content: center;
     gap: var(--space-lg);
 
-    background: var(--color-primary);
+    background: var(--btn-primary-bg);
     border: 1px solid transparent;
     border-radius: var(--btn-radius);
 
@@ -73,10 +73,10 @@ const Buttons = css`
   }
 
   .btn--primary {
-    background: var(--color-text);
+    /* background: var(--color-text); */
 
     &:hover {
-      background: var(--color-text-muted);
+      /* background: var(--color-text-muted); */
     }
   }
 

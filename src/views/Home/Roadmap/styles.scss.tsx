@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { breakpoint } from '../../../styles/mixins'
+import { breakpoint, textCrop } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -28,43 +28,51 @@ export const Roadmap = styled(motion.div)`
     }
   }
 
-  .roadmap-list {
-    display: flex;
-    flex-flow: column wrap;
-    gap: var(--space-md);
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--gutter);
 
-    &__item {
+    @media ${breakpoint.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .milestone {
       flex: 1;
       display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
+      flex-flow: row nowrap;
+      align-items: flex-start;
       justify-content: space-between;
 
-      background: var(--color-bg-secondary);
-      border: var(--border);
-      border-radius: var(--radius);
-      font-size: var(--text-root-size);
-      padding: var(--gutter-sm);
-
-      @media ${breakpoint.tablet} {
-        flex-flow: row nowrap;
-      }
+      /* background: var(--color-bg-secondary); */
+      border-top: var(--border);
+      /* border-radius: var(--radius); */
+      padding: var(--space-md) 0 var(--gutter);
 
       &__quarter {
+        ${textCrop(1, 0, -0.05)}
+
+        font-size: var(--text-xxl);
+        font-weight: 600;
         padding-right: var(--gutter-sm);
       }
 
       &__title {
         flex: 1;
-        font-size: var(--text-md);
+        font-size: var(--text-base-size);
         font-weight: 600;
       }
 
-      &__desc {
-      }
+      &__progress {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
 
-      &__state {
-        padding-left: var(--gutter);
+        background: var(--color-success);
+        color: var(--color-white);
+        border-radius: var(--radius-lg);
+        font-size: var(--text-sm);
+        padding: var(--space-xxs) var(--space-sm);
       }
     }
   }

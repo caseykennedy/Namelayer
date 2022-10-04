@@ -7,6 +7,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Browsers = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
+  overflow: hidden;
   padding: var(--gutter);
   border-top: var(--border);
 
@@ -17,6 +18,8 @@ export const Browsers = styled(motion.div)`
   .detail {
     position: relative;
     margin-bottom: var(--space-xxxl);
+
+    max-width: 38ch;
   }
 
   .sticky {
@@ -28,44 +31,55 @@ export const Browsers = styled(motion.div)`
     }
   }
 
-  .roadmap-list {
+  .swiper {
+    overflow: visible;
+  }
+
+  .card {
     display: flex;
-    flex-flow: column wrap;
-    /* gap: var(--space-md); */
+    flex-flow: column nowrap;
 
-    &__item {
-      flex: 1;
+    padding: var(--space-md);
+    background: var(--color-bg-secondary);
+    border-top: var(--border);
+    /* border-radius: var(--radius); */
+
+    &__name {
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
       align-items: center;
-      justify-content: space-between;
+      /* justify-content: space-between; */
 
-      /* background: var(--color-bg-secondary); */
-      border-bottom: var(--border);
-      /* border-radius: var(--radius); */
-      font-size: var(--text-root-size);
-      padding: var(--gutter-sm);
+      font-size: var(--text-md);
+      font-weight: 600;
+      margin-top: var(--space-md);
 
-      @media ${breakpoint.tablet} {
-        flex-flow: row nowrap;
+      span {
+        font-size: var(--text-sm);
+        margin-left: auto;
       }
 
-      &__quarter {
-        padding-right: var(--gutter-sm);
-      }
+      svg {
+        width: 18px;
+        transform: rotate(-90deg);
 
-      &__title {
-        flex: 1;
-        font-size: var(--text-md);
-        font-weight: 600;
+        path {
+          fill: var(--color-text-muted);
+        }
       }
+    }
 
-      &__desc {
-      }
+    &__figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      &__state {
-        padding-left: var(--gutter);
-      }
+      height: 444px;
+
+      background: var(--color-bg-secondary);
+      /* border: var(--border); */
+      border-radius: var(--radius);
+      color: var(--color-text-muted);
     }
   }
 `

@@ -50,8 +50,8 @@ const Home = () => (
     <PrivateKeys />
     <Features />
     <Roadmap />
-    <Team />
     <Browsers />
+    <Team />
   </S.HomeView>
 )
 

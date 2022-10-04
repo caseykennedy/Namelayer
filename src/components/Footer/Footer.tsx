@@ -4,7 +4,7 @@
 import * as React from 'react'
 import * as S from './styles.scss'
 import Icon from '../Icons'
-import SubscribeForm from "../SubscribeForm"
+import SubscribeForm from '../SubscribeForm'
 
 // ___________________________________________________________________
 
@@ -37,7 +37,7 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--secondary btn--sm"
+              className="btn btn--primary"
             >
               Name Auctions
               <Icon name="carat" />
@@ -57,7 +57,7 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--secondary btn--sm"
+              className="btn btn--primary"
             >
               Handshake.org
               <Icon name="carat" />
@@ -69,7 +69,6 @@ const Footer = () => (
     <div className="legal">
       <span>&copy;{currentYear} Namelayer</span>
       <span>Decentralize Everything</span>
-      <span>All Rights Reserved</span>
     </div>
   </S.Footer>
 )

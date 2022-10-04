@@ -6,7 +6,7 @@ import { breakpoint } from '../../styles/mixins'
 export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
-  background: var(--color-bg-secondary);
+  background: var(--color-bg);
   border-top: var(--border);
 
   /* min-height: 64vh; */
@@ -37,7 +37,7 @@ export const Footer = styled.footer`
       padding: var(--gutter);
 
       &__message {
-        font-size: var(--text-xxxl);
+        font-size: var(--text-xxl);
         margin-bottom: var(--space-xxxl);
       }
     }
@@ -56,8 +56,7 @@ export const Footer = styled.footer`
         overflow: hidden;
         width: 100%;
 
-        /* background: var(--color-bg); */
-        background: var(--color-bg);
+        /* background: var(--color-bg-secondary); */
         border: var(--border);
         border-color: var(--color-tertiary);
         border-radius: var(--radius);
@@ -69,15 +68,21 @@ export const Footer = styled.footer`
 
       &__call {
         flex: 1;
-        border-right: var(--border);
+        border-bottom: var(--border);
         border-color: var(--color-tertiary);
         padding: var(--gutter-sm);
         font-size: var(--text-md);
+
+        @media ${breakpoint.tablet} {
+          border-bottom: 0;
+          border-right: var(--border);
+        }
       }
 
       &__action {
         flex: 2;
         padding: var(--gutter-sm);
+        font-size: var(--text-root-size);
 
         /* span {
           margin-top: var(--gutter);
@@ -85,7 +90,7 @@ export const Footer = styled.footer`
         } */
 
         .btn {
-          margin-top: var(--gutter);
+          margin-top: var(--space-xxl);
 
           svg {
             transform: rotate(-90deg);

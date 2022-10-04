@@ -39,7 +39,7 @@ const PrivateKeys = () => (
             href="https://handshake.org"
             target="__blank"
             rel="noreferrer"
-            className="btn btn--secondary"
+            className="btn btn--primary"
           >
             Download
             <Icon name="carat" className="icon" />

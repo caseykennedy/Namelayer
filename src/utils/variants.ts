@@ -23,5 +23,5 @@ export const staggerItems = {
 
 export const viewport = {
   once: true,
-  amount: 0.1,
+  amount: 0.25,
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint } from '../../../styles/mixins'
+import { breakpoint, textCrop } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -13,64 +13,50 @@ export const Team = styled.div`
     margin-bottom: var(--space-xxxl);
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
-    gap: var(--space-md);
+  .team-list {
+    display: flex;
+    flex-flow: column wrap;
 
-    @media ${breakpoint.tablet} {
-      grid-template-columns: repeat(2, 1fr);
-      /* grid-template-rows: repeat(2, 1fr); */
-    }
-
-    @media ${breakpoint.desktop} {
-      grid-template-columns: repeat(3, 1fr);
-      /* grid-template-rows: repeat(2, 1fr); */
-    }
-
-    .card {
-      flex: 1 1 240px;
+    .mate {
+      flex: 1;
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
 
-      padding: var(--gutter-sm);
-      background: var(--color-bg-secondary);
-      border: var(--border);
-      border-radius: var(--radius);
+      border-top: var(--border);
+      font-size: var(--text-root-size);
+      padding: var(--gutter-sm) 0;
+
+      &__quarter {
+        padding-right: var(--gutter-sm);
+      }
 
       &__name {
+        ${textCrop(1, 0, -0.05)}
+
+        flex: 1;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-between;
 
         font-size: var(--text-md);
         font-weight: 600;
-        margin-bottom: var(--space-md);
 
-        span {
-          font-size: var(--text-sm);
-          /* font-weight: 400; */
-          margin-left: auto;
+        .emoji {
+          background: var(--color-text);
+          border: var(--border);
+          border-radius: var(--radius-lg);
+          margin-right: var(--gutter-sm);
+          padding: var(--space-md);
         }
       }
 
-      &__quote {
-        margin-bottom: var(--space-md);
+      &__desc {
       }
 
-      &__figure {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-bottom: var(--space-md);
-        height: 222px;
-
-        border: var(--border);
-        border-radius: var(--radius);
-        color: var(--color-text-muted);
+      &__position {
+        padding-left: var(--gutter);
       }
     }
   }

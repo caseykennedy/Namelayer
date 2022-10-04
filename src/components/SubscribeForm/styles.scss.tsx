@@ -10,7 +10,7 @@ export const SubscribeForm = styled.form`
 
   input[type='email'] {
     flex: 1;
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     border: var(--border);
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
@@ -29,11 +29,11 @@ export const SubscribeForm = styled.form`
     justify-content: space-between;
     padding: var(--space-md);
 
-    color: var(--color-bg);
+    color: var(--btn-primary-color);
     font-size: var(--text-base-size);
     font-weight: 600;
 
-    background: var(--color-text-muted);
+    background: var(--color-text);
     border: none;
     border-bottom-right-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
@@ -51,7 +51,7 @@ export const SubscribeForm = styled.form`
     }
 
     &:hover {
-      background: var(--color-text);
+      background: var(--color-text-muted);
     }
   }
 `

@@ -3,55 +3,52 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import SwiperCore, { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Styles
 import * as S from './styles.scss'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 // Utils
 import { polyVariant, staggerItems, viewport } from '../../../utils/variants'
 
 // Components
 import Icon from '../../../components/Icons'
-import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
-const data = [
+const browserList = [
   {
-    quarter: 'Extension',
-    title: 'Bob Extension',
+    type: 'Extension',
+    name: 'Bob Extension',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
   {
-    quarter: 'Extension',
-    title: 'Fingertip',
+    type: 'Extension',
+    name: 'Fingertip',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
   {
-    quarter: 'Browser',
-    title: 'Beacon',
+    type: 'Browser',
+    name: 'Beacon',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
   {
-    quarter: 'Browser',
-    title: 'Opera',
+    type: 'Browser',
+    name: 'Opera',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
   {
-    quarter: 'Browser',
-    title: 'Puma',
+    type: 'Browser',
+    name: 'Puma',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
   {
-    quarter: 'Browser',
-    title: 'Aloha',
+    type: 'Browser',
+    name: 'Aloha',
     desc: 'Manage your domains.',
-    state: 'in progress',
   },
 ]
 
@@ -63,28 +60,52 @@ const Browsers = () => (
         <br />
         <span>
           Handshake is a decentralized root zone that works† on any device
-          connected to the internet. The internet works as you know it!
+          connected to the internet.
         </span>
       </p>
     </div>
     <motion.div
-      className="roadmap-list"
+      className="grid"
       variants={staggerItems}
       initial="hidden"
       whileInView="visible"
       viewport={viewport}
     >
-      {data.map((item, idx) => (
-        <motion.div
-          variants={polyVariant}
-          className="roadmap-list__item"
-          key={idx}
-        >
-          <div className="roadmap-list__item__title">{item.title}</div>
-          {/* <div className="roadmap-list__item__desc">{item.desc}</div> */}
-          <div className="roadmap-list__item__state">{item.quarter}</div>
-        </motion.div>
-      ))}
+      <Swiper
+        spaceBetween={8}
+        grabCursor={true}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          '640': {
+            spaceBetween: 16,
+            slidesPerView: 1,
+          },
+          '768': {
+            spaceBetween: 16,
+            slidesPerView: 2,
+          },
+          '1024': {
+            spaceBetween: 16,
+            slidesPerView: 3,
+          },
+        }}
+      >
+        {browserList.map((browser, idx) => (
+          <SwiperSlide key={idx}>
+            <motion.div variants={polyVariant} key={idx} className="card">
+              <div className="card__figure" />
+              <div className="card__name">
+                {browser.name}
+                <Icon name="arrow" />
+              </div>
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </motion.div>
   </S.Browsers>
 )

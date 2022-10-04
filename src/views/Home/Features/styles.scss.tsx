@@ -37,23 +37,25 @@ export const Features = styled(motion.div)`
     gap: var(--space-md);
 
     .feature {
-      flex: 1 1 200px;
+      flex: 1 1 250px;
       display: flex;
       flex-flow: column nowrap;
 
-      background: var(--color-bg-secondary);
-      border: var(--border);
-      border-radius: var(--radius);
+      /* background: var(--color-bg-secondary); */
+      border-top: var(--border);
+      /* border-radius: var(--radius); */
       font-size: var(--text-root-size);
-      padding: var(--gutter-sm);
+      padding: var(--space-sm) 0 var(--gutter);
 
       &__title {
         font-size: var(--text-md);
         font-weight: 600;
         margin-bottom: var(--space-md);
+        max-width: 10ch;
       }
 
       &__desc {
+        color: var(--color-text-muted);
       }
     }
   }

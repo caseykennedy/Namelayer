@@ -60,7 +60,8 @@
     "react-intersection-observer": "^9.3.5",
     "react-responsive-modal": "^6.0.1",
     "resize-observer-polyfill": "^1.5.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.4.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.29",

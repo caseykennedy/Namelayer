@@ -22,11 +22,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   flex: 1;
   display: flex;
-
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: var(--gutter);
-  gap: var(--gutter); */
-
   width: 100%;
+
+  @media ${breakpoint.tablet} {
+    max-width: calc(100vw - var(--header-width));
+  }
 `

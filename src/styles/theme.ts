@@ -18,7 +18,7 @@ const Theme = css`
     --icon-size: 1.75rem;
 
     // radius
-    --radius: 1rem; // border radius base size
+    --radius: 0.5rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
@@ -40,6 +40,11 @@ const Theme = css`
       }
     }
   } */
+
+  html,
+  body {
+    background: var(--color-bg);
+  }
 
   .icon {
     display: flex;
