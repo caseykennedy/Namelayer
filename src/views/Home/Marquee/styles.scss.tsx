@@ -13,7 +13,7 @@ export const Marquee = styled.div`
   /* background: var(--color-bg-secondary); */
   border-top: var(--border);
   border-bottom: var(--border);
-  color: var(--color-text);
+  color: var(--color-text-muted);
   font-weight: 600;
 
   /* position: sticky;

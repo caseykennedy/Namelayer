@@ -26,6 +26,7 @@ const Footer = () => (
       <div className="explore">
         <div>
           <div className="explore__call">
+            <span>😎</span>
             <strong>Namelayer Auctions</strong>
           </div>
           <div className="explore__action">
@@ -37,7 +38,7 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--primary"
+              className="btn btn--outline btn--full-width"
             >
               Name Auctions
               <Icon name="carat" />
@@ -46,6 +47,7 @@ const Footer = () => (
         </div>
         <div>
           <div className="explore__call">
+            <span>😎</span>
             <strong>Dive into Handshake</strong>
           </div>
           <div className="explore__action">
@@ -57,7 +59,7 @@ const Footer = () => (
               href="/"
               target="_blank"
               rel="noopener"
-              className="btn btn--primary"
+              className="btn btn--outline btn--full-width"
             >
               Handshake.org
               <Icon name="carat" />

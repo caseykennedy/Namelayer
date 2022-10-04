@@ -68,12 +68,17 @@ export const Footer = styled.footer`
 
       &__call {
         flex: 1;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+
         border-bottom: var(--border);
         border-color: var(--color-tertiary);
         padding: var(--gutter-sm);
         font-size: var(--text-md);
 
         @media ${breakpoint.tablet} {
+          flex-flow: column nowrap;
           border-bottom: 0;
           border-right: var(--border);
         }
@@ -82,6 +87,7 @@ export const Footer = styled.footer`
       &__action {
         flex: 2;
         padding: var(--gutter-sm);
+        color: var(--color-text-muted);
         font-size: var(--text-root-size);
 
         /* span {

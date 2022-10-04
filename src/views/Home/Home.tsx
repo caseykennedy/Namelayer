@@ -7,6 +7,7 @@ import * as S from './styles.scss'
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
 import Rings from '../../components/SVG/Rings'
+import Torus from '../../components/SVG/Torus'
 import Wordmark from '../../components/SVG/Wordmark'
 
 import Marquee from './Marquee'
@@ -33,11 +34,14 @@ const Hero = () => (
     </div>
     <div className="figure">
       <div className="rings">
-        <Rings />
+        <Torus />
       </div>
       <div className="handshake">
         <Icon name="handshake" color="var(--color-text)" />
       </div>
+      {/* <div className="rings">
+        <Rings />
+      </div> */}
     </div>
   </S.Hero>
 )

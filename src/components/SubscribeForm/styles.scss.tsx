@@ -10,7 +10,7 @@ export const SubscribeForm = styled.form`
 
   input[type='email'] {
     flex: 1;
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     border: var(--border);
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
@@ -19,7 +19,7 @@ export const SubscribeForm = styled.form`
     line-height: normal;
 
     &::placeholder {
-      color: var(--color-text);
+      color: var(--color-text-muted);
     }
   }
 
@@ -29,12 +29,13 @@ export const SubscribeForm = styled.form`
     justify-content: space-between;
     padding: var(--space-md);
 
-    color: var(--btn-primary-color);
+    color: var(--color-text);
     font-size: var(--text-base-size);
     font-weight: 600;
 
-    background: var(--color-text);
-    border: none;
+    background: var(--color-bg-secondary);
+    border: var(--border);
+    border-top: none;
     border-bottom-right-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
     cursor: pointer;
@@ -46,12 +47,17 @@ export const SubscribeForm = styled.form`
       transform: rotate(-90deg);
 
       path {
-        fill: var(--color-bg);
+        fill: var(--color-text);
       }
     }
 
     &:hover {
       background: var(--color-text-muted);
+      color: var(--color-bg);
+
+      svg path {
+        fill: var(--color-bg);
+      }
     }
   }
 `

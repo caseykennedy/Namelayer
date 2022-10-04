@@ -12,19 +12,12 @@ const Buttons = css`
     --btn-primary-bg: var(--color-primary);
     --btn-primary-color: var(--color-bg);
 
-    --btn-height: 52px;
-    --btn-padding-x: var(--space-xl);
-    --btn-padding-y: var(--space-md);
-    --btn-font-size: var(--text-base-size);
+    --btn-height: 58px;
+    --btn-padding-x: var(--space-md);
+    --btn-padding-y: var(--space-sm);
+    --btn-font-size: var(--text-root-size);
     --btn-font-weight: 600;
     --btn-radius: var(--radius-sm);
-
-    @media ${breakpoint.tablet} {
-      --btn-height: 62px;
-      --btn-font-size: var(--text-base-size);
-      --btn-padding-x: var(--space-lg);
-      --btn-padding-y: var(--space-md);
-    }
   }
 
   /* [data-theme='darkMode'] {
@@ -39,7 +32,7 @@ const Buttons = css`
 
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--space-lg);
 
     background: var(--btn-primary-bg);
@@ -52,7 +45,7 @@ const Buttons = css`
     white-space: nowrap;
     text-decoration: none;
 
-    height: 62px;
+    height: var(--btn-height);
     padding: var(--btn-padding-y) var(--btn-padding-x);
 
     cursor: pointer;
@@ -89,9 +82,13 @@ const Buttons = css`
   }
 
   .btn--outline {
-    background: transparent;
-    border: 1px solid var(--color-text);
+    background: var(--color-bg-secondary);
+    border: var(--border);
     color: var(--color-text);
+
+    svg path {
+      fill: var(--color-text);
+    }
 
     /* &:hover,
     &:focus {
@@ -119,6 +116,10 @@ const Buttons = css`
     padding-right: calc(var(--btn-padding-x) * 1.25);
     padding-bottom: calc(var(--btn-padding-y) * 1.25);
     padding-left: calc(var(--btn-padding-x) * 1.25);
+  }
+
+  .btn--full-width {
+    width: 100%;
   }
 `
 

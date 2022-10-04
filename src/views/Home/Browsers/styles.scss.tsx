@@ -41,8 +41,8 @@ export const Browsers = styled(motion.div)`
 
     padding: var(--space-md);
     background: var(--color-bg-secondary);
-    border-top: var(--border);
-    /* border-radius: var(--radius); */
+    border: var(--border);
+    border-radius: var(--radius);
 
     &__name {
       display: flex;
@@ -74,7 +74,7 @@ export const Browsers = styled(motion.div)`
       align-items: center;
       justify-content: center;
 
-      height: 444px;
+      height: 375px;
 
       background: var(--color-bg-secondary);
       /* border: var(--border); */

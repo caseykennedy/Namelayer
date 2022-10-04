@@ -39,10 +39,10 @@ const PrivateKeys = () => (
             href="https://handshake.org"
             target="__blank"
             rel="noreferrer"
-            className="btn btn--primary"
+            className="btn btn--outline"
           >
-            Download
-            <Icon name="carat" className="icon" />
+            Coming Soon
+            {/* <Icon name="carat" className="icon" /> */}
           </a>
         </div>
       </div>
@@ -56,7 +56,7 @@ const PrivateKeys = () => (
         className="box"
       >
         <StaticImage
-          src="../../../images/mockup.png"
+          src="../../../images/mockup-2.png"
           alt="A dinosaur"
           placeholder="blurred"
           objectFit="contain"
