@@ -21,18 +21,14 @@ const PrivateKeys = () => (
     <div className="message">
       <div className="sticky">
         <p>
-          <strong>Decentralized</strong>
-          <br />
-          <span>secondary title</span>
+          <strong>Decentralized ownership</strong>
         </p>
-        <h2>
-          Not your 🔑’s not your 🧀.
-          <br />
-          With Namelayer you hold your private keys.
-        </h2>
+        <h2>Not your 🔑🗝 not your 🧀</h2>
         <p>
-          The naming layer is the root of your data. Own yours on the dWeb with
-          Namelayer/.
+          <strong>With Namelayer you hold your private keys.</strong>
+          <br />
+          The only way to own your assets is to hold your private keys. Do so
+          with ease using Namelayer/.
         </p>
         <div>
           <a

@@ -10,7 +10,7 @@ export const Marquee = styled.div`
   overflow: hidden;
   padding: var(--space-xl) 0;
 
-  /* background: var(--color-bg-secondary); */
+  background: var(--color-bg-secondary);
   border-top: var(--border);
   border-bottom: var(--border);
   color: var(--color-text-muted);

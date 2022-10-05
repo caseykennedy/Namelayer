@@ -37,21 +37,21 @@ const Header = () => {
   return (
     <>
       <S.Header>
-        <div className="logo">
-          <div className="symbol">
-            <Symbol />
-          </div>
+        <div className="symbol">
+          <Symbol />
         </div>
 
-        <div className="marquee">Namelayer</div>
+        <div className="wordmark">Namelayer</div>
 
-        <div className="twitter">
-          <Icon name="twitter" />
+        <div className="utilities">
+          {/* <div className="twitter">
+            <Icon name="twitter" />
+          </div> */}
           <button
             type="button"
             onClick={toggleTheme}
             onKeyDown={toggleTheme}
-            className="yinyang"
+            className="theme-toggle"
           >
             ◒
           </button>

@@ -49,7 +49,12 @@ export const Hero = styled.div`
 
     .intro {
       h1 {
+        font-size: var(--text-md);
         margin-bottom: 0;
+
+        @media ${breakpoint.tablet} {
+          font-size: var(--text-lg);
+        }
       }
 
       p {
@@ -66,6 +71,7 @@ export const Hero = styled.div`
     justify-content: center;
 
     padding: var(--gutter);
+    min-height: 375px;
     width: 100%;
 
     border-top: var(--border);
@@ -76,7 +82,7 @@ export const Hero = styled.div`
       border-left: var(--border);
     }
 
-    .rings {
+    .torus {
       display: flex;
       align-items: center;
       justify-content: center;

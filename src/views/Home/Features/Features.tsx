@@ -19,10 +19,10 @@ import Section from '../../../components/Section'
 const idealPersonas = [
   'namers',
   'cypherpunks',
-  'robots',
+  'developers',
   'domainers',
-  'users',
-  'programs',
+  'holders',
+  'resellers',
 ]
 
 const featureData = [
@@ -74,10 +74,8 @@ const Features = () => (
       <div className="sticky">
         <p>
           <strong>Features</strong>
-          <br />
-          <span>secondary title</span>
         </p>
-        <h2>It&apos;s not just a wallet.</h2>
+        <h2>It&apos;s not just a wallet</h2>
         <p>
           With Namelayer you can manage your domains, send and receive HNS, and
           participate in domain auctions from your native device.
@@ -99,7 +97,7 @@ const Features = () => (
       variants={staggerItems}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       {featureData.map((feat, idx) => (
         <motion.div variants={polyVariant} className="feature" key={idx}>

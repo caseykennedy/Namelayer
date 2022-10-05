@@ -25,9 +25,7 @@ const Intro = () => (
   >
     <div className="row">
       <p>
-        <strong>Intro</strong>
-        <br />
-        <span>We are your frens.</span>
+        <strong>We are your frens</strong>
       </p>
     </div>
 

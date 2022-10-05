@@ -41,7 +41,7 @@ export const Features = styled(motion.div)`
       display: flex;
       flex-flow: column nowrap;
 
-      background: var(--color-bg-secondary);
+      /* background: var(--color-bg-secondary); */
       border: var(--border);
       border-radius: var(--radius);
       font-size: var(--text-root-size);

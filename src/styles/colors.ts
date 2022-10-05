@@ -17,8 +17,8 @@ const Colors = css`
     --color-tertiary: hsl(285, 10%, 20%);
 
     // background
-    --color-bg: hsl(43, 16%, 65%);
-    --color-bg-secondary: hsl(43, 16%, 68%);
+    --color-bg: hsl(43, 12%, 65%);
+    --color-bg-secondary: hsl(43, 12%, 70%);
     // typography
     --color-text: var(--color-secondary);
     --color-text-muted: hsl(285, 10%, 20%);
@@ -28,11 +28,11 @@ const Colors = css`
     --color-success: hsl(174, 47%, 16%);
     --color-info: hsl(257, 31%, 17%);
     --color-warning: hsl(43, 33%, 28%);
-    --color-error: hsl(43, 16%, 68%);
+    --color-error: hsl(43, 12%, 70%);
   }
 
   [data-theme='darkMode'] {
-    --color-primary: hsl(43, 16%, 65%);
+    --color-primary: hsl(43, 12%, 75%);
     --color-secondary: hsl(285, 10%, 8%);
     --color-tertiary: hsl(285, 8%, 24%);
 
@@ -41,7 +41,7 @@ const Colors = css`
     --color-bg-secondary: hsl(285, 10%, 8%);
     // typography
     --color-text: var(--color-primary);
-    --color-text-muted: hsl(43, 7%, 52%);
+    --color-text-muted: hsl(43, 4%, 50%);
     // border
     --color-border: var(--color-tertiary);
   }

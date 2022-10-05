@@ -21,10 +21,6 @@ export const PrivateKeys = styled.div`
     position: relative;
 
     p {
-      margin-bottom: var(--space-xl);
-    }
-
-    p {
       margin-bottom: var(--space-xxxl);
     }
 

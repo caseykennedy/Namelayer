@@ -72,6 +72,7 @@ export const Footer = styled.footer`
         flex-flow: row-reverse nowrap;
         justify-content: space-between;
 
+        /* background: var(--color-bg-secondary); */
         border-bottom: var(--border);
         border-color: var(--color-tertiary);
         padding: var(--gutter-sm);
@@ -112,7 +113,7 @@ export const Footer = styled.footer`
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: var(--gutter-sm) var(--gutter);
+    padding: var(--gutter-sm) var(--gutter) var(--space-xxl);
 
     border-top: var(--border);
     border-color: var(--color-tertiary);

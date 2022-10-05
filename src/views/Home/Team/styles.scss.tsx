@@ -28,6 +28,10 @@ export const Team = styled.div`
       font-size: var(--text-root-size);
       padding: var(--gutter-sm) 0;
 
+      &:last-child {
+        padding-bottom: 0;
+      }
+
       &__quarter {
         padding-right: var(--gutter-sm);
       }
@@ -44,7 +48,7 @@ export const Team = styled.div`
         font-weight: 600;
 
         .emoji {
-          background: var(--color-text);
+          background: var(--color-bg-secondary);
           border: var(--border);
           border-radius: var(--radius-lg);
           margin-right: var(--gutter-sm);
@@ -52,10 +56,18 @@ export const Team = styled.div`
         }
       }
 
-      &__desc {
+      &__quote {
+        display: none;
+
+        @media ${breakpoint.tablet} {
+          display: initial;
+        }
       }
 
       &__position {
+        color: var(--color-text-muted);
+        text-align: right;
+        width: 150px;
         padding-left: var(--gutter);
       }
     }

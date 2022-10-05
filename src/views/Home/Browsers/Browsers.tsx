@@ -100,7 +100,7 @@ const Browsers = () => (
               <div className="card__figure" />
               <div className="card__name">
                 {browser.name}
-                <Icon name="arrow" />
+                <Icon name="external-link" />
               </div>
             </motion.div>
           </SwiperSlide>

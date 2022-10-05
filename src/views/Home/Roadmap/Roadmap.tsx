@@ -53,8 +53,6 @@ const Roadmap = () => (
     <div className="detail">
       <p>
         <strong>Roadmap</strong>
-        <br />
-        <span>There&apos;s plenty in the pipeline.</span>
       </p>
       {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
     </div>

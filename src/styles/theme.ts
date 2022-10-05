@@ -29,7 +29,12 @@ const Theme = css`
     --transition: 0.175s ease;
     --transition-all: all var(--transition);
 
+    // Display
+    --display-hide-mobile: none;
+
     @media ${breakpoint.tablet} {
+      // Display
+      --display-hide-mobile: initial;
     }
   }
 

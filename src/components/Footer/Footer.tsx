@@ -18,7 +18,7 @@ const Footer = () => (
   <S.Footer>
     <div className="billboard">
       <div className="capture">
-        <div className="capture__message">Slide into our DMs.</div>
+        <div className="capture__message">Slide into our DMs</div>
         <SubscribeForm />
         {/* <p>More info, features and news on the way.</p> */}
         {/* <p>auctions, twitter, handshake.org, newsletter</p> */}
@@ -26,13 +26,15 @@ const Footer = () => (
       <div className="explore">
         <div>
           <div className="explore__call">
-            <span>😎</span>
+            <span>
+              <Icon name="carat" color="var(--color-success)" />
+            </span>
             <strong>Namelayer Auctions</strong>
           </div>
           <div className="explore__action">
             <div>
-              Handshake is an experimental peer-to-peer root naming system and
-              decentralized and certificate authority.
+              Quarterly auctions showcasing exclusive 1/1 Emojis, Glyphs,
+              Symbols and other unique TLDs on Handshake.
             </div>
             <a
               href="/"
@@ -40,20 +42,22 @@ const Footer = () => (
               rel="noopener"
               className="btn btn--outline btn--full-width"
             >
-              Name Auctions
+              Premium Auctions
               <Icon name="carat" />
             </a>
           </div>
         </div>
         <div>
           <div className="explore__call">
-            <span>😎</span>
+            <span>
+              <Icon name="handshake" color="var(--color-warning)" />
+            </span>
             <strong>Dive into Handshake</strong>
           </div>
           <div className="explore__action">
             <div>
               Handshake is an experimental peer-to-peer root naming system and
-              decentralized and certificate authority.
+              decentralized certificate authority.
             </div>
             <a
               href="/"

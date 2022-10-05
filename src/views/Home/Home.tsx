@@ -33,7 +33,7 @@ const Hero = () => (
       </div>
     </div>
     <div className="figure">
-      <div className="rings">
+      <div className="torus">
         <Torus />
       </div>
       <div className="handshake">

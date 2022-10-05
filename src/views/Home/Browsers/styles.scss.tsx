@@ -38,11 +38,10 @@ export const Browsers = styled(motion.div)`
   .card {
     display: flex;
     flex-flow: column nowrap;
-
-    padding: var(--space-md);
     background: var(--color-bg-secondary);
     border: var(--border);
     border-radius: var(--radius);
+    padding: var(--space-md);
 
     &__name {
       display: flex;
@@ -61,7 +60,6 @@ export const Browsers = styled(motion.div)`
 
       svg {
         width: 18px;
-        transform: rotate(-90deg);
 
         path {
           fill: var(--color-text-muted);

@@ -31,25 +31,15 @@ export const Header = styled.header`
     width: var(--header-width);
   }
 
-  .logo {
+  .symbol {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media ${breakpoint.tablet} {
-      flex-flow: column nowrap;
-    }
-
-    .symbol {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    place-content: center;
   }
 
-  .marquee {
+  .wordmark {
     font-family: var(--font-sans);
     font-weight: 600;
+    display: var(--display-hide-mobile);
     position: relative;
 
     @media ${breakpoint.tablet} {
@@ -58,21 +48,30 @@ export const Header = styled.header`
     }
   }
 
-  .twitter {
+  .utilities {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
     gap: var(--space-sm);
-  }
 
-  .yinyang {
-    display: flex;
-    place-content: center;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-    color: var(--color-text);
+    @media ${breakpoint.tablet} {
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+
+    .twitter {
+      display: flex;
+      place-content: center;
+    }
+
+    .theme-toggle {
+      display: flex;
+      place-content: center;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--color-text);
+    }
   }
 `
 

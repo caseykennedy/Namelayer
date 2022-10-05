@@ -52,9 +52,13 @@ export const Roadmap = styled(motion.div)`
       &__quarter {
         ${textCrop(1, 0, -0.05)}
 
-        font-size: var(--text-xxl);
+        font-size: var(--text-xl);
         font-weight: 600;
         padding-right: var(--gutter-sm);
+
+        @media ${breakpoint.tablet} {
+          font-size: var(--text-xxl);
+        }
       }
 
       &__title {

@@ -20,7 +20,7 @@ import Section from '../../../components/Section'
 const teamData = [
   {
     name: 'Taylor',
-    quote: 'The domain space has been opened up for the users',
+    quote: 'The domain space has been opened up for the users.',
     handle: '🥷',
     title: 'product',
   },
@@ -69,7 +69,7 @@ const Team = () => {
         <p>
           <strong>Team</strong>
           <br />
-          <span>Dedicated to decentralization.</span>
+          <span>Dedicated to decentralization</span>
         </p>
         {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
       </div>
@@ -105,7 +105,7 @@ const Team = () => {
               <div className="emoji">{item.handle}</div>
               {item.name}
             </div>
-            {/* <div className="mate__state">{item.quote}</div> */}
+            <div className="mate__quote">&quot;{item.quote}&quot;</div>
             <div className="mate__position">{item.title}</div>
           </motion.div>
         ))}
