@@ -49,7 +49,7 @@ export const Hero = styled.div`
 
     .intro {
       h1 {
-        font-size: var(--text-md);
+        font-size: var(--text-base-size);
         margin-bottom: 0;
 
         @media ${breakpoint.tablet} {

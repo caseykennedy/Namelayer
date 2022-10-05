@@ -67,6 +67,7 @@ export const Header = styled.header`
     .theme-toggle {
       display: flex;
       place-content: center;
+      padding: 0;
       font-size: 1.5rem;
       background-color: transparent;
       border: none;

@@ -44,9 +44,9 @@ const Header = () => {
         <div className="wordmark">Namelayer</div>
 
         <div className="utilities">
-          {/* <div className="twitter">
+          <div className="twitter">
             <Icon name="twitter" />
-          </div> */}
+          </div>
           <button
             type="button"
             onClick={toggleTheme}

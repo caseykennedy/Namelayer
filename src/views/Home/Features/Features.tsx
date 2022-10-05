@@ -59,10 +59,6 @@ const featureData = [
     desc: 'Decentralized link-trees and domain parking.',
   },
   {
-    title: 'Hardware Support',
-    desc: 'Ledger integration for hardware wallet support.',
-  },
-  {
     title: 'Atomic Swaps',
     desc: 'In-app Bitcoin atomic swaps.',
   },

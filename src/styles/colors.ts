@@ -34,14 +34,14 @@ const Colors = css`
   [data-theme='darkMode'] {
     --color-primary: hsl(43, 12%, 75%);
     --color-secondary: hsl(285, 10%, 8%);
-    --color-tertiary: hsl(285, 8%, 24%);
+    --color-tertiary: hsl(285, 10%, 16%);
 
     // background
     --color-bg: hsl(285, 9%, 2%);
-    --color-bg-secondary: hsl(285, 10%, 8%);
+    --color-bg-secondary: hsl(285, 10%, 10%);
     // typography
     --color-text: var(--color-primary);
-    --color-text-muted: hsl(43, 4%, 50%);
+    --color-text-muted: hsl(285, 2%, 60%);
     // border
     --color-border: var(--color-tertiary);
   }

@@ -32,10 +32,6 @@ export const Team = styled.div`
         padding-bottom: 0;
       }
 
-      &__quarter {
-        padding-right: var(--gutter-sm);
-      }
-
       &__name {
         ${textCrop(1, 0, -0.05)}
 
@@ -47,12 +43,21 @@ export const Team = styled.div`
         font-size: var(--text-md);
         font-weight: 600;
 
+        @media ${breakpoint.tablet} {
+          font-size: var(--text-md);
+        }
+
         .emoji {
           background: var(--color-bg-secondary);
           border: var(--border);
           border-radius: var(--radius-lg);
+          font-size: var(--text-base-size);
           margin-right: var(--gutter-sm);
-          padding: var(--space-md);
+          padding: var(--space-sm);
+
+          @media ${breakpoint.tablet} {
+            font-size: var(--text-md);
+          }
         }
       }
 
@@ -67,7 +72,7 @@ export const Team = styled.div`
       &__position {
         color: var(--color-text-muted);
         text-align: right;
-        width: 150px;
+        width: 100px;
         padding-left: var(--gutter);
       }
     }
