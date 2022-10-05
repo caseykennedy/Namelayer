@@ -41,11 +41,11 @@ export const Features = styled(motion.div)`
       display: flex;
       flex-flow: column nowrap;
 
-      /* background: var(--color-bg-secondary); */
-      border-top: var(--border);
-      /* border-radius: var(--radius); */
+      background: var(--color-bg-secondary);
+      border: var(--border);
+      border-radius: var(--radius);
       font-size: var(--text-root-size);
-      padding: var(--space-sm) 0 var(--gutter);
+      padding: var(--gutter-sm);
 
       &__title {
         font-size: var(--text-md);

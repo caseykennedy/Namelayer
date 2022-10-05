@@ -40,8 +40,8 @@ const Intro = () => (
           <strong>Built by namers</strong>
           <br />
           <span>
-            Namelayer is built by namers, for namers. Designed to be your one
-            stop shop for decentralized domain management.
+            Namelayer is built by namers, for namers. Designed to be your
+            gateway into the decentralized web.
           </span>
         </p>
       </motion.div>
@@ -65,12 +65,10 @@ const Intro = () => (
         <p>
           <strong>Supported by the dWeb</strong>
           <br />
-          We are supported by the{' '}
+          We are supports of and supported by{' '}
           <a href="/" target="_blank" rel="noopener" className="link">
             @dwebfoundation
-          </a>{' '}
-          and work hand-in-hand with them to build the best decentralized
-          internet.
+          </a>
         </p>
       </motion.div>
     </div>

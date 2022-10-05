@@ -25,9 +25,9 @@ const Colors = css`
     // border
     --color-border: var(--color-text);
 
-    --color-success: hsl(175, 47%, 32%);
-    --color-info: hsl(257, 31%, 27%);
-    --color-warning: hsl(43, 57%, 37%);
+    --color-success: hsl(174, 47%, 16%);
+    --color-info: hsl(257, 31%, 17%);
+    --color-warning: hsl(43, 33%, 28%);
     --color-error: hsl(43, 16%, 68%);
   }
 
@@ -37,8 +37,8 @@ const Colors = css`
     --color-tertiary: hsl(285, 8%, 24%);
 
     // background
-    --color-bg: var(--color-secondary);
-    --color-bg-secondary: hsl(285, 10%, 10%);
+    --color-bg: hsl(285, 9%, 2%);
+    --color-bg-secondary: hsl(285, 10%, 8%);
     // typography
     --color-text: var(--color-primary);
     --color-text-muted: hsl(43, 7%, 52%);
