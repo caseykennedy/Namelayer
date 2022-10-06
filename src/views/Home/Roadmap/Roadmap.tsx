@@ -69,7 +69,11 @@ const Roadmap = () => (
           <div className="milestone__title">{item.title}</div>
           <div
             className="milestone__progress"
-            style={{ background: `var(--color-${item.progressColor})` }}
+            style={{
+              background: `var(--color-${item.progressColor}-darker)`,
+              borderColor: `var(--color-${item.progressColor}-dark)`,
+              color: `var(--color-${item.progressColor})`,
+            }}
           >
             {item.progress}
           </div>

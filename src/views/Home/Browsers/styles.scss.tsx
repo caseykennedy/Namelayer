@@ -33,6 +33,26 @@ export const Browsers = styled(motion.div)`
 
   .swiper {
     overflow: visible;
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      text-align: right;
+      top: calc(var(--space-xl) * -1);
+      bottom: initial;
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--color-tertiary);
+      opacity: 1;
+      height: 12px;
+      width: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--color-primary);
+    }
   }
 
   .card {

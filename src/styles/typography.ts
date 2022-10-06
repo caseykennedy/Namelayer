@@ -155,8 +155,8 @@ const Typography = css`
   }
 
   ::selection {
-    color: var(--color-white);
-    background-color: var(--color-black);
+    color: var(--color-bg);
+    background-color: var(--color-text);
   }
 
   body,

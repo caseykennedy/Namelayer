@@ -82,7 +82,7 @@ const Buttons = css`
   }
 
   .btn--outline {
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     border: var(--border);
     color: var(--color-text);
 

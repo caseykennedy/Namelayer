@@ -73,6 +73,7 @@ export const Roadmap = styled(motion.div)`
         align-items: center;
 
         background: var(--color-success);
+        border: var(--border);
         color: var(--color-white);
         border-radius: var(--radius-lg);
         font-size: var(--text-sm);

@@ -1,7 +1,7 @@
 // Browsers:
 // ___________________________________________________________________
 
-import * as React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import SwiperCore, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'

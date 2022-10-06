@@ -25,10 +25,28 @@ const Colors = css`
     // border
     --color-border: var(--color-text);
 
-    --color-success: hsl(174, 47%, 16%);
-    --color-info: hsl(257, 31%, 17%);
-    --color-warning: hsl(43, 33%, 28%);
-    --color-error: hsl(43, 12%, 70%);
+    // success
+    --color-success-darker: hsl(175, 47%, 16%);
+    --color-success-dark: hsl(175, 47%, 36%);
+    --color-success: hsl(175, 47%, 62%);
+    --color-success-light: hsl(175, 47%, 82%);
+    --color-success-lighter: hsl(175, 47%, 92%);
+
+    // info
+    --color-info-darker: hsl(257, 31%, 17%);
+    --color-info-dark: hsl(257, 31%, 44%);
+    --color-info: hsl(257, 31%, 77%);
+    --color-info-light: hsl(257, 31%, 84%);
+    --color-info-lighter: hsl(257, 31%, 94%);
+
+    // warning
+    --color-warning-darker: hsl(43, 33%, 32%);
+    --color-warning-dark: hsl(43, 33%, 41%);
+    --color-warning: hsl(43, 20%, 75%);
+    --color-warning-light: hsl(43, 33%, 84%);
+    --color-warning-lighter: hsl(43, 33%, 92%);
+
+    /* --color-error: hsl(43, 12%, 70%); */
   }
 
   [data-theme='darkMode'] {
