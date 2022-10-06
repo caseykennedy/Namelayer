@@ -11,6 +11,11 @@ export const Marquee = styled.div`
   padding: var(--space-xl) 0;
 
   background: var(--color-bg-secondary);
+  background: linear-gradient(
+    0deg,
+    var(--color-bg-secondary) 0%,
+    rgba(0, 0, 0, 0) 33%
+  );
   border-top: var(--border);
   border-bottom: var(--border);
   color: var(--color-text-muted);

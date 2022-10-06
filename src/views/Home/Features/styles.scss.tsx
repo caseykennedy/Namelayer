@@ -23,11 +23,17 @@ export const Features = styled(motion.div)`
   }
 
   .sticky {
-    position: sticky;
-    top: var(--gutter);
+    @media ${breakpoint.tablet} {
+      position: sticky;
+      top: var(--gutter);
+    }
 
     p {
       margin-bottom: var(--space-xxxl);
+    }
+
+    ul {
+      margin-bottom: var(--space-xxl);
     }
   }
 
@@ -41,7 +47,13 @@ export const Features = styled(motion.div)`
       display: flex;
       flex-flow: column nowrap;
 
-      /* background: var(--color-bg-secondary); */
+      background: var(--color-bg-secondary);
+      background: linear-gradient(
+        0deg,
+        var(--color-bg-secondary) 0%,
+        rgba(0, 0, 0, 0) 33%
+      );
+
       border: var(--border);
       border-radius: var(--radius);
       font-size: var(--text-root-size);

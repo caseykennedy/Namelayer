@@ -10,7 +10,7 @@ export const SubscribeForm = styled.form`
 
   input[type='email'] {
     flex: 1;
-    background: var(--color-bg);
+    background: transparent;
     border: var(--border);
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
@@ -52,11 +52,8 @@ export const SubscribeForm = styled.form`
     }
 
     &:hover {
-      background: var(--color-text-muted);
-      color: var(--color-bg);
-
-      svg path {
-        fill: var(--color-bg);
+      svg {
+        transform: rotate(-90deg);
       }
     }
   }

@@ -76,7 +76,7 @@ const Features = () => (
           With Namelayer you can manage your domains, send and receive HNS, and
           participate in domain auctions from your native device.
         </p>
-        <div className="list-title">
+        <div>
           <strong>Namelayer is great for:</strong>
         </div>
         <ul>

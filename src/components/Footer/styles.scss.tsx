@@ -37,7 +37,7 @@ export const Footer = styled.footer`
       padding: var(--gutter);
 
       &__message {
-        font-size: var(--text-xxl);
+        font-size: var(--text-xl);
         margin-bottom: var(--space-xxxl);
       }
     }
@@ -56,7 +56,12 @@ export const Footer = styled.footer`
         overflow: hidden;
         width: 100%;
 
-        /* background: var(--color-bg-secondary); */
+        background: var(--color-bg-secondary);
+      background: linear-gradient(
+        0deg,
+        var(--color-bg-secondary) 0%,
+        rgba(0, 0, 0, 0) 33%
+      );
         border: var(--border);
         border-color: var(--color-tertiary);
         border-radius: var(--radius);

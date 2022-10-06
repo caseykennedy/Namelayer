@@ -39,6 +39,11 @@ export const Browsers = styled(motion.div)`
     display: flex;
     flex-flow: column nowrap;
     background: var(--color-bg-secondary);
+    background: linear-gradient(
+      0deg,
+      var(--color-bg-secondary) 0%,
+      rgba(0, 0, 0, 0) 33%
+    );
     border: var(--border);
     border-radius: var(--radius);
     padding: var(--space-md);
@@ -74,7 +79,7 @@ export const Browsers = styled(motion.div)`
 
       height: 375px;
 
-      background: var(--color-bg-secondary);
+      /* background: var(--color-bg-secondary); */
       /* border: var(--border); */
       border-radius: var(--radius);
       color: var(--color-text-muted);

@@ -44,11 +44,12 @@ export const Hero = styled.div`
     }
 
     .wordmark {
-      padding-top: var(--space-xxxxl);
+      padding-top: calc(var(--space-xxxxl) * 2.75);
     }
 
     .intro {
       h1 {
+        color: var(--color-text-muted);
         font-size: var(--text-base-size);
         margin-bottom: 0;
 

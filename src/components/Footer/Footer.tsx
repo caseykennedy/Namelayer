@@ -27,7 +27,7 @@ const Footer = () => (
         <div>
           <div className="explore__call">
             <span>
-              <Icon name="carat" color="var(--color-success)" />
+              <Icon name="carat" />
             </span>
             <strong>Namelayer Auctions</strong>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => (
         <div>
           <div className="explore__call">
             <span>
-              <Icon name="handshake" color="var(--color-warning)" />
+              <Icon name="handshake" />
             </span>
             <strong>Dive into Handshake</strong>
           </div>

@@ -49,6 +49,11 @@ export const Team = styled.div`
 
         .emoji {
           background: var(--color-bg-secondary);
+          background: linear-gradient(
+            0deg,
+            var(--color-bg-secondary) 0%,
+            rgba(0, 0, 0, 0) 75%
+          );
           border: var(--border);
           border-radius: var(--radius-lg);
           font-size: var(--text-base-size);
