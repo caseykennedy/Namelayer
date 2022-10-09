@@ -38,7 +38,6 @@ export const Roadmap = styled(motion.div)`
     }
 
     .milestone {
-      flex: 1;
       display: flex;
       flex-flow: row nowrap;
       align-items: flex-start;

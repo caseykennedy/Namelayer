@@ -12,15 +12,15 @@ const Colors = css`
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
 
-    --color-primary: hsl(285, 10%, 10%);
-    --color-secondary: hsl(285, 10%, 10%);
+    --color-primary: hsl(185, 70%, 70%);
+    --color-secondary: hsl(45, 70%, 70%);
     --color-tertiary: hsl(285, 10%, 20%);
 
     // background
     --color-bg: hsl(43, 12%, 65%);
     --color-bg-secondary: hsl(43, 12%, 70%);
     // typography
-    --color-text: var(--color-secondary);
+    --color-text: hsl(285, 10%, 10%);
     --color-text-muted: hsl(285, 10%, 20%);
     // border
     --color-border: var(--color-text);
@@ -50,18 +50,18 @@ const Colors = css`
   }
 
   [data-theme='darkMode'] {
-    --color-primary: hsl(257, 5%, 91%);
-    --color-secondary: hsl(285, 10%, 8%);
-    --color-tertiary: hsl(285, 10%, 16%);
+    /* --color-primary: hsl(257, 5%, 91%); */
+    /* --color-secondary: hsl(285, 10%, 8%); */
+    --color-tertiary: hsl(257, 31%, 44%);
 
     // background
     --color-bg: hsl(285, 9%, 2%);
     --color-bg-secondary: hsl(285, 10%, 10%);
     // typography
-    --color-text: var(--color-primary);
+    --color-text: hsl(257, 5%, 91%);
     --color-text-muted: hsl(259, 7%, 60%);
     // border
-    --color-border: var(--color-tertiary);
+    --color-border: hsl(285, 10%, 16%);
   }
 `
 

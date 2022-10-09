@@ -17,8 +17,12 @@ export const PrivateKeys = styled.div`
     padding: var(--gutter);
   }
 
-  .message {
+  .detail {
     position: relative;
+
+    @media ${breakpoint.desktop} {
+      flex: 0.5;
+    }
 
     p {
       margin-bottom: var(--space-xxxl);

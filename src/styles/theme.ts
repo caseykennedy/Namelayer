@@ -59,6 +59,15 @@ const Theme = css`
     height: var(--icon-xs);
     width: var(--icon-xs);
   }
+
+  .bg-gradient {
+    background: var(--color-bg-secondary);
+    background: linear-gradient(
+      0deg,
+      var(--color-bg-secondary) 0%,
+      rgba(0, 0, 0, 0) 33%
+    );
+  }
 `
 
 export default Theme

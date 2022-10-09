@@ -63,7 +63,6 @@ export const Footer = styled.footer`
         rgba(0, 0, 0, 0) 33%
       );
         border: var(--border);
-        border-color: var(--color-tertiary);
         border-radius: var(--radius);
 
         @media ${breakpoint.tablet} {
@@ -79,7 +78,6 @@ export const Footer = styled.footer`
 
         /* background: var(--color-bg-secondary); */
         border-bottom: var(--border);
-        border-color: var(--color-tertiary);
         padding: var(--gutter-sm);
         font-size: var(--text-md);
 
@@ -121,7 +119,6 @@ export const Footer = styled.footer`
     padding: var(--gutter-sm) var(--gutter) var(--space-xxl);
 
     border-top: var(--border);
-    border-color: var(--color-tertiary);
     font-size: var(--text-sm);
   }
 `

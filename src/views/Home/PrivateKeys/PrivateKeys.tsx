@@ -18,12 +18,12 @@ import Icon from '../../../components/Icons'
 
 const PrivateKeys = () => (
   <S.PrivateKeys>
-    <div className="message">
+    <div className="detail">
       <div className="sticky">
         <p>
           <strong>Decentralized ownership</strong>
         </p>
-        <h2>Not your 🔑🗝 not your 🧀</h2>
+        <h2>Not your 🔑&apos;s not your 🧀</h2>
         <p>
           <strong>With Namelayer you hold your private keys.</strong>
           <br />
@@ -51,12 +51,13 @@ const PrivateKeys = () => (
         viewport={viewport}
         className="box"
       >
-        <StaticImage
+        figure
+        {/* <StaticImage
           src="../../../images/mockup-2.png"
           alt="A dinosaur"
           placeholder="blurred"
           objectFit="contain"
-        />
+        /> */}
       </motion.div>
     </div>
   </S.PrivateKeys>

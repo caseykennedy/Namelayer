@@ -64,6 +64,23 @@ const featureData = [
   },
 ]
 
+const FeatureGrid = () => (
+  <motion.div
+    className="feature-list"
+    variants={staggerItems}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.25 }}
+  >
+    {featureData.map((feat, idx) => (
+      <motion.div variants={polyVariant} className="feature" key={idx}>
+        <div className="feature__title">{feat.title}</div>
+        <div className="feature__desc">{feat.desc}</div>
+      </motion.div>
+    ))}
+  </motion.div>
+)
+
 const Features = () => (
   <S.Features>
     <div className="detail">
@@ -87,21 +104,9 @@ const Features = () => (
           ))}
         </ul>
       </div>
+      <div className="figure">figure</div>
     </div>
-    <motion.div
-      className="feature-list"
-      variants={staggerItems}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.25 }}
-    >
-      {featureData.map((feat, idx) => (
-        <motion.div variants={polyVariant} className="feature" key={idx}>
-          <div className="feature__title">{feat.title}</div>
-          <div className="feature__desc">{feat.desc}</div>
-        </motion.div>
-      ))}
-    </motion.div>
+    <FeatureGrid />
   </S.Features>
 )
 

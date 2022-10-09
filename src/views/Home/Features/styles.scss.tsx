@@ -9,17 +9,26 @@ export const Features = styled(motion.div)`
   flex-flow: column nowrap;
   border-top: var(--border);
 
-  @media ${breakpoint.tablet} {
-    flex-flow: row nowrap;
-  }
-
   & > * {
     flex: 1;
     padding: var(--gutter);
   }
 
   .detail {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: var(--gutter);
     position: relative;
+
+    @media ${breakpoint.desktop} {
+      flex: 0.5;
+      flex-flow: row nowrap;
+    }
+
+    & > * {
+      flex: 1;
+    }
   }
 
   .sticky {
@@ -37,13 +46,21 @@ export const Features = styled(motion.div)`
     }
   }
 
+  .figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 600px;
+  }
+
   .feature-list {
     display: flex;
     flex-flow: row wrap;
     gap: var(--space-md);
 
     .feature {
-      flex: 1 1 250px;
+      flex: 1 1 333px;
       display: flex;
       flex-flow: column nowrap;
 
