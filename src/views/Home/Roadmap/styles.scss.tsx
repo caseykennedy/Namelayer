@@ -21,7 +21,7 @@ export const Roadmap = styled(motion.div)`
 
   .sticky {
     position: sticky;
-    top: var(--gutter);
+    top: calc(var(--gutter) + var(--header-width));
 
     p {
       margin-bottom: var(--space-xxxl);

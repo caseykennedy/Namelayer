@@ -22,27 +22,30 @@ export const Features = styled(motion.div)`
     position: relative;
 
     @media ${breakpoint.desktop} {
-      flex: 0.5;
       flex-flow: row nowrap;
     }
 
     & > * {
       flex: 1;
     }
-  }
 
-  .sticky {
-    @media ${breakpoint.tablet} {
-      position: sticky;
-      top: var(--gutter);
-    }
+    .sticky {
+      @media ${breakpoint.tablet} {
+        position: sticky;
+        top: calc(var(--gutter) + var(--header-width));
+      }
 
-    p {
-      margin-bottom: var(--space-xxxl);
-    }
+      @media ${breakpoint.desktop} {
+        flex: 0.5;
+      }
 
-    ul {
-      margin-bottom: var(--space-xxl);
+      p {
+        margin-bottom: var(--space-xxxl);
+      }
+
+      ul {
+        margin-bottom: var(--space-xxl);
+      }
     }
   }
 

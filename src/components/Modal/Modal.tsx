@@ -14,10 +14,10 @@ type ModalProps = {
 
 const modalStyles = {
   overlay: {
-    background: 'var(--color-white)',
+    background: 'var(--color-bg)',
   },
   modal: {
-    background: 'var(--color-white)',
+    background: 'var(--color-bg)',
     boxShadow: 'none',
     margin: '0',
     padding: `0`,

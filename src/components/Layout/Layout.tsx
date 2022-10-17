@@ -5,6 +5,7 @@ import React from 'react'
 
 // Components
 import Header from '../Header'
+import Navigation from '../Navigation'
 import Footer from '../Footer'
 import SmoothScroll from '../SmoothScroll'
 
@@ -31,6 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
       <S.Wrapper>
         <Header />
         <S.Content>
+          <Navigation />
           {/* <SmoothScroll>{children}</SmoothScroll> */}
           {children}
         </S.Content>

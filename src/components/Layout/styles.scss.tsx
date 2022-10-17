@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   flex: 1;
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
 
   @media ${breakpoint.tablet} {

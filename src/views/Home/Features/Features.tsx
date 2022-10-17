@@ -82,7 +82,7 @@ const FeatureGrid = () => (
 )
 
 const Features = () => (
-  <S.Features>
+  <S.Features id="features">
     <div className="detail">
       <div className="sticky">
         <p>

@@ -20,6 +20,10 @@ const GlobalStyles = createGlobalStyle`
   ${Typography}
   ${Theme}
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     overscroll-behavior-y: none;
   }

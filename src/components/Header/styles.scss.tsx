@@ -68,10 +68,13 @@ export const Header = styled.header`
       display: flex;
       place-content: center;
       padding: 0;
-      font-size: 1.5rem;
       background-color: transparent;
       border: none;
       color: var(--color-text);
+
+      @media ${breakpoint.tablet} {
+        display: none;
+      }
     }
   }
 `

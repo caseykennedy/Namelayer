@@ -49,7 +49,7 @@ const data = [
 ]
 
 const Roadmap = () => (
-  <S.Roadmap>
+  <S.Roadmap id="roadmap">
     <div className="detail">
       <p>
         <strong>Roadmap</strong>

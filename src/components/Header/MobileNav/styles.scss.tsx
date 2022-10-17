@@ -14,7 +14,9 @@ export const MobileNav = styled(motion.ul)`
   flex-direction: row;
   flex-wrap: wrap;
 
+  background: var(--color-bg);
   margin: 0;
+  margin-top: var(--header-width);
   height: 100%;
   width: 100%;
 `

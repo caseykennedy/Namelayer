@@ -22,6 +22,7 @@ const Intro = () => (
     initial="hidden"
     whileInView="visible"
     viewport={viewport}
+    id="intro"
   >
     <div className="row">
       <p>

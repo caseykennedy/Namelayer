@@ -1,8 +1,7 @@
 // MobileNav:
 // ___________________________________________________________________
 
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 // import theme from '../../../styles/theme'
@@ -12,24 +11,16 @@ import * as S from './styles.scss'
 
 const routes = [
   {
-    name: 'Pre-register',
-    link: '/search',
+    name: 'intro',
+    path: 'intro',
   },
   {
-    name: 'How it works',
-    link: '/how-it-works',
+    name: 'features',
+    path: 'features',
   },
   {
-    name: 'Why .nft?',
-    link: '/why-nft',
-  },
-  {
-    name: 'Policies',
-    link: '/policies',
-  },
-  {
-    name: 'FAQs',
-    link: '/faq',
+    name: 'roadmap',
+    path: 'roadmap',
   },
 ]
 
@@ -60,20 +51,20 @@ const listVariants = {
 }
 
 type LinkProps = {
-  item: {
-    link: string,
+  link: {
+    path: string
     name: string
   }
   handleExitOnClick: () => void
 }
 
-const NavLink = ({ item, handleExitOnClick }: LinkProps) => (
+const NavLink = ({ link, handleExitOnClick }: LinkProps) => (
   <S.NavLink
     variants={itemVariants}
     whileTap={{ scale: 0.98 }}
     onClick={handleExitOnClick}
   >
-    <Link to={item.link}>{item.name}</Link>
+    <a href={`/#${link.path}`}>{link.name}</a>
   </S.NavLink>
 )
 
@@ -82,14 +73,37 @@ type NavProps = {
   isOpen: boolean
 }
 
-const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => (
-  <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
-    <S.MobileNav variants={listVariants}>
-      {routes.map((item, idx) => (
-        <NavLink key={idx} handleExitOnClick={handleExitOnClick} item={item} />
-      ))}
-    </S.MobileNav>
-  </motion.div>
-)
+const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => {
+  const [theme, setTheme] = useState('default')
+  const [isNavOpen, setNavOpen] = useState(false)
+  const toggleMenu = () => setNavOpen(!isNavOpen)
+
+  const toggleTheme = () => {
+    setTheme(theme === 'default' ? 'darkMode' : 'default')
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme')
+    if (localTheme) {
+      document.documentElement.setAttribute('data-theme', localTheme)
+    }
+  }, [])
+
+  return (
+    <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
+      <S.MobileNav variants={listVariants}>
+        {routes.map((item, idx) => (
+          <NavLink
+            key={idx}
+            handleExitOnClick={handleExitOnClick}
+            link={item}
+          />
+        ))}
+      </S.MobileNav>
+    </motion.div>
+  )
+}
 
 export default MobileNav

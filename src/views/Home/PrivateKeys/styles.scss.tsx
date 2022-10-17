@@ -30,7 +30,7 @@ export const PrivateKeys = styled.div`
 
     .sticky {
       position: sticky;
-      top: var(--gutter);
+      top: calc(var(--gutter) + var(--header-width));
     }
   }
 
