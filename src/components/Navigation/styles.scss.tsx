@@ -70,7 +70,7 @@ export const Navigation = styled.div`
 
       background: var(--color-bg-secondary);
       border: var(--border);
-      border-radius: var(--btn-radius);
+      border-radius: var(--radius-lg);
 
       color: var(--color-text-muted);
       font-size: var(--text-sm);
@@ -78,9 +78,9 @@ export const Navigation = styled.div`
       white-space: nowrap;
       text-decoration: none;
 
-      height: calc(var(--btn-height) * 0.75);
-      padding-right: calc(var(--btn-padding-x) * 0.5);
-      padding-left: calc(var(--btn-padding-x) * 0.5);
+      /* height: calc(var(--btn-height) * 0.75); */
+      padding: calc(var(--btn-padding-y) * 0.75)
+        calc(var(--btn-padding-x) * 0.75);
 
       transition: var(--transition-all);
 

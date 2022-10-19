@@ -51,13 +51,12 @@ const PrivateKeys = () => (
         viewport={viewport}
         className="box"
       >
-        figure
-        {/* <StaticImage
-          src="../../../images/mockup-2.png"
+        <StaticImage
+          src="../../../images/mock-portfolio.png"
           alt="A dinosaur"
           placeholder="blurred"
           objectFit="contain"
-        /> */}
+        />
       </motion.div>
     </div>
   </S.PrivateKeys>

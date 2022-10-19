@@ -3,12 +3,13 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { StaticImage } from 'gatsby-plugin-image'
 
 // Styles
 import * as S from './styles.scss'
 
 // Utils
-import { polyVariant, staggerItems } from '../../../utils/variants'
+import { polyVariant, staggerItems, viewport } from '../../../utils/variants'
 
 // Components
 import Icon from '../../../components/Icons'
@@ -104,7 +105,22 @@ const Features = () => (
           ))}
         </ul>
       </div>
-      <div className="figure">figure</div>
+      <div className="figure">
+        <motion.div
+          variants={polyVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="box"
+        >
+          <StaticImage
+            src="../../../images/mock-dashboard.png"
+            alt="A dinosaur"
+            placeholder="blurred"
+            objectFit="contain"
+          />
+        </motion.div>
+      </div>
     </div>
     <FeatureGrid />
   </S.Features>

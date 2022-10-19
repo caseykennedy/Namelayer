@@ -13,7 +13,7 @@ const Colors = css`
     --color-white: hsl(0, 0%, 100%);
 
     --color-primary: hsl(185, 70%, 70%);
-    --color-secondary: hsl(45, 70%, 70%);
+    --color-secondary: hsl(257, 31%, 47%);
     --color-tertiary: hsl(285, 10%, 20%);
 
     // background

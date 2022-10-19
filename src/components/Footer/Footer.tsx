@@ -38,11 +38,11 @@ const Footer = () => (
             </div>
             <a
               href="/"
-              target="_blank"
-              rel="noopener"
+              // target="_blank"
+              // rel="noopener"
               className="btn btn--outline btn--full-width"
             >
-              Premium Auctions
+              Coming Soon
               <Icon name="carat" />
             </a>
           </div>

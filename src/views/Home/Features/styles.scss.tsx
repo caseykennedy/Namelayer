@@ -21,7 +21,7 @@ export const Features = styled(motion.div)`
     gap: var(--gutter);
     position: relative;
 
-    @media ${breakpoint.desktop} {
+    @media ${breakpoint.tablet} {
       flex-flow: row nowrap;
     }
 
@@ -31,12 +31,9 @@ export const Features = styled(motion.div)`
 
     .sticky {
       @media ${breakpoint.tablet} {
+        flex: 0.5;
         position: sticky;
         top: calc(var(--gutter) + var(--header-width));
-      }
-
-      @media ${breakpoint.desktop} {
-        flex: 0.5;
       }
 
       p {
@@ -54,7 +51,9 @@ export const Features = styled(motion.div)`
     align-items: center;
     justify-content: center;
 
-    height: 600px;
+    img {
+      max-height: 650px;
+    }
   }
 
   .feature-list {
