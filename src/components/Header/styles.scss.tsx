@@ -68,13 +68,14 @@ export const Header = styled.header`
       }
     }
 
-    .theme-toggle {
+    .menu-toggle {
       display: flex;
       place-content: center;
       padding: 0;
       background-color: transparent;
       border: none;
       color: var(--color-text);
+      cursor: pointer;
 
       @media ${breakpoint.tablet} {
         display: none;

@@ -1,12 +1,9 @@
 // MobileNav:
 // ___________________________________________________________________
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-
 import useTheme from '../../../hooks/useTheme'
-
-// import theme from '../../../styles/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -81,8 +78,6 @@ type NavProps = {
 
 const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => {
   const { toggleTheme, theme } = useTheme()
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => setNavOpen(!isNavOpen)
 
   return (
     <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>

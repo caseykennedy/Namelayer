@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import breakpoint from '../../../utils/breakpoint'
 
-// Begin Styles
 // ___________________________________________________________________
 
 export const MobileNav = styled(motion.ul)`
@@ -25,12 +24,19 @@ export const MobileNav = styled(motion.ul)`
     border-top: var(--border);
     display: flex;
     flex-flow: column nowrap;
-    padding-top: var(--space-xs);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-md);
     width: 100%;
 
     & > * {
       flex: 1;
       padding: var(--space-xs) 0;
+      cursor: pointer;
+
+      &:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
     }
   }
 `

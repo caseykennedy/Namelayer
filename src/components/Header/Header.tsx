@@ -31,8 +31,8 @@ const Header = () => {
           <div className="twitter">
             <Icon name="twitter" />
           </div>
-          <button type="button" onClick={toggleMenu} className="theme-toggle">
-            menu
+          <button type="button" onClick={toggleMenu} className="menu-toggle">
+            {isNavOpen ? "Exit" : "Menu"}
           </button>
         </div>
       </S.Header>
