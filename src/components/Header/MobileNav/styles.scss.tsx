@@ -17,13 +17,26 @@ export const MobileNav = styled(motion.ul)`
   background: var(--color-bg);
   margin: 0;
   margin-top: var(--header-width);
+  padding: var(--gutter);
   height: 100%;
   width: 100%;
+
+  .secondary {
+    border-top: var(--border);
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: var(--space-xs);
+    width: 100%;
+
+    & > * {
+      flex: 1;
+      padding: var(--space-xs) 0;
+    }
+  }
 `
 
 export const NavLink = styled(motion.li)`
   display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   width: 100%;

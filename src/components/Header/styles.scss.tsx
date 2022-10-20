@@ -60,8 +60,12 @@ export const Header = styled.header`
     }
 
     .twitter {
-      display: flex;
+      display: none;
       place-content: center;
+
+      @media ${breakpoint.tablet} {
+        display: flex;
+      }
     }
 
     .theme-toggle {

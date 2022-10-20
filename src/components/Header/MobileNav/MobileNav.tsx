@@ -4,6 +4,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+import useTheme from '../../../hooks/useTheme'
+
 // import theme from '../../../styles/theme'
 import * as S from './styles.scss'
 
@@ -29,21 +31,25 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -1000 },
+      duration: 0.5,
+      stiffness: 100,
+      velocity: -100,
     },
   },
   closed: {
     y: 25,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 },
+      duration: 0.5,
+      stiffness: 100,
+      velocity: -100,
     },
   },
 }
 
 const listVariants = {
   open: {
-    transition: { staggerChildren: 0.035, delayChildren: 0.03 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -74,22 +80,9 @@ type NavProps = {
 }
 
 const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => {
-  const [theme, setTheme] = useState('default')
+  const { toggleTheme, theme } = useTheme()
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => setNavOpen(!isNavOpen)
-
-  const toggleTheme = () => {
-    setTheme(theme === 'default' ? 'darkMode' : 'default')
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }
-
-  useEffect(() => {
-    const localTheme = localStorage.getItem('theme')
-    if (localTheme) {
-      document.documentElement.setAttribute('data-theme', localTheme)
-    }
-  }, [])
 
   return (
     <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
@@ -101,6 +94,17 @@ const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => {
             link={item}
           />
         ))}
+        <motion.div variants={itemVariants} className="secondary">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={toggleTheme}
+            onKeyDown={toggleTheme}
+          >
+            {theme === 'default' ? 'Light Mode' : 'Dark Mode'}
+          </div>
+          <div>Twitter</div>
+        </motion.div>
       </S.MobileNav>
     </motion.div>
   )

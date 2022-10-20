@@ -1,8 +1,7 @@
 // Header
 // ___________________________________________________________________
 
-import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react'
 
 // Styles
 import * as S from './styles.scss'
@@ -12,7 +11,6 @@ import Icon from '../Icons'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
 import Symbol from '../SVG/Symbol'
-import HandshakeLogo from '../SVG/Handshake'
 
 // ___________________________________________________________________
 
@@ -33,11 +31,7 @@ const Header = () => {
           <div className="twitter">
             <Icon name="twitter" />
           </div>
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className="theme-toggle"
-          >
+          <button type="button" onClick={toggleMenu} className="theme-toggle">
             menu
           </button>
         </div>
