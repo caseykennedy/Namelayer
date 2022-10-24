@@ -19,13 +19,9 @@ export const Roadmap = styled(motion.div)`
     margin-bottom: var(--space-xxxl);
   }
 
-  .sticky {
-    position: sticky;
-    top: calc(var(--gutter) + var(--header-width));
-
-    p {
-      margin-bottom: var(--space-xxxl);
-    }
+  .decorator {
+    margin-bottom: var(--space-xl);
+    padding-top: calc(var(--space-xxxxl) * 3);
   }
 
   .roadmap {

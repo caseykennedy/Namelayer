@@ -7,6 +7,8 @@ import { motion } from 'framer-motion'
 import * as S from './styles.scss'
 import { polyVariant, staggerItems, viewport } from '../../../utils/variants'
 
+import Grid from '../../../components/SVG/Grid'
+
 // ___________________________________________________________________
 
 const data = [
@@ -55,6 +57,9 @@ const Roadmap = () => (
         <strong>Roadmap</strong>
       </p>
       {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
+    </div>
+    <div className="decorator">
+      <Grid />
     </div>
     <motion.div
       className="roadmap"
