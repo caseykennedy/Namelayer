@@ -102,7 +102,8 @@ export const Browsers = styled(motion.div)`
       color: var(--color-text-muted);
 
       svg {
-        width: 24px;
+        max-height: 24px;
+        width: 20px;
 
         path {
         }

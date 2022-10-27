@@ -20,6 +20,10 @@ import Icon from '../../../components/Icons'
 // SVG
 import BobIcon from '../../../../static/svg/bob.svg'
 import OperaIcon from '../../../../static/svg/opera.svg'
+import FingertipIcon from '../../../../static/svg/fingertip.svg'
+import PumaIcon from '../../../../static/svg/puma.svg'
+import AlohaIcon from '../../../../static/svg/aloha.svg'
+import BeaconIcon from '../../../../static/svg/beacon.svg'
 
 // ___________________________________________________________________
 
@@ -34,13 +38,13 @@ const browserList = [
     type: 'Extension',
     name: 'Fingertip',
     desc: 'Manage your domains.',
-    symbol: <BobIcon />,
+    symbol: <FingertipIcon />,
   },
   {
     type: 'Browser',
     name: 'Beacon',
     desc: 'Manage your domains.',
-    symbol: <BobIcon />,
+    symbol: <BeaconIcon />,
   },
   {
     type: 'Browser',
@@ -52,13 +56,13 @@ const browserList = [
     type: 'Browser',
     name: 'Puma',
     desc: 'Manage your domains.',
-    symbol: <BobIcon />,
+    symbol: <PumaIcon />,
   },
   {
     type: 'Browser',
     name: 'Aloha',
     desc: 'Manage your domains.',
-    symbol: <BobIcon />,
+    symbol: <AlohaIcon />,
   },
 ]
 
