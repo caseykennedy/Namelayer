@@ -1,7 +1,7 @@
 // Header Styles:
 
 import styled from 'styled-components'
-import breakpoint from '../../utils/breakpoint'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -22,7 +22,7 @@ export const Header = styled.header`
   width: 100%;
   z-index: 9999;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     border-right: var(--border);
     border-bottom: none;
     flex-flow: column nowrap;
@@ -42,7 +42,7 @@ export const Header = styled.header`
     display: var(--display-hide-mobile);
     position: relative;
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       transform-origin: center center;
       transform: rotate(-90deg);
     }
@@ -54,7 +54,7 @@ export const Header = styled.header`
     align-items: center;
     gap: var(--space-sm);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       flex-flow: column nowrap;
       justify-content: center;
     }
@@ -63,7 +63,7 @@ export const Header = styled.header`
       display: none;
       place-content: center;
 
-      @media ${breakpoint.tablet} {
+      @media ${breakpoint.sm} {
         display: flex;
       }
     }
@@ -77,7 +77,7 @@ export const Header = styled.header`
       color: var(--color-text);
       cursor: pointer;
 
-      @media ${breakpoint.tablet} {
+      @media ${breakpoint.sm} {
         display: none;
       }
     }

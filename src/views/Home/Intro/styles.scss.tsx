@@ -14,7 +14,7 @@ export const Intro = styled(motion.div)`
     flex-flow: column nowrap;
     gap: var(--space-xxxl);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       flex-flow: row nowrap;
     }
 

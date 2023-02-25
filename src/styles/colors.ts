@@ -23,7 +23,7 @@ const Colors = css`
     --color-text: hsl(285, 10%, 10%);
     --color-text-muted: hsl(285, 10%, 20%);
     // border
-    --color-border: var(--color-text);
+    --color-border: hsl(43, 12%, 56%);
 
     // success
     --color-success-darker: hsl(175, 47%, 16%);
@@ -55,13 +55,14 @@ const Colors = css`
     --color-tertiary: hsl(257, 31%, 44%);
 
     // background
-    --color-bg: hsl(285, 9%, 2%);
-    --color-bg-secondary: hsl(285, 10%, 10%);
+    --color-bg: hsla(246, 13%, 4%, 1);
+    --color-bg-blur: hsla(246, 13%, 4%, 0.875);
+    --color-bg-secondary: hsla(246, 13%, 9%, 1);
     // typography
-    --color-text: hsl(257, 5%, 91%);
-    --color-text-muted: hsl(259, 7%, 60%);
+    --color-text: hsla(246, 13%, 98%, 1);
+    --color-text-muted: hsla(246, 11%, 66%, 1);
     // border
-    --color-border: hsl(285, 10%, 16%);
+    --color-border: hsla(246, 13%, 13%, 1);
   }
 `
 

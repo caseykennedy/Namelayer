@@ -20,10 +20,8 @@ const PrivateKeys = () => (
   <S.PrivateKeys>
     <div className="detail">
       <div className="sticky">
-        <p>
-          <strong>Decentralized ownership</strong>
-        </p>
-        <h2>Not your 🔑&apos;s not your 🧀</h2>
+        <div className="sub-heading">Decentralized ownership</div>
+        <h2>Not your key&apos;s, not your cheese.</h2>
         <p>
           <strong>With Namelayer you hold your private keys.</strong>
           <br />
@@ -51,12 +49,12 @@ const PrivateKeys = () => (
         viewport={viewport}
         className="box"
       >
-        <StaticImage
+        {/* <StaticImage
           src="../../../images/mock-portfolio.png"
           alt="A dinosaur"
           placeholder="blurred"
           objectFit="contain"
-        />
+        /> */}
       </motion.div>
     </div>
   </S.PrivateKeys>

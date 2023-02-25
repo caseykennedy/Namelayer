@@ -5,7 +5,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "node ./scripts/bootstrap-fauna-database.js",
     "build": "gatsby build",
     "cleancache": "gatsby clean",
     "develop": "gatsby develop",

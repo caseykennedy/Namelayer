@@ -43,7 +43,7 @@ export const Team = styled.div`
         font-size: var(--text-md);
         font-weight: 600;
 
-        @media ${breakpoint.tablet} {
+        @media ${breakpoint.sm} {
           font-size: var(--text-md);
         }
 
@@ -60,7 +60,7 @@ export const Team = styled.div`
           margin-right: var(--gutter-sm);
           padding: var(--space-sm);
 
-          @media ${breakpoint.tablet} {
+          @media ${breakpoint.sm} {
             font-size: var(--text-md);
           }
         }
@@ -69,7 +69,7 @@ export const Team = styled.div`
       &__quote {
         display: none;
 
-        @media ${breakpoint.tablet} {
+        @media ${breakpoint.sm} {
           display: initial;
         }
       }

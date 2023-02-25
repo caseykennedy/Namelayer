@@ -13,7 +13,7 @@ export const Button = styled.a`
   --btn-padding-y: var(--space-xs);
   --btn-radius: var(--radius-lg);
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     /* --btn-height: 40px; */
     --btn-font-size: var(--text-base-size);
     --btn-padding-x: var(--space-md);

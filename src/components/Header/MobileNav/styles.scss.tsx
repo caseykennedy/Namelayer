@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import breakpoint from '../../../utils/breakpoint'
+import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -47,7 +47,7 @@ export const NavLink = styled(motion.li)`
   padding: 0;
   width: 100%;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     padding: 0;
   }
 

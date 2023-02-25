@@ -60,7 +60,7 @@ export const Browsers = styled(motion.div)`
     grid-template-columns: repeat(1, 1fr);
     gap: var(--space-md);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       grid-template-columns: repeat(2, 1fr);
     }
   }

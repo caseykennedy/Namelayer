@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import breakpoint from '../utils/breakpoint'
+import { breakpoint } from './mixins'
 
 // ___________________________________________________________________
 
@@ -17,7 +17,7 @@ const Spacing = css`
     --gutter: var(--space-md);
     --gutter-lg: var(--space-xl);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       --gutter-sm: var(--space-lg);
       --gutter: var(--space-xxl);
       --gutter-lg: var(--space-xxxl);
@@ -41,7 +41,7 @@ const Spacing = css`
   }
 
   @supports (--css: variables) {
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       :root,
       * {
         --space-xxxxs: calc(0.237 * var(--space-unit));

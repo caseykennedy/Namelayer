@@ -11,7 +11,6 @@ export const Features = styled(motion.div)`
 
   & > * {
     flex: 1;
-    padding: var(--gutter);
   }
 
   .detail {
@@ -20,8 +19,9 @@ export const Features = styled(motion.div)`
     align-items: flex-start;
     gap: var(--gutter);
     position: relative;
+    padding: var(--gutter);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       flex-flow: row nowrap;
     }
 
@@ -30,8 +30,8 @@ export const Features = styled(motion.div)`
     }
 
     .sticky {
-      @media ${breakpoint.tablet} {
-        flex: 0.5;
+      @media ${breakpoint.sm} {
+        flex: 1;
         position: sticky;
         top: calc(var(--gutter) + var(--header-width));
       }
@@ -56,37 +56,40 @@ export const Features = styled(motion.div)`
     }
   }
 
-  .feature-list {
-    display: flex;
-    flex-flow: row wrap;
-    gap: var(--space-md);
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--gutter-sm);
+    padding: var(--gutter);
+    padding-top: 0;
+
+    @media ${breakpoint.sm} {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .feature {
-      flex: 1 1 333px;
-      display: flex;
-      flex-flow: column nowrap;
-
       background: var(--color-bg-secondary);
-      background: linear-gradient(
+      /* background: linear-gradient(
         0deg,
         var(--color-bg-secondary) 0%,
         rgba(0, 0, 0, 0) 33%
-      );
+      ); */
 
       border: var(--border);
       border-radius: var(--radius);
       font-size: var(--text-root-size);
-      padding: var(--gutter-sm);
+      padding: var(--space-xxxxl) var(--gutter-sm) var(--gutter-sm);
 
       &__title {
         font-size: var(--text-md);
         font-weight: 600;
         margin-bottom: var(--space-md);
-        max-width: 10ch;
+        /* max-width: 10ch; */
       }
 
       &__desc {
         color: var(--color-text-muted);
+        max-width: 33ch;
       }
     }
   }

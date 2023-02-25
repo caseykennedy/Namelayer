@@ -23,7 +23,7 @@ export const Hero = styled.div`
   flex-flow: column nowrap;
   min-height: 65vh;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     flex-flow: row nowrap;
     justify-content: stretch;
   }
@@ -53,7 +53,7 @@ export const Hero = styled.div`
         font-size: var(--text-base-size);
         margin-bottom: 0;
 
-        @media ${breakpoint.tablet} {
+        @media ${breakpoint.sm} {
           font-size: var(--text-lg);
         }
       }
@@ -78,7 +78,7 @@ export const Hero = styled.div`
     border-top: var(--border);
     position: relative;
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       border-top: none;
       border-left: var(--border);
     }

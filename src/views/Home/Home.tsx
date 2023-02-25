@@ -14,6 +14,7 @@ import Marquee from './Marquee'
 import Intro from './Intro'
 import PrivateKeys from './PrivateKeys'
 import Features from './Features'
+import Namers from './Namers'
 import Roadmap from './Roadmap'
 import Team from './Team'
 import Browsers from './Browsers'
@@ -53,8 +54,9 @@ const Home = () => (
     <Intro />
     <PrivateKeys />
     <Features />
+    <Namers />
     <Roadmap />
-    <Browsers />
+    {/* <Browsers /> */}
     <Team />
   </S.HomeView>
 )

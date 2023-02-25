@@ -58,9 +58,9 @@ const Roadmap = () => (
       </p>
       {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
     </div>
-    <div className="decorator">
+    {/* <div className="decorator">
       <Grid />
-    </div>
+    </div> */}
     <motion.div
       className="roadmap"
       variants={staggerItems}
@@ -85,6 +85,7 @@ const Roadmap = () => (
         </motion.div>
       ))}
     </motion.div>
+    <div className="mask" />
   </S.Roadmap>
 )
 

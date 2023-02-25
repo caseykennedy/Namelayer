@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import breakpoint from '../../utils/breakpoint'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     flex-flow: row nowrap;
   }
 `
@@ -25,7 +25,7 @@ export const Content = styled.div`
   flex-flow: column nowrap;
   width: 100%;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     max-width: calc(100vw - var(--header-width));
   }
 `

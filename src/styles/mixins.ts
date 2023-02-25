@@ -48,10 +48,12 @@ export const textCrop = (
 // Breakpoints
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['768px', '1140px']
+const breakpoints: string[] = ['768px', '1024px', '1140px', '1440px']
 export const breakpoint = {
-  tablet: `(min-width: ${breakpoints[0]})`,
-  desktop: `(min-width: ${breakpoints[1]})`,
+  sm: `(min-width: ${breakpoints[0]})`,
+  md: `(min-width: ${breakpoints[1]})`,
+  lg: `(min-width: ${breakpoints[2]})`,
+  xl: `(min-width: ${breakpoints[3]})`,
 }
 
 export const fontSmooth = css`

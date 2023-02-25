@@ -1,12 +1,13 @@
 // Navigation Styles:
 
 import styled from 'styled-components'
-import breakpoint from '../../utils/breakpoint'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
 export const Navigation = styled.div`
-  background: var(--color-bg);
+  background: var(--color-bg-blur);
+  backdrop-filter: blur(7px);
   border-bottom: var(--border);
 
   display: none;
@@ -22,7 +23,7 @@ export const Navigation = styled.div`
   width: 100%;
   z-index: 9999;
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.md} {
     display: flex;
   }
 

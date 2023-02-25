@@ -54,7 +54,7 @@ const Typography = css`
     --heading-font-weight: 500;
 
     // line-height
-    --body-line-height: 1.15;
+    --body-line-height: 1.3;
     --heading-line-height: 1.15;
 
     // letter-spacing
@@ -188,21 +188,21 @@ const Typography = css`
   h1 {
     font-size: var(--text-lg);
 
-    @media ${breakpoint.desktop} {
-      font-size: var(--text-lg);
+    @media ${breakpoint.lg} {
+      font-size: var(--text-xl);
     }
   }
 
   h2 {
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
   }
 
   h3 {
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
   }
 
   h4 {
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     font-weight: 600;
   }
 
@@ -212,6 +212,15 @@ const Typography = css`
     font-weight: var(--heading-font-weight);
     /* text-transform: uppercase; */
     margin-bottom: var(--space-xxxxl);
+  }
+
+  .sub-heading {
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xxxl);
   }
 
   // --------------------------------

@@ -10,12 +10,12 @@ export const Marquee = styled.div`
   overflow: hidden;
   padding: var(--space-xl) 0;
 
-  background: var(--color-bg-secondary);
-  background: linear-gradient(
+  background: var(--color-bg);
+  /* background: linear-gradient(
     0deg,
     var(--color-bg-secondary) 0%,
     rgba(0, 0, 0, 0) 33%
-  );
+  ); */
   border-top: var(--border);
   border-bottom: var(--border);
   color: var(--color-text-muted);
@@ -26,7 +26,7 @@ export const Marquee = styled.div`
   z-index: 999; */
 
   .marquee-container {
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       max-width: calc(100vw - calc(var(--header-width) + 16px));
     }
   }
@@ -43,7 +43,7 @@ export const Marquee = styled.div`
       white-space: nowrap;
       margin: 0 var(--space-xl);
 
-      @media ${breakpoint.tablet} {
+      @media ${breakpoint.sm} {
         margin: 0 var(--space-xxxxl);
       }
     }

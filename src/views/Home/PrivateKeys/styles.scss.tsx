@@ -8,7 +8,7 @@ export const PrivateKeys = styled.div`
   flex-flow: column nowrap;
   border-top: var(--border);
 
-  @media ${breakpoint.tablet} {
+  @media ${breakpoint.sm} {
     flex-flow: row-reverse nowrap;
   }
 
@@ -20,7 +20,7 @@ export const PrivateKeys = styled.div`
   .detail {
     position: relative;
 
-    @media ${breakpoint.desktop} {
+    @media ${breakpoint.lg} {
       flex: 0.5;
     }
 
@@ -45,7 +45,6 @@ export const PrivateKeys = styled.div`
     justify-content: center;
     /* border: var(--border); */
     border-radius: var(--radius);
-    height: 720px;
     width: 100%;
   }
 `

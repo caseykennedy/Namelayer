@@ -7,11 +7,33 @@ import { breakpoint, textCrop } from '../../../styles/mixins'
 export const Roadmap = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
+  /* border-top: var(--border); */
   padding: var(--gutter);
-  border-top: var(--border);
+  position: relative;
 
   & > * {
     flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background: var(--color-border);
+    -webkit-mask-image: linear-gradient(#000 1px, transparent 0),
+      linear-gradient(90deg, #000 1px, transparent 0);
+    mask-image: linear-gradient(#000 1px, transparent 0),
+      linear-gradient(90deg, #000 1px, transparent 0);
+    -webkit-mask-position: top center;
+    mask-position: top center;
+    -webkit-mask-size: 28px 28px;
+    mask-size: var(--space-xl) var(--space-xl);
   }
 
   .detail {
@@ -29,31 +51,31 @@ export const Roadmap = styled(motion.div)`
     grid-template-columns: repeat(1, 1fr);
     gap: var(--gutter);
 
-    @media ${breakpoint.tablet} {
+    @media ${breakpoint.sm} {
       grid-template-columns: repeat(2, 1fr);
     }
 
     .milestone {
       display: flex;
       flex-flow: row nowrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
 
-      /* background: var(--color-bg-secondary); */
-      border-top: var(--border);
+      background: var(--color-bg);
+      /* border: var(--border); */
       /* border-radius: var(--radius); */
-      padding: var(--space-md) 0 var(--gutter);
+      padding: var(--space-xxxl) var(--gutter);
 
       &__quarter {
         ${textCrop(1, 0, -0.05)}
 
         font-size: var(--text-xl);
-        font-weight: 600;
+        font-weight: 500;
         padding-right: var(--gutter-sm);
 
-        @media ${breakpoint.tablet} {
-          font-size: var(--text-xxl);
-        }
+        /* @media ${breakpoint.sm} {
+          font-size: var(--text-xl);
+        } */
       }
 
       &__title {

@@ -22,7 +22,7 @@ export const Footer = styled.footer`
 
     /* min-height: 64vh; */
 
-    @media ${breakpoint.desktop} {
+    @media ${breakpoint.lg} {
       flex-flow: row nowrap;
     }
 
@@ -57,15 +57,15 @@ export const Footer = styled.footer`
         width: 100%;
 
         background: var(--color-bg-secondary);
-      background: linear-gradient(
-        0deg,
-        var(--color-bg-secondary) 0%,
-        rgba(0, 0, 0, 0) 33%
-      );
+        /* background: linear-gradient(
+          0deg,
+          var(--color-bg-secondary) 0%,
+          rgba(0, 0, 0, 0) 33%
+        ); */
         border: var(--border);
         border-radius: var(--radius);
 
-        @media ${breakpoint.tablet} {
+        @media ${breakpoint.sm} {
           flex-flow: row nowrap;
         }
       }
@@ -81,7 +81,7 @@ export const Footer = styled.footer`
         padding: var(--gutter-sm);
         font-size: var(--text-md);
 
-        @media ${breakpoint.tablet} {
+        @media ${breakpoint.sm} {
           flex-flow: column nowrap;
           border-bottom: 0;
           border-right: var(--border);
