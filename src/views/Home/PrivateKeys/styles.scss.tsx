@@ -24,6 +24,10 @@ export const PrivateKeys = styled.div`
       flex: 0.5;
     }
 
+    .sub-heading {
+      color: var(--color-secondary);
+    }
+
     p {
       margin-bottom: var(--space-xxxl);
     }

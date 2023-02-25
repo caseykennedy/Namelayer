@@ -195,6 +195,7 @@ const Typography = css`
 
   h2 {
     font-size: var(--text-xl);
+    margin-bottom: var(--space-xxl);
   }
 
   h3 {
@@ -220,7 +221,7 @@ const Typography = css`
     font-size: var(--text-sm);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: var(--space-xxxl);
+    margin-bottom: var(--space-xxl);
   }
 
   // --------------------------------

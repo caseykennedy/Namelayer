@@ -12,9 +12,9 @@ const Colors = css`
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
 
-    --color-primary: hsl(185, 70%, 70%);
-    --color-secondary: hsl(257, 31%, 47%);
-    --color-tertiary: hsl(285, 10%, 20%);
+    --color-primary: #8ae8ff;
+    --color-secondary: #7b65dc;
+    --color-tertiary: #f75f8f;
 
     // background
     --color-bg: hsl(43, 12%, 65%);
@@ -50,10 +50,6 @@ const Colors = css`
   }
 
   [data-theme='darkMode'] {
-    /* --color-primary: hsl(257, 5%, 91%); */
-    /* --color-secondary: hsl(285, 10%, 8%); */
-    --color-tertiary: hsl(257, 31%, 44%);
-
     // background
     --color-bg: hsla(246, 13%, 4%, 1);
     --color-bg-blur: hsla(246, 13%, 4%, 0.875);

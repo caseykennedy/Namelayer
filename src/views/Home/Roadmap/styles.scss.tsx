@@ -49,7 +49,7 @@ export const Roadmap = styled(motion.div)`
   .roadmap {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: var(--gutter);
+    gap: var(--gutter-sm);
 
     @media ${breakpoint.sm} {
       grid-template-columns: repeat(2, 1fr);

@@ -28,13 +28,9 @@ const idealPersonas = [
 const Namers = () => (
   <S.Namers>
     <div className="detail">
-      <div className="sub-heading">
-        Decentralized
-      </div>
+      <div className="sub-heading">Decentralized</div>
       <h2>Namelayer is great for everyone.</h2>
       <p>
-        <strong>With Namelayer you hold your private keys.</strong>
-        <br />
         The only way to own your assets is to hold your private keys. Do so with
         ease using Namelayer/.
       </p>
