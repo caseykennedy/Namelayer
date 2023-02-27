@@ -8,10 +8,6 @@ export const HomeView = styled.main`
   /* grid-column: 1/13; */
   width: 100%;
 
-  .list-title {
-    margin-top: var(--space-xxl);
-  }
-
   .box__header {
     border-bottom: var(--border);
     height: var(--header-width);
@@ -21,7 +17,7 @@ export const HomeView = styled.main`
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  min-height: 65vh;
+  /* min-height: 65vh; */
 
   @media ${breakpoint.sm} {
     flex-flow: row nowrap;
@@ -34,6 +30,7 @@ export const Hero = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
+    background: var(--color-bg-secondary);
 
     & > * {
       display: flex;
@@ -44,22 +41,22 @@ export const Hero = styled.div`
     }
 
     .wordmark {
-      padding-top: calc(var(--space-xxxxl) * 2.75);
+      padding-top: calc(var(--space-xxxxl));
     }
 
     .intro {
       h1 {
-        color: var(--color-text-muted);
+        color: var(--color-text);
         font-size: var(--text-md);
         margin-bottom: 0;
 
         @media ${breakpoint.sm} {
+          font-size: var(--text-lg);
+        }
+
+        @media ${breakpoint.md} {
           font-size: var(--text-xl);
         }
-      }
-
-      p {
-        margin-bottom: var(--space-xxl);
       }
     }
   }

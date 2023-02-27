@@ -57,7 +57,7 @@ const Colors = css`
     --color-bg-secondary: hsla(246, 13%, 9%, 1);
     // typography
     --color-text: hsla(246, 13%, 98%, 1);
-    --color-text-muted: hsla(246, 11%, 66%, 1);
+    --color-text-muted: hsla(246, 4%, 66%, 1);
     // border
     --color-border: hsla(246, 13%, 17%, 1);
   }

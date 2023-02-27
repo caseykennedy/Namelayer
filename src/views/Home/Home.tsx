@@ -25,8 +25,7 @@ const Hero = () => (
       <div className="intro">
         {/* <p>Coming Soon</p> */}
         <h1>
-          Namelayer is an on-chain domain manager and non-custodial HNS wallet
-          for the Handshake blockchain.
+          Namelayer is an on-chain domain manager and non-custodial Handshake wallet.
         </h1>
       </div>
       <div className="wordmark">
