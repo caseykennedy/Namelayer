@@ -53,10 +53,8 @@ const data = [
 const Roadmap = () => (
   <S.Roadmap id="roadmap">
     <div className="detail">
-      <p>
-        <strong>Roadmap</strong>
-      </p>
-      {/* <h2>There&apos;s plenty in the pipeline.</h2> */}
+      <div className="text-sub-heading">Roadmap</div>
+      <p>Plenty in the pipeline</p>
     </div>
     {/* <div className="decorator">
       <Grid />
@@ -69,11 +67,11 @@ const Roadmap = () => (
       viewport={viewport}
     >
       {data.map((item, idx) => (
-        <motion.div variants={polyVariant} className="milestone" key={idx}>
-          <div className="milestone__quarter">{item.quarter}</div>
-          <div className="milestone__title">{item.title}</div>
+        <motion.div variants={polyVariant} className="roadmap__item" key={idx}>
+          <div className="roadmap__item__quarter">{item.quarter}</div>
+          <div className="roadmap__item__title">{item.title}</div>
           <div
-            className="milestone__progress"
+            className="roadmap__item__progress"
             style={{
               background: `var(--color-${item.progressColor}-darker)`,
               borderColor: `var(--color-${item.progressColor}-dark)`,

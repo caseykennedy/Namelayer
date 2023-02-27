@@ -16,7 +16,7 @@ export const Namers = styled.div`
   }
 
   @media ${breakpoint.xl} {
-    gap: var(--space-xxxxl);
+    /* gap: var(--space-xxl); */
   }
 
   .detail {
@@ -27,7 +27,7 @@ export const Namers = styled.div`
       text-align: left;
     }
 
-    .sub-heading {
+    .text-sub-heading {
       color: var(--color-tertiary);
     }
 
@@ -59,21 +59,23 @@ export const Namers = styled.div`
     flex: 1;
     position: relative;
 
-    @media ${breakpoint.xl} {
+    /* @media ${breakpoint.xl} {
       flex: 2;
-    }
+    } */
 
     ul {
       display: grid;
+      grid-auto-rows: 1fr;
       grid-template-columns: repeat(2, 1fr);
       gap: var(--gutter-sm);
+      margin: 0 auto 0;
 
       @media ${breakpoint.sm} {
         grid-template-columns: repeat(2, 1fr);
       }
 
       @media ${breakpoint.lg} {
-        padding: 0 var(--space-xxxxl) 0;
+        /* padding: 0 0 0 var(--space-xxxxl); */
       }
 
       @media ${breakpoint.xl} {
@@ -81,16 +83,27 @@ export const Namers = styled.div`
       }
 
       li {
+        flex: 1;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
 
-        padding: var(--gutter);
-        width: 100%;
+        aspect-ratio: 1/1;
+        padding: var(--gutter-sm);
 
         border: var(--border);
         border-radius: var(--radius);
+        font-size: var(--text-base-size);
+
+        span {
+          margin: 0;
+
+          svg {
+            width: var(--space-xl);
+            margin-bottom: var(--space-xl);
+          }
+        }
       }
     }
   }

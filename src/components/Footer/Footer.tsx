@@ -17,12 +17,12 @@ const currentYear = new Date().getFullYear()
 const Footer = () => (
   <S.Footer>
     <div className="billboard">
-      <div className="capture">
+      {/* <div className="capture">
         <div className="capture__message">Slide into our DMs</div>
         <SubscribeForm />
-        {/* <p>More info, features and news on the way.</p> */}
-        {/* <p>auctions, twitter, handshake.org, newsletter</p> */}
-      </div>
+        <p>More info, features and news on the way.</p>
+        <p>auctions, twitter, handshake.org, newsletter</p>
+      </div> */}
       <div className="explore">
         <div>
           <div className="explore__call">

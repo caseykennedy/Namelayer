@@ -20,13 +20,14 @@ const PrivateKeys = () => (
   <S.PrivateKeys>
     <div className="detail">
       <div className="sticky">
-        <div className="sub-heading">Decentralized ownership</div>
-        <h2>Not your key&apos;s, not your cheese.</h2>
+        <div className="text-sub-heading">Decentralized ownership</div>
+        <h2>Protect your private keys with ease</h2>
+        {/* <h2>Not your key&apos;s, not your cheese</h2> */}
         <p>
           <strong>With Namelayer you hold your private keys.</strong>
           <br />
           The only way to own your assets is to hold your private keys. Do so
-          with ease using Namelayer/.
+          with ease using Namelayer.
         </p>
         <div>
           <a

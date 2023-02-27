@@ -8,6 +8,7 @@ export const Footer = styled.footer`
   flex-flow: column nowrap;
   background: var(--color-bg);
   border-top: var(--border);
+  background: var(--color-bg-secondary);
 
   /* min-height: 64vh; */
 
@@ -30,7 +31,7 @@ export const Footer = styled.footer`
       flex: 1;
     }
 
-    .capture {
+    /* .capture {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
@@ -40,14 +41,14 @@ export const Footer = styled.footer`
         font-size: var(--text-xl);
         margin-bottom: var(--space-xxxl);
       }
-    }
+    } */
 
     .explore {
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
       align-items: center;
-      gap: var(--space-md);
-      padding: var(--gutter);
+      /* gap: var(--space-md); */
+      /* padding: var(--gutter); */
 
       & > * {
         flex: 1;
@@ -56,14 +57,14 @@ export const Footer = styled.footer`
         overflow: hidden;
         width: 100%;
 
-        background: var(--color-bg-secondary);
+        /* background: var(--color-bg-secondary); */
         /* background: linear-gradient(
           0deg,
           var(--color-bg-secondary) 0%,
           rgba(0, 0, 0, 0) 33%
         ); */
-        border: var(--border);
-        border-radius: var(--radius);
+        /* border: var(--border);
+        border-radius: var(--radius); */
 
         @media ${breakpoint.sm} {
           flex-flow: row nowrap;

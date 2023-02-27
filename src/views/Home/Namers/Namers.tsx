@@ -17,19 +17,37 @@ import Icon from '../../../components/Icons'
 // ___________________________________________________________________
 
 const idealPersonas = [
-  'namers',
-  'cypherpunks',
-  'developers',
-  'domainers',
-  'holders',
-  'resellers',
+  {
+    persona: 'namers',
+    icon: <Icon name="carat" color="var(--color-primary)" />,
+  },
+  {
+    persona: 'cypherpunks',
+    icon: <Icon name="carat" color="var(--color-secondary)" />,
+  },
+  {
+    persona: 'developers',
+    icon: <Icon name="carat" color="var(--color-tertiary)" />,
+  },
+  {
+    persona: 'domainers',
+    icon: <Icon name="carat" color="var(--color-quaternary)" />,
+  },
+  {
+    persona: 'holders',
+    icon: <Icon name="carat" color="var(--color-primary)" />,
+  },
+  {
+    persona: 'resellers',
+    icon: <Icon name="carat" color="var(--color-secondary)" />,
+  },
 ]
 
 const Namers = () => (
   <S.Namers>
     <div className="detail">
-      <div className="sub-heading">Decentralized</div>
-      <h2>Namelayer is great for everyone.</h2>
+      <div className="text-sub-heading">Self Ownership</div>
+      <h2>We want everyone to own their name</h2>
       <p>
         The only way to own your assets is to hold your private keys. Do so with
         ease using Namelayer/.
@@ -48,7 +66,7 @@ const Namers = () => (
     </div>
     <div className="list">
       <ul>
-        {idealPersonas.map((persona, idx) => (
+        {idealPersonas.map((item, idx) => (
           <motion.li
             variants={polyVariant}
             initial="hidden"
@@ -56,7 +74,8 @@ const Namers = () => (
             viewport={viewport}
             key={idx}
           >
-            <Icon name="plus" /> {persona}
+            <span>{item.icon}</span>
+            {item.persona}
           </motion.li>
         ))}
       </ul>

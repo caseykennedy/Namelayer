@@ -9,50 +9,24 @@ export const Features = styled(motion.div)`
   flex-flow: column nowrap;
   border-top: var(--border);
 
-  & > * {
-    flex: 1;
-  }
-
   .detail {
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
     gap: var(--gutter);
     position: relative;
-    padding: var(--gutter);
 
-    @media ${breakpoint.sm} {
+    @media ${breakpoint.md} {
       flex-flow: row nowrap;
+    }
+
+    @media ${breakpoint.xl} {
+      gap: var(--space-xxxxl);
     }
 
     & > * {
       flex: 1;
-    }
-
-    .sticky {
-      @media ${breakpoint.sm} {
-        flex: 1;
-        position: sticky;
-        top: calc(var(--gutter) + var(--header-width));
-      }
-
-      p {
-        margin-bottom: var(--space-xxxl);
-      }
-
-      ul {
-        margin-bottom: var(--space-xxl);
-      }
-    }
-  }
-
-  .figure {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      max-height: 650px;
+      padding: var(--gutter);
     }
   }
 
@@ -61,35 +35,40 @@ export const Features = styled(motion.div)`
     grid-template-columns: repeat(1, 1fr);
     gap: var(--gutter-sm);
     padding: var(--gutter);
-    padding-top: 0;
+    /* padding-top: 0; */
 
     @media ${breakpoint.sm} {
       grid-template-columns: repeat(2, 1fr);
     }
 
     .feature {
-      background: var(--color-bg-secondary);
-      /* background: linear-gradient(
-        0deg,
-        var(--color-bg-secondary) 0%,
-        rgba(0, 0, 0, 0) 33%
-      ); */
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
 
+      background: var(--color-bg-secondary);
       border: var(--border);
       border-radius: var(--radius);
-      font-size: var(--text-root-size);
-      padding: var(--space-xxxxl) var(--gutter-sm) var(--gutter-sm);
+
+      font-size: var(--text-base-size);
+
+      height: 200px;
+      padding: var(--gutter-sm);
+      position: relative;
 
       &__title {
-        font-size: var(--text-md);
+        display: flex;
+        flex-flow: column nowrap;
+
+        font-size: var(--text-base-size);
         font-weight: 600;
-        margin-bottom: var(--space-md);
-        /* max-width: 10ch; */
+        position: absolute;
       }
 
       &__desc {
         color: var(--color-text-muted);
-        max-width: 33ch;
+        max-width: 30ch;
+        margin-top: var(--space-xxxs);
       }
     }
   }

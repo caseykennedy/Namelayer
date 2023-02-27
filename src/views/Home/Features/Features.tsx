@@ -11,24 +11,31 @@ import * as S from './styles.scss'
 // Utils
 import { polyVariant, staggerItems, viewport } from '../../../utils/variants'
 
+// Components
+import Icon from '../../../components/Icons'
+
 // ___________________________________________________________________
 
 const featureData = [
   {
     title: 'Decentralized Wallet',
-    desc: 'Hodl, send and receive HNS and own your private keys.',
+    desc: 'Hodl, send and receive HNS with your own private keys.',
+    icon: <Icon name="carat" color="var(--color-primary)" />,
   },
   {
     title: 'Multi-account Wallet',
-    desc: 'Create as many wallets and wallet accounts as you’d like.',
+    desc: "Create as many wallets and wallet accounts as you'd like.",
+    icon: <Icon name="carat" color="var(--color-secondary)" />,
   },
   {
     title: 'Domain Manager',
     desc: 'Manage your decentralized domains and on-chain DNS.',
+    icon: <Icon name="carat" color="var(--color-tertiary)" />,
   },
   {
     title: 'TLD Marketplace',
     desc: 'Bid on new TLDs in the primary market. Participate in domain auctions.',
+    icon: <Icon name="carat" color="var(--color-quaternary)" />,
   },
   // {
   //   title: 'Utility with Handshake',
@@ -56,6 +63,38 @@ const featureData = [
   // },
 ]
 
+const featureTitle = {
+  show: {
+    y: -58,
+    transition: {
+      duration: 0.25,
+      ease: 'easeOut',
+    },
+  },
+  hide: {
+    y: 0,
+    transition: {
+      duration: 0.25,
+      ease: 'easeOut',
+    },
+  },
+}
+
+const featureDesc = {
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.25,
+    },
+  },
+  hide: {
+    opacity: 0,
+    transition: {
+      duration: 0.15,
+    },
+  },
+}
+
 const FeatureGrid = () => (
   <motion.div
     className="feature-grid"
@@ -65,9 +104,21 @@ const FeatureGrid = () => (
     viewport={{ once: true, amount: 0.25 }}
   >
     {featureData.map((feat, idx) => (
-      <motion.div variants={polyVariant} className="feature" key={idx}>
-        <div className="feature__title">{feat.title}</div>
-        <div className="feature__desc">{feat.desc}</div>
+      <motion.div
+        initial="hide"
+        whileHover="show"
+        animate="hide"
+        variants={polyVariant}
+        className="feature"
+        key={idx}
+      >
+        <motion.div variants={featureTitle} className="feature__title">
+          <span>{feat.icon}</span>
+          {feat.title}
+        </motion.div>
+        <motion.div variants={featureDesc} className="feature__desc">
+          {feat.desc}
+        </motion.div>
       </motion.div>
     ))}
   </motion.div>
@@ -76,30 +127,15 @@ const FeatureGrid = () => (
 const Features = () => (
   <S.Features id="features">
     <div className="detail">
-      <div className="sticky">
-        <div className="sub-heading">Features</div>
+      <div>
+        <div className="text-sub-heading">Features</div>
         <h2>It&apos;s not just a wallet</h2>
         <p>
           With Namelayer you can manage your domains, send and receive HNS, and
           participate in domain auctions from your native device.
         </p>
       </div>
-      <div className="figure">
-        <motion.div
-          variants={polyVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-          className="box"
-        >
-          {/* <StaticImage
-            src="../../../images/mock-dashboard.png"
-            alt="A dinosaur"
-            placeholder="blurred"
-            objectFit="contain"
-          /> */}
-        </motion.div>
-      </div>
+      <div />
     </div>
     <FeatureGrid />
   </S.Features>

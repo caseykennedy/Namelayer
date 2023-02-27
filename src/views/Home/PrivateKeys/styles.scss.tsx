@@ -21,10 +21,10 @@ export const PrivateKeys = styled.div`
     position: relative;
 
     @media ${breakpoint.lg} {
-      flex: 0.5;
+      flex: 1;
     }
 
-    .sub-heading {
+    .text-sub-heading {
       color: var(--color-secondary);
     }
 

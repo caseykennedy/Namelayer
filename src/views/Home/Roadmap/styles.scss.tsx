@@ -26,13 +26,9 @@ export const Roadmap = styled(motion.div)`
     z-index: 0;
 
     background: var(--color-border);
-    -webkit-mask-image: linear-gradient(#000 1px, transparent 0),
-      linear-gradient(90deg, #000 1px, transparent 0);
     mask-image: linear-gradient(#000 1px, transparent 0),
       linear-gradient(90deg, #000 1px, transparent 0);
-    -webkit-mask-position: top center;
     mask-position: top center;
-    -webkit-mask-size: 28px 28px;
     mask-size: var(--space-xl) var(--space-xl);
   }
 
@@ -55,16 +51,18 @@ export const Roadmap = styled(motion.div)`
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .milestone {
+    &__item {
       display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
+      flex-flow: column nowrap;
+      /* align-items: center; */
       justify-content: space-between;
 
-      background: var(--color-bg);
-      /* border: var(--border); */
-      /* border-radius: var(--radius); */
-      padding: var(--space-xxxl) var(--gutter);
+      background: hsla(246, 13%, 4%, 0.8);
+      border: var(--border);
+      border-radius: var(--radius);
+      /* box-shadow: var(--shadow-md); */
+
+      padding: var(--gutter-sm);
 
       &__quarter {
         ${textCrop(1, 0, -0.05)}
@@ -85,14 +83,15 @@ export const Roadmap = styled(motion.div)`
       }
 
       &__progress {
-        display: flex;
+        /* display: flex; */
         flex-flow: column nowrap;
         align-items: center;
 
         background: var(--color-success);
         border: var(--border);
+        border-radius: var(--radius-md);
+
         color: var(--color-white);
-        border-radius: var(--radius-lg);
         font-size: var(--text-sm);
         padding: var(--space-xxs) var(--space-sm);
       }

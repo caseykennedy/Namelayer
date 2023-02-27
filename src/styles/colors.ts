@@ -15,6 +15,7 @@ const Colors = css`
     --color-primary: #8ae8ff;
     --color-secondary: #7b65dc;
     --color-tertiary: #f75f8f;
+    --color-quaternary: #f0c000;
 
     // background
     --color-bg: hsl(43, 12%, 65%);
@@ -58,7 +59,7 @@ const Colors = css`
     --color-text: hsla(246, 13%, 98%, 1);
     --color-text-muted: hsla(246, 11%, 66%, 1);
     // border
-    --color-border: hsla(246, 13%, 13%, 1);
+    --color-border: hsla(246, 13%, 17%, 1);
   }
 `
 

@@ -11,7 +11,7 @@ import * as S from './styles.scss'
 const MarqueeProps = {
   gradient: false,
   pauseOnHover: false,
-  speed: 25,
+  speed: 75,
 }
 
 const Marquee = () => (

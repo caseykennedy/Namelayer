@@ -50,11 +50,11 @@ export const Hero = styled.div`
     .intro {
       h1 {
         color: var(--color-text-muted);
-        font-size: var(--text-base-size);
+        font-size: var(--text-md);
         margin-bottom: 0;
 
         @media ${breakpoint.sm} {
-          font-size: var(--text-lg);
+          font-size: var(--text-xl);
         }
       }
 
