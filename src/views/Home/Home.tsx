@@ -29,7 +29,7 @@ const Hero = () => (
         </h1>
       </div>
       <div className="wordmark">
-        <Wordmark />
+        {/* <Wordmark /> */}
       </div>
     </div>
     <div className="figure">

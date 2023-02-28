@@ -28,7 +28,7 @@ export const Hero = styled.div`
     flex: 2;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     background: var(--color-bg-secondary);
 
@@ -42,11 +42,12 @@ export const Hero = styled.div`
 
     .wordmark {
       padding-top: calc(var(--space-xxxxl));
+      max-width: 555px;
     }
 
     .intro {
       h1 {
-        color: var(--color-text);
+        color: var(--color-text-muted);
         font-size: var(--text-md);
         margin-bottom: 0;
 
